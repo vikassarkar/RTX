@@ -1,0 +1,14 @@
+{
+    "bell": {
+        "variables": "bell.variables.scss",
+        "assets": "assets/",
+        "styles": "assets/bell/styles/",
+        "images": "assets/bell/images/"
+    },
+    "virgin": {
+        "variables": "virgin.variables.scss",
+      "assets": "assets/",      
+        "styles": "assets/virgin/styles/",
+        "images": "assets/virgin/images/"
+    }
+}

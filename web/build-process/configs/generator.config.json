@@ -1,0 +1,148 @@
+{
+    "widget": {
+        "app": {
+            "type": "widget",
+            "input": "",
+            "folderName": [
+                "lowercaseHyphenSeprated",
+                "app-",
+                ""
+            ],
+            "tempFolderPath": "../fs-generator/temp/",
+            "refrenceSourcePath": "../fs-generator/widget/",
+            "destinationSourcePath": "../../../src/modules/widgets/",
+            "replaceFileName": {
+                "app": {
+                    "index.html": "",
+                    "index.tsx": ""
+                },
+                "components": {
+                    "ComponentName.tsx": [
+                        "camelUpperCase",
+                        "",
+                        ""
+                    ]
+                },
+                "models": {
+                    "ComponentName.ts": [
+                        "camelUpperCase",
+                        "I",
+                        ""
+                    ]
+                },
+                "styles": {
+                    "ComponentName.scss": [
+                        "camelLowerCase",
+                        "_",
+                        ""
+                    ]
+                },
+                "WidgetName.tsx": [
+                    "camelUpperCase",
+                    "App",
+                    "Widget"
+                ]
+            },
+            "replaceContent": {
+                "ComponentName": [
+                    "camelUpperCase",
+                    "",
+                    ""
+                ],
+                "componentName": [
+                    "camelLowerCase",
+                    "",
+                    ""
+                ],
+                "widget-folder-name": [
+                    "lowercaseHyphenSeprated",
+                    "app-",
+                    ""
+                ],
+                "WidgetName": [
+                    "camelUpperCase",
+                    "",
+                    ""
+                ],
+                "widgetName": [
+                    "camelLowerCase",
+                    "",
+                    ""
+                ]
+            }
+        },
+        "test": {
+            "type": "test",
+            "input": "",
+            "folderName": [
+                "lowercaseHyphenSeprated",
+                "app-",
+                ""
+            ],
+            "tempFolderPath": "../fs-generator/temp/",
+            "refrenceSourcePath": "../fs-generator/test-widget/",
+            "destinationSourcePath": "../../../src/tests/widgets/",
+            "replaceFileName": {
+                "ComponentName.spec.tsx": [
+                    "camelUpperCase",
+                    "",
+                    ".spec"
+                ],
+                "WidgetName.spec.tsx": [
+                    "camelUpperCase",
+                    "App",
+                    "Widget.spec"
+                ]
+            },
+            "replaceContent": {
+                "ComponentName": [
+                    "camelUpperCase",
+                    "",
+                    ""
+                ],
+                "componentName": [
+                    "camelLowerCase",
+                    "",
+                    ""
+                ],
+                "widget-folder-name": [
+                    "lowercaseHyphenSeprated",
+                    "app-",
+                    ""
+                ],
+                "WidgetName": [
+                    "camelUpperCase",
+                    "",
+                    ""
+                ],
+                "widgetName": [
+                    "camelLowerCase",
+                    "",
+                    ""
+                ]
+            }
+        }
+    },
+    "component": {
+        "name": "",
+        "prefix": "",
+        "suffix": "",
+        "type": "",
+        "tempFolderPath": "",
+        "refrenceSourcePath": "",
+        "destinationSourcePath": "",
+        "replaceFileName": {},
+        "replaceContent": {}
+    },
+    "page": {
+        "name": "",
+        "prefix": "",
+        "suffix": "",
+        "type": "",
+        "tempFolderPath": "",
+        "refrenceSourcePath": "",
+        "destinationSourcePath": "",
+        "replaceFileName": {},
+        "replaceContent": {}
+    }
+}

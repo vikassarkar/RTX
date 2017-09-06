@@ -1,0 +1,14 @@
+{    
+    "lang": "en",
+    "ajax":"fixture",
+    "threshold": {
+        "dashboardCardLimit": 5,
+        "warning": "ITS_WARNING"
+    },
+    "annotationsBasePaths": {
+        "appBasePath": "",
+        "pageBasePath": "",
+        "widgetBasePath": "",
+        "componentBasePath": ""
+    }
+}

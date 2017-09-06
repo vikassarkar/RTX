@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{8EB38803-2B51-48F9-A120-E827AEA17E60}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build-process\utils\fs-generator\generator.js" />
+    <Content Include="build-process\utils\fs-generator\widget\app\index.html" />
+    <Content Include="build-process\utils\webpack\webpack.bootstrap.utils.js" />
+    <Content Include="build-process\utils\webpack\webpack.config.utils.js" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\app\index.html" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\index.html" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\libs\bundle.js" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\styles.css" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\vendors\bootstrap.bundle.js" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\vendors\react.bundle.js" />
+    <Content Include="webpack.prompt.js" />
+    <Content Include="web.config" />
+    <Content Include="webpack.config.js" />
+    <Content Include="client\assets\bell\images\logo.png" />
+    <Content Include="client\assets\virgin\images\logo.png" />
+    <Content Include="client\src\app\index.html" />
+    <Content Include="client\src\widgets\usage-header-widget\app\index.html" />
+    <Content Include="client\src\widgets\usage-hello-widget\app\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".babelrc" />
+    <Content Include=".bootstraprc" />
+    <Content Include="build-process\configs\generator.config.json" />
+    <Content Include="build-process\configs\webpack.html.config.json" />
+    <Content Include="build-process\configs\webpack.path.config.json" />
+    <Content Include="build-process\configs\webpack.theme.config.json" />
+    <Content Include="build-process\utils\fs-generator\widget\styles\ComponentName.scss" />
+    <Content Include="build-process\utils\fs-generator\widget\styles\main.scss" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\typings\react\README.md" />
+    <Content Include="Scripts\typings\react\tsconfig.json" />
+    <Content Include="Scripts\typings\react\tslint.json" />
+    <Content Include="client\assets\loadtheme.scss" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\libs\bundle.js.map" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\styles.css.map" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\vendors\bootstrap.bundle.js.map" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\build\vendors\react.bundle.js.map" />
+    <Content Include="client\src\widgets\usage-side-menu-widget\styles\_sidemenu.scss" />
+    <Content Include="client\translator\bell\app.json" />
+    <Content Include="client\translator\virgin\app.json" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <Content Include="client\assets\bell\styles\_global.scss" />
+    <Content Include="client\assets\bell\styles\_main.scss" />
+    <Content Include="client\assets\bell\styles\_variables.scss" />
+    <Content Include="client\assets\common\bootstrap\fonts\OpenSans-Light.ttf" />
+    <Content Include="client\assets\common\bootstrap\_customizations.scss" />
+    <Content Include="client\assets\common\bootstrap\_endpoint.scss" />
+    <Content Include="client\assets\common\bootstrap\_pre-customizations.scss" />
+    <Content Include="client\assets\common\_mixins.scss" />
+    <Content Include="client\assets\virgin\styles\_global.scss" />
+    <Content Include="client\assets\virgin\styles\_main.scss" />
+    <Content Include="client\assets\virgin\styles\_variables.scss" />
+    <Content Include="client\configs\api.config.json" />
+    <Content Include="client\configs\config.json" />
+    <Content Include="client\configs\fixture.config.json" />
+    <Content Include="client\configs\themes.config.json" />
+    <Content Include="client\src\app\README.md" />
+    <Content Include="client\src\pages\README.md" />
+    <Content Include="client\src\sandbox\README.md" />
+    <Content Include="client\src\widgets\README.md" />
+    <Content Include="client\src\widgets\usage-header-widget\styles\_header.scss" />
+    <Content Include="client\src\widgets\usage-hello-widget\styles\_hello.scss" />
+    <Content Include="client\translator\bell\usage-header.json" />
+    <Content Include="client\translator\bell\usage-hello.json" />
+    <Content Include="client\translator\virgin\usage-header.json" />
+    <Content Include="client\translator\virgin\usage-hello.json" />
+    <Content Include="client\mock-api\configApi.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.tsx" />
+    <TypeScriptCompile Include="build-process\utils\fs-generator\test-widget\WidgetName.spec.tsx" />
+    <TypeScriptCompile Include="build-process\utils\fs-generator\widget\app\index.tsx" />
+    <TypeScriptCompile Include="build-process\utils\fs-generator\widget\components\ComponentName.tsx" />
+    <TypeScriptCompile Include="build-process\utils\fs-generator\widget\models\ComponentName.ts" />
+    <TypeScriptCompile Include="build-process\utils\fs-generator\widget\WidgetName.tsx" />
+    <TypeScriptCompile Include="client\scripts\rtx\annotations\ReactTsBooster.ts" />
+    <TypeScriptCompile Include="client\scripts\rtx\RTX.ts" />
+    <TypeScriptCompile Include="client\scripts\rtx\utils\Localization.utils.ts" />
+    <TypeScriptCompile Include="client\scripts\rtx\utils\Template.utils.ts" />
+    <TypeScriptCompile Include="client\scripts\rtx\utils\Themes.utils.ts" />
+    <TypeScriptCompile Include="client\src\app\index.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-side-menu-widget\app\index.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-side-menu-widget\components\SideMenu.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-side-menu-widget\models\ISideMenu.ts" />
+    <TypeScriptCompile Include="client\src\widgets\usage-side-menu-widget\UsageSideMenuWidget.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-header-widget\app\index.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-header-widget\components\Header.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-header-widget\models\IHeader.ts" />
+    <TypeScriptCompile Include="client\src\widgets\usage-header-widget\UsageHeaderWidget.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-hello-widget\app\index.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-hello-widget\components\Hello.tsx" />
+    <TypeScriptCompile Include="client\src\widgets\usage-hello-widget\models\IHello.ts" />
+    <TypeScriptCompile Include="client\src\widgets\usage-hello-widget\UsageHelloWidget.tsx" />
+    <TypeScriptCompile Include="client\tests\widgets\usage-hello-widget\Hello.spec.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\jest\jest.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-dom\react-dom.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-redux\react-redux-2.1.2.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router-redux\react-router-redux-2.x.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router-redux\react-router-redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\history.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router-0.13.3.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router-1.0.0.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\cssProperties.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\index.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\tsx.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\typings.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="client-output\app-build\" />
+    <Folder Include="client-output\tests-coverage\" />
+    <Folder Include="client\tests\pages\" />
+    <Folder Include="client\tests\sandbox\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MUE</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65038</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65038/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

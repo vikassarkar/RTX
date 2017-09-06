@@ -1,0 +1,40 @@
+/**
+*Created by Vikas Sarkar
+*Date : 2017-07-07
+*/
+// .brand_image{
+//     height: 10rem;
+//     width: 10rem;
+//     background-image: url('../../../assets/images/react.png');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+
+//allthe branding images needs tobe added in _main.scss of bell or vergin and that class needs to be extended here in other css
+//we are not using individual css for component pattern, beacause of theme, a theme is set individually for project by loadtheme.scss;
+//no need to import below loadtheme.scss file , and no need to look into errors on common scss var/extendables/mixins etc they will be compiled on project level
+//if style id required for individual then we would need to change webpack settings to ignore scss, then importing features as per requirement.
+//@import "../../../../assets/loadtheme.scss";
+
+.usage-header-widget {
+    background-color:$baseColor;
+    .header_row {
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        .header_image {
+            display: flex;
+            background: transparent;
+            flex-direction: row;
+            justify-content: flex-start;
+            img {
+                height: 6rem;
+            }
+        }
+        .header_btns {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+}

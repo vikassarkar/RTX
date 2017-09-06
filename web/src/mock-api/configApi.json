@@ -1,0 +1,8 @@
+{
+    "theme": "virgin",
+    "lang": "en",
+    "threshold":{
+        "dashboardCardLimit":5,
+        "warning":"ITS_WARNING"
+    }
+}
