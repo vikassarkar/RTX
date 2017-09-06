@@ -14,12 +14,12 @@ import {ISwitchProps, ISwitchStates} from '../models/ISwitch'
     moduleName: "app-hello", 
     translator: "app-hello"
 })
-export class Switch extends React.Component<IHelloProps, IHelloStates> {
+export class Switch extends React.Component<ISwitchProps, ISwitchStates> {
     permit: any;
     configs: any;
     translator: any;
 
-    render(): React.ReactElement<IHelloProps> {
+    render(): React.ReactElement<ISwitchProps> {
        const template = (
           <button>New button</button>
         );

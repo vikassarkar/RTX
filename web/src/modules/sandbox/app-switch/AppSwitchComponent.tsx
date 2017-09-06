@@ -10,23 +10,23 @@ import { Router, Route } from 'react-router';
 import { Widget } from '../../../scripts/rtx/RTX';
 import { Switch } from './components/Switch';
 
-export interface IHelloProps {
+export interface ISwitchProps {
     compiler: string;
     framework: string;
 }
 
-export interface IHelloStates {}
+export interface ISwitchStates {}
 
 @Widget({
     moduleName: "app-switch", 
     translator: "app-switch"
 })
-export class AppSwitchComponent extends React.Component<IHelloProps, IHelloStates> {
+export class AppSwitchComponent extends React.Component<ISwitchProps, ISwitchStates> {
     permit: any;
     configs: any;
     translator: any;
 
-    render(): React.ReactElement<IHelloProps> {
+    render(): React.ReactElement<ISwitchProps> {
         const template = (
             <div>
                 <Switch framework={this.props.compiler} compiler={this.props.framework} />
