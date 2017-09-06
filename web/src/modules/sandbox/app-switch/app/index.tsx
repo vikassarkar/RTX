@@ -8,7 +8,7 @@ import * as ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router';
 
 import { Widget } from '../../../../scripts/rtx/RTX';
-import { AppHelloWidget } from '../AppHelloWidget';
+import { AppSwitchWidget } from '../AppSwitchWidget';
 
 @Widget({
     moduleName: "app-hello", 
@@ -26,7 +26,7 @@ class App extends React.Component<{}, {}> {
     render(): React.ReactElement<{}> {
         const template = (
             <div>
-                <AppHelloWidget framework="React" compiler="TypeScript" />
+                <AppSwitchWidget framework="React" compiler="TypeScript" />
             </div>
         );
         return template;
