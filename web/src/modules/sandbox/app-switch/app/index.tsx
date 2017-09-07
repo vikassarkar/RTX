@@ -25,7 +25,21 @@ class App extends React.Component<{}, {}> {
     }
     render(): React.ReactElement<{}> {
         const template = (
-                <AppSwitchComponent framework="React" compiler="TypeScript" />
+            <div className="container">
+                <div className="row text-center">
+                    <h2 className="col-xs-12 text-center">
+                        It's a React "AppSwitchComponent".
+                    </h2>
+                    <div className="col-xs-12 text-center">
+                        while you use ".bind" in eventchange it is necessary to pass "this" as first argument.
+                    </div>
+                    <div className="col-xs-12 text-center">
+                        customTheme is name of class if you want to add different theme.
+                    </div>
+                    <AppSwitchComponent />
+                </div>
+            </div>
+                
         );
         return template;
     }

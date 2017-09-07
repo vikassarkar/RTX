@@ -68,10 +68,10 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                         <div className="col-xs-4">
                             <div className="header_btns">
                                 <div className="btns_seperator">
-                                    <AppButtonComponent theme="dark" text="Back" eventClick={this.handleBtnsEvent.bind(this, "b", "Go back")}/>
+                                    <AppButtonComponent theme="dark" text="Back" customTheme="" eventClick={this.handleBtnsEvent.bind(this, "b", "Go back")}/>
                                 </div>
                                 <div>
-                                    <AppButtonComponent theme="dark" text="Logout" eventClick={this.handleBtnsEvent.bind(this, "l", "Log out")}/>
+                                    <AppButtonComponent theme="dark" text="Logout" customTheme="" eventClick={this.handleBtnsEvent.bind(this, "l", "Log out")}/>
                                 </div>
                             </div>
                         </div>

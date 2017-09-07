@@ -21,7 +21,12 @@ export class Switch extends React.Component<ISwitchProps, ISwitchStates> {
 
     render(): React.ReactElement<ISwitchProps> {
        const template = (
-          <button>New button</button>
+           <p className="btn-switch">
+               <input type="radio" id="yes" name="switch" className="btn-switch__radio btn-switch__radio_yes" />
+               <input type="radio" checked id="no" name="switch" className="btn-switch__radio btn-switch__radio_no" />
+               <label htmlFor ="yes" className="btn-switch__label btn-switch__label_yes"><span className="btn-switch__txt">Yes</span></label>
+               <label htmlFor ="no" className="btn-switch__label btn-switch__label_no"><span className="btn-switch__txt">No</span></label>
+           </p>
         );
        return template;
     }

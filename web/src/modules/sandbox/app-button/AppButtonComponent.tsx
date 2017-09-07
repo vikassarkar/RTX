@@ -14,6 +14,7 @@ export interface IButtonProps {
     text: string;
     theme: string; //dark / light /transparent
     eventClick: any;
+    customTheme: string;
 }
 
 export interface IButtonStates {}
@@ -30,7 +31,7 @@ export class AppButtonComponent extends React.Component<IButtonProps, IButtonSta
     render(): React.ReactElement<IButtonProps> {
         const template = (
             <div>
-                <Button text={this.props.text} theme={this.props.theme} eventClick={this.props.eventClick}/>
+                <Button text={this.props.text} theme={this.props.theme} customTheme="" eventClick={this.props.eventClick}/>
             </div>
         );
         return template;

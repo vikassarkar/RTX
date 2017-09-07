@@ -25,7 +25,7 @@ export class Button extends React.Component<IButtonProps, IButtonStates> {
 
     render(): React.ReactElement<IButtonProps> {
         const template = (
-            <button className={"app_btn " + this.props.theme} onClick={this.props.eventClick}>{this.props.text}</button>
+            <button className={"app_btn " + this.props.theme + this.props.customTheme} onClick={this.props.eventClick}>{this.props.text}</button>
         );
        return template;
     }

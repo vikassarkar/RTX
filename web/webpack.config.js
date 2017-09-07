@@ -144,7 +144,7 @@ module.exports = function (env) {
 
         //build for sandbox components webserver
     else if (buildPkg == "dashboardSandbox") {
-        if (buildMod.split("-")[0] != "app") {
+        if (buildMod.split("-")[0] == "app") {
             console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~Sandbox webserver Build ~~~~~~~~~~~~~~~~~~~~");
             buildConfig = webpackConfig("sandbox", buildEnv, buildMod, true, false, buildTheme)
         } else {

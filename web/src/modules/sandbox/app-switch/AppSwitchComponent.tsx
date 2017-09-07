@@ -11,8 +11,6 @@ import { Widget } from '../../../scripts/rtx/RTX';
 import { Switch } from './components/Switch';
 
 export interface ISwitchProps {
-    compiler: string;
-    framework: string;
 }
 
 export interface ISwitchStates {}
@@ -29,7 +27,7 @@ export class AppSwitchComponent extends React.Component<ISwitchProps, ISwitchSta
     render(): React.ReactElement<ISwitchProps> {
         const template = (
             <div>
-                <Switch framework={this.props.compiler} compiler={this.props.framework} />
+                <Switch />
             </div>
         );
         return template;
