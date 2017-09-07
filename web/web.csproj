@@ -29,8 +29,6 @@
     <Folder Include="Scripts\typings\react-router\" />
     <Folder Include="Scripts\typings\react\test\" />
     <Folder Include="Scripts\typings\redux\" />
-    <Folder Include="src-output\app-build\" />
-    <Folder Include="src-output\tests-coverage\" />
     <Folder Include="src\tests\pages\" />
     <Folder Include="src\tests\sandbox\" />
   </ItemGroup>
