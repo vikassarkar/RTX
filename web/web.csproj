@@ -44,6 +44,8 @@
     <Content Include="build-process\utils\fs-generator\widget\WidgetName.js" />
     <Content Include="build-process\utils\webpack\webpack.bootstrap.utils.js" />
     <Content Include="build-process\utils\webpack\webpack.config.utils.js" />
+    <Content Include="MUE.csproj" />
+    <Content Include="MUE.csproj.user" />
     <Content Include="package.json" />
     <Content Include="src\assets\bell\images\bell.png" />
     <Content Include="src\assets\bell\images\logo-rtx.png" />
@@ -79,11 +81,6 @@
     <Content Include="src\modules\widgets\app-side-menu\app\index.html" />
     <Content Include="src\modules\widgets\app-side-menu\styles\_sidemenu.scss" />
     <Content Include="src\modules\widgets\README.md" />
-    <Content Include="src\scripts\rtx\annotations\ReactTsBooster.js" />
-    <Content Include="src\scripts\rtx\RTX.js" />
-    <Content Include="src\scripts\rtx\utils\Localization.utils.js" />
-    <Content Include="src\scripts\rtx\utils\Template.utils.js" />
-    <Content Include="src\scripts\rtx\utils\Themes.utils.js" />
     <Content Include="src\translator\bell\app-header.json" />
     <Content Include="src\translator\bell\app-hello.json" />
     <Content Include="src\translator\bell\app.json" />
@@ -100,11 +97,6 @@
     <Content Include="build-process\utils\fs-generator\widget\components\ComponentName.js.map" />
     <Content Include="build-process\utils\fs-generator\widget\models\ComponentName.js.map" />
     <Content Include="build-process\utils\fs-generator\widget\WidgetName.js.map" />
-    <Content Include="src\scripts\rtx\annotations\ReactTsBooster.js.map" />
-    <Content Include="src\scripts\rtx\RTX.js.map" />
-    <Content Include="src\scripts\rtx\utils\Localization.utils.js.map" />
-    <Content Include="src\scripts\rtx\utils\Template.utils.js.map" />
-    <Content Include="src\scripts\rtx\utils\Themes.utils.js.map" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.tsx" />
@@ -113,6 +105,22 @@
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\components\ComponentName.tsx" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\models\ComponentName.ts" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\WidgetName.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\jest\jest.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-dom\react-dom.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-redux\react-redux-2.1.2.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router-redux\react-router-redux-2.x.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router-redux\react-router-redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\history.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router-0.13.3.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router-1.0.0.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\cssProperties.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\index.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\tsx.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\typings.d.ts" />
     <TypeScriptCompile Include="src\modules\app\index.tsx" />
     <TypeScriptCompile Include="src\modules\sandbox\app-switch\AppSwitchComponent.tsx" />
     <TypeScriptCompile Include="src\modules\sandbox\app-switch\app\index.tsx" />
@@ -136,6 +144,11 @@
     <TypeScriptCompile Include="src\scripts\rtx\utils\Template.utils.ts" />
     <TypeScriptCompile Include="src\scripts\rtx\utils\Themes.utils.ts" />
     <TypeScriptCompile Include="src\tests\widgets\app-hello\Hello.spec.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\typings\react\README.md" />
+    <Content Include="Scripts\typings\react\tsconfig.json" />
+    <Content Include="Scripts\typings\react\tslint.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
