@@ -7,10 +7,10 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as TestUtils from 'react-dom/test-utils';
 
-import { Hello } from '../../../modules/widgets/app-hello/components/Hello';
-import { IHelloProps } from '../../../modules/widgets/app-hello/models/IHello';
+import { Hello } from '../../../ui-toolkit/widgets/app-hello/components/Hello';
+import { IHelloProps } from '../../../ui-toolkit/widgets/app-hello/models/IHello';
 
-jest.dontMock('../../../modules/widgets/app-hello/components/Hello.tsx');
+jest.dontMock('../../../ui-toolkit/widgets/app-hello/components/Hello.tsx');
 
 describe('Hello', () => {
 

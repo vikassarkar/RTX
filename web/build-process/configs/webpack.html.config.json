@@ -1,4 +1,4 @@
 {
-    "inFile": "./src/modules/app/index.html",
+    "inFile": "./src/ui-toolkit/app/index.html",
     "outFile": "index.html"
 }

@@ -1,9 +1,9 @@
 {
     "widget":{
-        "entryBaseDir":"../../../src/modules/widgets/",
+        "entryBaseDir":"../../../src/ui-toolkit/widgets/",
         "entryPath":"/app/",
         "entryFile":"index.tsx",
-        "outBaseDir":"../../../src/modules/widgets/",
+        "outBaseDir":"../../../src/ui-toolkit/widgets/",
         "outPath":"/build",
         "outFile":"libs/bundle.js",
         "vendorPath":"vendors/",
@@ -16,10 +16,10 @@
         "virginStylePath":"../../../src/assets/virgin/"
     },
     "page":{
-        "entryBaseDir":"../../../src/modules/pages/",
+        "entryBaseDir":"../../../src/ui-toolkit/pages/",
         "entryPath":"/app/",
         "entryFile":"index.tsx",
-        "outBaseDir":"../../../src/modules/pages/",
+        "outBaseDir":"../../../src/ui-toolkit/pages/",
         "outPath":"/build",
         "outFile":"libs/bundle.js",
         "vendorPath":"vendors/",
@@ -32,10 +32,10 @@
         "virginStylePath":"../../../src/assets/virgin/"
     },
     "sandbox":{
-        "entryBaseDir":"../../../src/modules/sandbox/",
+        "entryBaseDir":"../../../src/ui-toolkit/sandbox/",
         "entryPath":"/app/",
         "entryFile":"index.tsx",
-        "outBaseDir":"../../../src/modules/sandbox/",
+        "outBaseDir":"../../../src/ui-toolkit/sandbox/",
         "outPath":"/build",
         "outFile":"libs/bundle.js",
         "vendorPath":"vendors/",
@@ -48,7 +48,7 @@
         "virginStylePath":"../../../src/assets/virgin/"
     },
     "app":{
-        "entryBaseDir":"../../../src/modules/app/",
+        "entryBaseDir":"../../../src/ui-toolkit/app/",
         "entryPath":"",
         "entryFile":"index.tsx",
         "outBaseDir":"../../../src-output/app-build",

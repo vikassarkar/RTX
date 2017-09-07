@@ -5,8 +5,8 @@
 "use strict";
 var React = require('react');
 var TestUtils = require('react-dom/test-utils');
-var Hello_1 = require('../../../modules/widgets/app-hello/components/Hello');
-jest.dontMock('../../../modules/widgets/app-hello/components/Hello.tsx');
+var Hello_1 = require('../../../ui-toolkit/widgets/app-hello/components/Hello');
+jest.dontMock('../../../ui-toolkit/widgets/app-hello/components/Hello.tsx');
 describe('Hello', function () {
     it('props should contain TypeScript and React', function () {
         var expectedFramework = 'React';

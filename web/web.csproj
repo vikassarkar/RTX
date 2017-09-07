@@ -22,6 +22,13 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Scripts\typings\jest\" />
+    <Folder Include="Scripts\typings\react-dom\" />
+    <Folder Include="Scripts\typings\react-redux\" />
+    <Folder Include="Scripts\typings\react-router-redux\" />
+    <Folder Include="Scripts\typings\react-router\" />
+    <Folder Include="Scripts\typings\react\test\" />
+    <Folder Include="Scripts\typings\redux\" />
     <Folder Include="src-output\app-build\" />
     <Folder Include="src-output\tests-coverage\" />
     <Folder Include="src\tests\pages\" />
@@ -68,20 +75,20 @@
     <Content Include="src\configs\fixture.config.json" />
     <Content Include="src\configs\themes.config.json" />
     <Content Include="src\mock-api\configApi.json" />
-    <Content Include="src\modules\app\index.html" />
-    <Content Include="src\modules\app\README.md" />
-    <Content Include="src\modules\pages\README.md" />
-    <Content Include="src\modules\sandbox\app-button\app\index.html" />
-    <Content Include="src\modules\sandbox\app-switch\app\index.html" />
-    <Content Include="src\modules\sandbox\app-switch\styles\_switch.scss" />
-    <Content Include="src\modules\sandbox\README.md" />
-    <Content Include="src\modules\widgets\app-header\app\index.html" />
-    <Content Include="src\modules\widgets\app-header\styles\_header.scss" />
-    <Content Include="src\modules\widgets\app-hello\app\index.html" />
-    <Content Include="src\modules\widgets\app-hello\styles\_hello.scss" />
-    <Content Include="src\modules\widgets\app-side-menu\app\index.html" />
-    <Content Include="src\modules\widgets\app-side-menu\styles\_sidemenu.scss" />
-    <Content Include="src\modules\widgets\README.md" />
+    <Content Include="src\ui-toolkit\app\index.html" />
+    <Content Include="src\ui-toolkit\app\README.md" />
+    <Content Include="src\ui-toolkit\pages\README.md" />
+    <Content Include="src\ui-toolkit\sandbox\app-button\app\index.html" />
+    <Content Include="src\ui-toolkit\sandbox\app-switch\app\index.html" />
+    <Content Include="src\ui-toolkit\sandbox\app-switch\styles\_switch.scss" />
+    <Content Include="src\ui-toolkit\sandbox\README.md" />
+    <Content Include="src\ui-toolkit\widgets\app-header\app\index.html" />
+    <Content Include="src\ui-toolkit\widgets\app-header\styles\_header.scss" />
+    <Content Include="src\ui-toolkit\widgets\app-hello\app\index.html" />
+    <Content Include="src\ui-toolkit\widgets\app-hello\styles\_hello.scss" />
+    <Content Include="src\ui-toolkit\widgets\app-side-menu\app\index.html" />
+    <Content Include="src\ui-toolkit\widgets\app-side-menu\styles\_sidemenu.scss" />
+    <Content Include="src\ui-toolkit\widgets\README.md" />
     <Content Include="src\translator\bell\app-header.json" />
     <Content Include="src\translator\bell\app-hello.json" />
     <Content Include="src\translator\bell\app.json" />
@@ -106,43 +113,27 @@
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\components\ComponentName.tsx" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\models\ComponentName.ts" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\WidgetName.tsx" />
-    <TypeScriptCompile Include="Scripts\typings\jest\jest.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-dom\react-dom.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-redux\react-redux-2.1.2.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-redux\react-redux.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-router-redux\react-router-redux-2.x.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-router-redux\react-router-redux.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-router\history.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-router\react-router-0.13.3.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-router\react-router-1.0.0.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react-router\react-router.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react\index.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react\test\cssProperties.tsx" />
-    <TypeScriptCompile Include="Scripts\typings\react\test\index.ts" />
-    <TypeScriptCompile Include="Scripts\typings\react\test\tsx.tsx" />
-    <TypeScriptCompile Include="Scripts\typings\redux\redux.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\typings.d.ts" />
-    <TypeScriptCompile Include="src\modules\app\index.tsx" />
-    <TypeScriptCompile Include="src\modules\sandbox\app-button\AppButtonComponent.tsx" />
-    <TypeScriptCompile Include="src\modules\sandbox\app-button\app\index.tsx" />
-    <TypeScriptCompile Include="src\modules\sandbox\app-button\components\Button.tsx" />
-    <TypeScriptCompile Include="src\modules\sandbox\app-button\models\IButton.ts" />
-    <TypeScriptCompile Include="src\modules\sandbox\app-switch\AppSwitchComponent.tsx" />
-    <TypeScriptCompile Include="src\modules\sandbox\app-switch\app\index.tsx" />
-    <TypeScriptCompile Include="src\modules\sandbox\app-switch\components\Switch.tsx" />
-    <TypeScriptCompile Include="src\modules\sandbox\app-switch\models\ISwitch.ts" />
-    <TypeScriptCompile Include="src\modules\widgets\app-header\AppHeaderWidget.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-header\app\index.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-header\components\Header.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-header\models\IHeader.ts" />
-    <TypeScriptCompile Include="src\modules\widgets\app-hello\AppHelloWidget.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-hello\app\index.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-hello\components\Hello.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-hello\models\IHello.ts" />
-    <TypeScriptCompile Include="src\modules\widgets\app-side-menu\AppSideMenuWidget.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-side-menu\app\index.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-side-menu\components\SideMenu.tsx" />
-    <TypeScriptCompile Include="src\modules\widgets\app-side-menu\models\ISideMenu.ts" />
+    <TypeScriptCompile Include="src\ui-toolkit\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\AppButtonComponent.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\components\Button.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\models\IButton.ts" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-switch\AppSwitchComponent.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-switch\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-switch\components\Switch.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-switch\models\ISwitch.ts" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-header\AppHeaderWidget.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-header\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-header\components\Header.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-header\models\IHeader.ts" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-hello\AppHelloWidget.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-hello\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-hello\components\Hello.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-hello\models\IHello.ts" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-side-menu\AppSideMenuWidget.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-side-menu\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-side-menu\components\SideMenu.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\widgets\app-side-menu\models\ISideMenu.ts" />
     <TypeScriptCompile Include="src\scripts\rtx\annotations\ReactTsBooster.ts" />
     <TypeScriptCompile Include="src\scripts\rtx\RTX.ts" />
     <TypeScriptCompile Include="src\scripts\rtx\utils\Localization.utils.ts" />
@@ -151,15 +142,10 @@
     <TypeScriptCompile Include="src\tests\widgets\app-hello\Hello.spec.tsx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\typings\react\README.md" />
-    <Content Include="Scripts\typings\react\tsconfig.json" />
-    <Content Include="Scripts\typings\react\tslint.json" />
+    <Content Include="src\ui-toolkit\sandbox\app-button\styles\_button.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\modules\sandbox\app-button\styles\_button.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="src\assets\common\_modules.scss" />
+    <Content Include="src\assets\common\_ui-toolkit.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
