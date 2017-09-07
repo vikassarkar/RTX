@@ -73,6 +73,8 @@
     <Content Include="src\configs\fixture.config.json" />
     <Content Include="src\configs\themes.config.json" />
     <Content Include="src\mock-api\configApi.json" />
+    <Content Include="src\ui-modules\agent-search\index.html" />
+    <Content Include="src\ui-modules\unblock-manager\index.html" />
     <Content Include="src\ui-toolkit\app\index.html" />
     <Content Include="src\ui-toolkit\app\README.md" />
     <Content Include="src\ui-toolkit\pages\README.md" />
@@ -95,6 +97,8 @@
     <Content Include="src\translator\virgin\app.json" />
     <Content Include="webpack.config.js" />
     <Content Include="webpack.prompt.js" />
+    <Content Include="src\ui-modules\unblock-manager\README.md" />
+    <Content Include="src\ui-modules\agent-search\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js.map" />
@@ -111,6 +115,8 @@
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\components\ComponentName.tsx" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\models\ComponentName.ts" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\WidgetName.tsx" />
+    <TypeScriptCompile Include="src\ui-modules\agent-search\index.tsx" />
+    <TypeScriptCompile Include="src\ui-modules\unblock-manager\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\app\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\AppButtonComponent.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\app\index.tsx" />
