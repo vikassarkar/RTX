@@ -7,7 +7,7 @@
 //we are not using individual css for component pattern, beacause of theme, a theme is set individually for project by loadtheme.scss;
 //no need to import below loadtheme.scss file , and no need to look into errors on common scss var/extendables/mixins etc they will be compiled on project level
 //if style id required for individual then we would need to change webpack settings to ignore scss, then importing features as per requirement.
-//@import "../../../../assets/loadtheme.scss";
+//@import "../../../../../build-process/configs/webpack.theme.config.scss";
 
 .header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

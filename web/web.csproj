@@ -59,12 +59,12 @@
     <Content Include="src\assets\bell\styles\_main.scss" />
     <Content Include="src\assets\bell\styles\_variables.scss" />
     <Content Include="src\assets\common\bootstrap\fonts\OpenSans-Light.ttf" />
+    <Content Include="build-process\configs\webpack.theme.config.scss" />
     <None Include="src\assets\common\_commonVariable.scss" />
     <Content Include="src\assets\common\bootstrap\_customizations.scss" />
     <Content Include="src\assets\common\bootstrap\_endpoint.scss" />
     <Content Include="src\assets\common\bootstrap\_pre-customizations.scss" />
     <Content Include="src\assets\common\_mixins.scss" />
-    <Content Include="src\assets\loadtheme.scss" />
     <Content Include="src\assets\virgin\images\logo-rtx.png" />
     <Content Include="src\assets\virgin\images\virgin.png" />
     <Content Include="src\assets\common\_global.scss" />

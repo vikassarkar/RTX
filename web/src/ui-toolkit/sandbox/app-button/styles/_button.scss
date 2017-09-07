@@ -5,9 +5,9 @@
 
 //allthe branding images needs tobe added in _main.scss of bell or vergin and that class needs to be extended here in other css
 //we are not using individual css for component pattern, beacause of theme, a theme is set individually for project by loadtheme.scss;
-//no need to import below loadtheme.scss file , and no need to look into errors on common scss var/extendables/mixins etc they will be compiled on project level
+//no need to import below webpack.theme.config.scss file , and no need to look into errors on common scss var/extendables/mixins etc they will be compiled on project level
 //if style id required for individual then we would need to change webpack settings to ignore scss, then importing features as per requirement.
-//@import "../../../../assets/loadtheme.scss";
+//@import "../../../../../build-process/configs/webpack.theme.config.scss";
 
 .app_btn {
     &.dark {

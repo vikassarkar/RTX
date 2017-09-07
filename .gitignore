@@ -39,6 +39,8 @@ web/src/modules/**/**/**/*.map.js
 src/assets/loadtheme.scss
 web/src/assets/loadtheme.scss
 
+build-process/configs/webpack.theme.config.scss
+
 build-process/configs/webpack.theme.config.json
 web/build-process/configs/webpack.theme.config.json
 

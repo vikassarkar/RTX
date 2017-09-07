@@ -53,6 +53,6 @@ export const localConfigs = {
  * @param name 
  */
 export const requireGlobalStyle = function (annotationType: String, moduleName: String) {
-    require("../../../assets/loadtheme.scss");
+    require("../../../../build-process/configs/webpack.theme.config.scss");
 };
 

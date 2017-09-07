@@ -1,4 +1,4 @@
 {
   "theme": "bell",
-  "themeFile": "./src/assets/loadtheme.scss"
+  "themeFile": "./build-process/configs/webpack.theme.config.scss"
 }
