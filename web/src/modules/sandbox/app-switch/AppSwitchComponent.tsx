@@ -19,7 +19,7 @@ export interface ISwitchStates {}
 
 @Widget({
     moduleName: "app-switch", 
-    translator: "app-switch"
+    translator: "app"
 })
 export class AppSwitchComponent extends React.Component<ISwitchProps, ISwitchStates> {
     permit: any;

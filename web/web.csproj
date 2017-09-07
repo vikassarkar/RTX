@@ -49,10 +49,10 @@
     <Content Include="package.json" />
     <Content Include="src\assets\bell\images\bell.png" />
     <Content Include="src\assets\bell\images\logo-rtx.png" />
-    <Content Include="src\assets\bell\styles\_global.scss" />
     <Content Include="src\assets\bell\styles\_main.scss" />
     <Content Include="src\assets\bell\styles\_variables.scss" />
     <Content Include="src\assets\common\bootstrap\fonts\OpenSans-Light.ttf" />
+    <None Include="src\assets\common\_commonVariable.scss" />
     <Content Include="src\assets\common\bootstrap\_customizations.scss" />
     <Content Include="src\assets\common\bootstrap\_endpoint.scss" />
     <Content Include="src\assets\common\bootstrap\_pre-customizations.scss" />
@@ -60,7 +60,7 @@
     <Content Include="src\assets\loadtheme.scss" />
     <Content Include="src\assets\virgin\images\logo-rtx.png" />
     <Content Include="src\assets\virgin\images\virgin.png" />
-    <Content Include="src\assets\virgin\styles\_global.scss" />
+    <Content Include="src\assets\common\_global.scss" />
     <Content Include="src\assets\virgin\styles\_main.scss" />
     <Content Include="src\assets\virgin\styles\_variables.scss" />
     <Content Include="src\configs\api.config.json" />
@@ -71,6 +71,7 @@
     <Content Include="src\modules\app\index.html" />
     <Content Include="src\modules\app\README.md" />
     <Content Include="src\modules\pages\README.md" />
+    <Content Include="src\modules\sandbox\app-button\app\index.html" />
     <Content Include="src\modules\sandbox\app-switch\app\index.html" />
     <Content Include="src\modules\sandbox\app-switch\styles\_hello.scss" />
     <Content Include="src\modules\sandbox\README.md" />
@@ -122,6 +123,10 @@
     <TypeScriptCompile Include="Scripts\typings\redux\redux.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\typings.d.ts" />
     <TypeScriptCompile Include="src\modules\app\index.tsx" />
+    <TypeScriptCompile Include="src\modules\sandbox\app-button\AppButtonComponent.tsx" />
+    <TypeScriptCompile Include="src\modules\sandbox\app-button\app\index.tsx" />
+    <TypeScriptCompile Include="src\modules\sandbox\app-button\components\Button.tsx" />
+    <TypeScriptCompile Include="src\modules\sandbox\app-button\models\IButton.ts" />
     <TypeScriptCompile Include="src\modules\sandbox\app-switch\AppSwitchComponent.tsx" />
     <TypeScriptCompile Include="src\modules\sandbox\app-switch\app\index.tsx" />
     <TypeScriptCompile Include="src\modules\sandbox\app-switch\components\Switch.tsx" />
@@ -149,6 +154,12 @@
     <Content Include="Scripts\typings\react\README.md" />
     <Content Include="Scripts\typings\react\tsconfig.json" />
     <Content Include="Scripts\typings\react\tslint.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\modules\sandbox\app-button\styles\_button.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\common\_modules.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

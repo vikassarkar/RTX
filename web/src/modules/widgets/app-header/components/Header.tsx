@@ -9,6 +9,7 @@ import * as ReactDOM from 'react-dom';
 
 import { Widget } from '../../../../scripts/rtx/RTX';
 import { IHeaderProps, IHeaderState } from '../models/IHeader';
+import { AppButtonComponent } from '../../../sandbox/app-button/AppButtonComponent';
 
 @Widget({
     moduleName: "app-header",
@@ -25,15 +26,30 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
             logo_image: ""
         }
     }
-    componentWillMount() {
-         console.log(this.permit)
-         console.log(this.translator)
-         console.log(this.configs)
-         console.log(this.configs.themeConfigs.images + this.configs.currentTheme+'.png')
-         this.setState({
-             logo_image: require('../../../../' + this.configs.themeConfigs.images + this.configs.currentTheme + '.png')
-         })
+
+    handleBtnsEvent(name: string, data: any) {
+        switch (name) {
+            case "l":
+                alert(data);
+                break;
+            case "b":
+                alert(data);
+                break;
+            default:
+                alert("No buttons matched");
+        }
     }
+
+    componentWillMount() {
+        console.log(this.permit)
+        console.log(this.translator)
+        console.log(this.configs)
+        console.log(this.configs.themeConfigs.images + this.configs.currentTheme + '.png')
+        this.setState({
+            logo_image: require('../../../../' + this.configs.themeConfigs.images + this.configs.currentTheme + '.png')
+        })
+    }
+
     render(): React.ReactElement<IHeaderProps> {
         const template = (
             <div className="cointainer-fluid usage-header-widget">
@@ -44,9 +60,19 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                                 <img src={this.state.logo_image} />
                             </div>
                         </div>
-                        <div className="col-xs-8">
+                        <div className="col-xs-4">
+                            <div className="header_title">
+                                <h2>Header Title</h2>
+                            </div>
+                        </div>
+                        <div className="col-xs-4">
                             <div className="header_btns">
-                                <button>Back</button>
+                                <div className="btns_seperator">
+                                    <AppButtonComponent theme="dark" text="Back" eventClick={this.handleBtnsEvent.bind(this, "b", "Go back")}/>
+                                </div>
+                                <div>
+                                    <AppButtonComponent theme="dark" text="Logout" eventClick={this.handleBtnsEvent.bind(this, "l", "Log out")}/>
+                                </div>
                             </div>
                         </div>
                     </div>

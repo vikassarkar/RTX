@@ -125,7 +125,7 @@
     },
     "component": {
         "name": "",
-        "prefix": "",
+        "prefix": "app",
         "suffix": "",
         "type": "",
         "tempFolderPath": "",
@@ -136,7 +136,7 @@
     },
     "page": {
         "name": "",
-        "prefix": "",
+        "prefix": "app",
         "suffix": "",
         "type": "",
         "tempFolderPath": "",

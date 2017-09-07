@@ -15,7 +15,7 @@
         "bellStylePath":"../../../src/assets/bell/",
         "virginStylePath":"../../../src/assets/virgin/"
     },
-    "pages":{
+    "page":{
         "entryBaseDir":"../../../src/modules/pages/",
         "entryPath":"/app/",
         "entryFile":"index.tsx",

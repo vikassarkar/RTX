@@ -12,7 +12,7 @@ import {ISwitchProps, ISwitchStates} from '../models/ISwitch'
 
 @Widget({
     moduleName: "app-hello", 
-    translator: "app-hello"
+    translator: "app"
 })
 export class Switch extends React.Component<ISwitchProps, ISwitchStates> {
     permit: any;

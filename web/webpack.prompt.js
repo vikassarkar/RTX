@@ -38,7 +38,7 @@ var promptUserWithType = function () {
     prompt.start();
     console.log("\x1b[33m%s\x1b[0m", "Please enter below details as-");
     console.log("\x1b[33m%s\x1b[0m", "PackageType : give package type you want to build - page/widget/sandbox ");
-    console.log("\x1b[33m%s\x1b[0m", "Name : give exact package type name eg. for widget- usage-header-widget");
+    console.log("\x1b[33m%s\x1b[0m", "Name : give exact package type name eg. for widget- app-header");
     console.log("\x1b[33m%s\x1b[0m", "Envirnoment : -d/-p");
 
     prompt.get(['PackageType', 'Name', 'Envirnoment'], function (err, result) {
@@ -54,7 +54,7 @@ var promptUserWithType = function () {
 var promptUser = function () {
     prompt.start();
     console.log("\x1b[33m%s\x1b[0m", "Please enter below details as-");
-    console.log("\x1b[33m%s\x1b[0m", "Name : give exact package type name eg. for widget- usage-header-widget");
+    console.log("\x1b[33m%s\x1b[0m", "Name : give exact package type name eg. for widget- app-header");
     console.log("\x1b[33m%s\x1b[0m", "Envirnoment : -d/-p");
 
     prompt.get(['Name', 'Envirnoment'], function (err, result) {
@@ -80,7 +80,7 @@ var callWebpack = function (pkgType, env, name) {
 
     //build for components in sandbox
     if (buildPkg == "page") {
-        if (buildMod.split("-")[0] == "usage") {//usage-name-page
+        if (buildMod.split("-")[0] == "app") {
             console.log("\x1b[33m%s\x1b[0m", "~~~~~~Page Build ~~~~~~");
             buildConfig = webpackConfig(buildPkg, buildEnv, buildMod, false, false)
         } else {
@@ -91,7 +91,7 @@ var callWebpack = function (pkgType, env, name) {
 
         //build for Page webserver
     else if (buildPkg == "dashboardPage") {
-        if (buildMod.split("-")[0] == "usage") {//usage-name-page
+        if (buildMod.split("-")[0] == "app") {
             console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~~Page webserver Build ~~~~~~~~~~~~~~~~~~~~~");
             buildConfig = webpackConfig("page", buildEnv, buildMod, true, true)
         } else {
@@ -102,7 +102,7 @@ var callWebpack = function (pkgType, env, name) {
 
         //build for widget
     else if (buildPkg == "widget") {
-        if (buildMod && buildMod.split("-")[0] == "usage") { //usage-name-widget
+        if (buildMod && buildMod.split("-")[0] == "app") { 
             console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~~~~~~Widigts Build ~~~~~~~~~~~~~~~~~~~");
             buildConfig = webpackConfig(buildPkg, buildEnv, buildMod, false, false)
         } else {
@@ -113,7 +113,7 @@ var callWebpack = function (pkgType, env, name) {
 
         //build for widget webserver
     else if (buildPkg == "dashboardWidget") {
-        if (buildMod && buildMod.split("-")[0] == "usage") { //usage-name-widget
+        if (buildMod && buildMod.split("-")[0] == "app") { 
             console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~Widget webserver Build ~~~~~~~~~~~~~~~~~~~~");
             buildConfig = webpackConfig("widget", buildEnv, buildMod, true, true)
         } else {
@@ -124,7 +124,7 @@ var callWebpack = function (pkgType, env, name) {
 
         //build for components in sandbox
     else if (buildPkg == "sandbox") {
-        if (buildMod.split("-")[0] != "usage") {
+        if (buildMod.split("-")[0] != "app") {
             console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~~~~~~~Sandbox Build ~~~~~~~~~~~~~~~~~~~~");
             buildConfig = webpackConfig(buildPkg, buildEnv, buildMod, false, false)
         } else {
@@ -135,7 +135,7 @@ var callWebpack = function (pkgType, env, name) {
 
         //build for sandbox components webserver
     else if (buildPkg == "dashboardSandbox") {
-        if (buildMod.split("-")[0] != "usage") {
+        if (buildMod.split("-")[0] != "app") {
             console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~Sandbox webserver Build ~~~~~~~~~~~~~~~~~~~~");
             buildConfig = webpackConfig("sandbox", buildEnv, buildMod, true, true)
         } else {
