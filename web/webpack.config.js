@@ -11,7 +11,7 @@ const fse = require('fs-extra');
 //define all configs
 var themeConfig;
 var webpackConfig = require("./build-process/utils/webpack/webpack.config.utils");
-var themeConfigPath = "./build-process/configs/webpack-theme-config.json";
+var themeConfigPath = "./build-process/configs/webpack.theme.config.json";
 var pathConfigPath = "./build-process/configs/webpack.path.config.json";
 var generatorConfigPath = "./build-process/configs/generator.config.json";
 
@@ -68,7 +68,7 @@ module.exports = function (env) {
         editThemeConfig(buildTheme);
 
     //get theme config once updated
-    themeConfig = require("./build-process/configs/webpack-theme-config.json");
+    themeConfig = require("./build-process/configs/webpack.theme.config.json");
     editThemeFile();
   
     //build for components in sandbox

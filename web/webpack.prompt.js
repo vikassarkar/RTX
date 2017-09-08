@@ -7,7 +7,7 @@ const WebpackDevServer = require('webpack-dev-server');
 var prompt = require('prompt');
 
 //define all configs
-var themeConfig = require("./build-process/configs/webpack-theme-config.json");
+var themeConfig = require("./build-process/configs/webpack.theme.config.json");
 
 var editThemeFile = function () {
 

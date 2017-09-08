@@ -10,7 +10,7 @@ const path = require('path');
 //define all configs
 const htmlConfig = require('../../../build-process/configs/webpack.html.config.json');
 const buildPathConfig = require('../../../build-process/configs/webpack.path.config.json');
-const currentTheme = require('../../../build-process/configs/webpack-theme-config.json');
+const currentTheme = require('../../../build-process/configs/webpack.theme.config.json');
 const bootstrapEntryPoints = require('./webpack.bootstrap.utils');
 const Dashboard = require('webpack-dashboard');
 const DashboardPlugin = require('webpack-dashboard/plugin');
