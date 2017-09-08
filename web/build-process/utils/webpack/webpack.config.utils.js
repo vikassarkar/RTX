@@ -26,10 +26,11 @@ const isProd = process.env.Node_ENV === "production";
 const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;
 const nodeModulesDir = path.resolve(__dirname, 'node_modules');
 
-const webpackConfig = function (packageType, envirnoment, packageName, isDashboard, isTRE, buildTheme) {
+const webpackConfig = function (srcFolder, packageType, envirnoment, packageName, isDashboard, isTRE, buildTheme) {
     //initilize variables
     var configurations = {};
-    var buildData = buildPathConfig[packageType];
+    console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~getting configuration  " + srcFolder + "/" + packageType + "~~~~~~~~~~~");
+    var buildData = buildPathConfig[srcFolder][packageType];
     var theme = buildTheme? buildTheme : currentTheme.theme;
     var entryDir = path.resolve(__dirname, buildData['entryBaseDir'] + packageName + buildData['entryPath'] + buildData['entryFile']);
     var outDir = path.resolve(__dirname, buildData['outBaseDir'] + packageName + buildData['outPath'] + "/" + theme);
@@ -46,10 +47,10 @@ const webpackConfig = function (packageType, envirnoment, packageName, isDashboa
                 allChunks: true
             }),
             new HtmlPlugin({
-                title: htmlConfig.title,
+                title: htmlConfig[srcFolder][packageType]['title'],
                 minify: false,
-                template: htmlConfig.inFile,
-                filename: htmlConfig.outFile
+                template: htmlConfig[srcFolder][packageType]['inFile'],
+                filename: htmlConfig[srcFolder][packageType]['outFile']
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'react',

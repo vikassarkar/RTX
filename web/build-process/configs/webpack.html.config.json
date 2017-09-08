@@ -1,4 +1,18 @@
 {
-    "inFile": "./src/ui-toolkit/app/index.html",
-    "outFile": "index.html"
+  "ui-toolkit": {
+    "app": {
+      "inFile": "./src/ui-toolkit/app/index.html",
+      "outFile": "index.html"
+    }
+  },
+  "ui-modules": {
+    "agent-search": {
+      "inFile": "./src/ui-modules/agent-search/index.html",
+      "outFile": "index.html"
+    },
+    "unblock-manager":{
+      "inFile": "./src/ui-modules/agent-search/index.html",
+      "outFile": "index.html"
+    }
+  }
 }
