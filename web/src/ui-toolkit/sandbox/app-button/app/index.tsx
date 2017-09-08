@@ -20,6 +20,10 @@ class App extends React.Component<{}, {}> {
     configs: any;
     translator: any;
 
+    constructor(props: any) {
+        super(props);
+    }
+
     handleIndexBack(data: any) {
         alert("hi " + data);
     }

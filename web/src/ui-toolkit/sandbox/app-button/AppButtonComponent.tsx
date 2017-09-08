@@ -28,6 +28,10 @@ export class AppButtonComponent extends React.Component<IButtonProps, IButtonSta
     configs: any;
     translator: any;
 
+    constructor(props: any) {
+        super(props);
+    }
+
     render(): React.ReactElement<IButtonProps> {
         const template = (
             <div>

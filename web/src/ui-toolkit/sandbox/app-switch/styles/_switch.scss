@@ -1,0 +1,222 @@
+/**
+*Created by Vikas Sarkar
+*Date : 2017-07-07
+*/
+
+//allthe branding images needs tobe added in _main.scss of bell or vergin and that class needs to be extended here in other css
+//we are not using individual css for component pattern, beacause of theme, a theme is set individually for project by loadtheme.scss;
+//no need to import below loadtheme.scss file , and no need to look into errors on common scss var/extendables/mixins etc they will be compiled on project level
+//if style id required for individual then we would need to change webpack settings to ignore scss, then importing features as per requirement.
+//@import "../../../../../build-process/configs/webpack.theme.config.scss";
+
+.switch_container {
+    width: 100%;
+    text-align: center;
+}
+// Variables
+$toggle-enabled-bg: #86d993;
+$toggle-enabled-color: #FFFFFF;
+$toggle-enabled-tab-bg: #FFFFFF;
+
+$toggle-disabled-bg: #de474e;
+$toggle-disabled-color: #FFFFFF;
+$toggle-disabled-tab-bg: #FFFFFF;
+
+.simple_switch {
+    .tgl {
+        font-size: 2rem;
+        cursor: pointer;
+        // add default box-sizing for this scope
+        &, &:after, &:before,
+        & *, & *:after, & *:before,
+        & + .tgl-btn {
+            box-sizing: border-box;
+
+            &::selection {
+                background: none;
+            }
+        }
+
+        span {
+            position: relative;
+            min-width: 8.2rem;
+            display: block;
+            overflow: hidden;
+            font-weight: normal;
+            text-align: center;
+            border-radius: 4rem;
+            padding: 0.4rem 2rem;
+            transition: color 0.3s ease, padding 0.3s ease-in-out, background 0.3s ease-in-out;
+
+            &:before {
+                position: relative;
+                display: block;
+                line-height: 2.6rem;
+                padding: 0 0.4rem;
+                font-size: 2rem;
+            }
+
+            &:after {
+                position: absolute;
+                display: block;
+                content: '';
+                border-radius: 4rem;
+                width: 2.6rem;
+                height: 2.6rem;
+                margin-left: -2.90rem;
+                top: 0.4rem;
+                background: #FFFFFF;
+                transition: left 0.3s cubic-bezier( 0.175, 0.885, 0.320, 0.97 ), background 0.3s ease-in-out;
+            }
+        }
+
+        input[type="checkbox"] {
+            display: none !important;
+            // Off
+            &:not(:checked) {
+                + span {
+                    background: $toggle-disabled-bg;
+                    color: $toggle-disabled-color;
+                    padding-left: 1.6em;
+                    padding-right: 0.4em;
+
+                    &:before {
+                        content: attr(data-off);
+                        color: $toggle-disabled-color;
+                    }
+
+                    &:after {
+                        background: $toggle-disabled-tab-bg;
+                        left: 1.6em;
+                    }
+                }
+            }
+            // On
+            &:checked {
+                + span {
+                    background: $toggle-enabled-bg;
+                    color: $toggle-enabled-color;
+                    padding-left: 0.4em;
+                    padding-right: 1.6em;
+
+                    &:before {
+                        content: attr(data-on);
+                    }
+
+                    &:after {
+                        background: $toggle-enabled-tab-bg;
+                        left: 100%;
+                    }
+                }
+            }
+            // Disabled
+            &:disabled, &:disabled + span, &:read-only, &:read-only + span {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .dark {
+        input[type="checkbox"] {
+            &:not(:checked) {
+                + span {
+                    background: $dustGrayColor;
+                    color: $whiteColor;
+
+                    &:before {
+                        color: $whiteColor;
+                    }
+
+                    &:after {
+                        background: $whiteColor;
+                    }
+                }
+            }
+
+            &:checked {
+                + span {
+                    background: $baseColor;
+                    color: $whiteColor;
+
+                    &:before {
+                        color: $whiteColor;
+                    }
+
+                    &:after {
+                        background: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .light {
+        input[type="checkbox"] {
+            &:not(:checked) {
+                + span {
+                    background: $dustGrayColor;
+                    color: $whiteColor;
+
+                    &:before {
+                        color: $whiteColor;
+                    }
+
+                    &:after {
+                        background: $whiteColor;
+                    }
+                }
+            }
+
+            &:checked {
+                + span {
+                    background: $baselightColor;
+                    color: $whiteColor;
+
+                    &:before {
+                        color: $dustGrayColor;
+                    }
+
+                    &:after {
+                        background: $dustGrayColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .transparent {
+        input[type="checkbox"] {
+            &:not(:checked) {
+                + span {
+                    background: $transparent;
+                    color: $baseColor;
+                    border: 0.1rem solid $baseColor;
+
+                    &:before {
+                        color: $baseColor;
+                    }
+
+                    &:after {
+                        background: $baseColor;
+                    }
+                }
+            }
+
+            &:checked {
+                + span {
+                    background: $transparent;
+                    color: $baseColor;
+                    border: 0.1rem solid $baseColor;
+
+                    &:before {
+                        color: $baseColor;
+                    }
+
+                    &:after {
+                        background: $baseColor;
+                    }
+                }
+            }
+        }
+    }
+}

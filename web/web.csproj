@@ -69,9 +69,7 @@
     <Content Include="src\ui-toolkit\app\README.md" />
     <Content Include="src\ui-toolkit\pages\README.md" />
     <Content Include="src\ui-toolkit\sandbox\app-button\app\index.html" />
-    <Content Include="src\ui-toolkit\sandbox\app-checkbox-switch\app\index.html" />
-    <Content Include="src\ui-toolkit\sandbox\app-radio-switch\app\index.html" />
-    <Content Include="src\ui-toolkit\sandbox\app-radio-switch\styles\_switch.scss" />
+    <Content Include="src\ui-toolkit\sandbox\app-switch\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\README.md" />
     <Content Include="src\ui-toolkit\widgets\app-header\app\index.html" />
     <Content Include="src\ui-toolkit\widgets\app-header\styles\_header.scss" />
@@ -90,7 +88,7 @@
     <Content Include="webpack.prompt.js" />
     <Content Include="src\ui-modules\unblock-manager\README.md" />
     <Content Include="src\ui-modules\agent-search\README.md" />
-    <Content Include="src\ui-toolkit\sandbox\app-checkbox-switch\styles\_switch.scss" />
+    <Content Include="src\ui-toolkit\sandbox\app-switch\styles\_switch.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js.map" />
@@ -126,14 +124,10 @@
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\app\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\components\Button.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\models\IButton.ts" />
-    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-checkbox-switch\AppSwitchComponent.tsx" />
-    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-checkbox-switch\app\index.tsx" />
-    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-checkbox-switch\components\Switch.tsx" />
-    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-checkbox-switch\models\ISwitch.ts" />
-    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-switch\AppSwitchComponent.tsx" />
-    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-switch\app\index.tsx" />
-    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-switch\components\Switch.tsx" />
-    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-switch\models\ISwitch.ts" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-switch\AppSwitchComponent.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-switch\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-switch\components\Switch.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-switch\models\ISwitch.ts" />
     <TypeScriptCompile Include="src\ui-toolkit\widgets\app-header\AppHeaderWidget.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\widgets\app-header\app\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\widgets\app-header\components\Header.tsx" />

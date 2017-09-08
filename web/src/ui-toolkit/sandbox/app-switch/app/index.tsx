@@ -20,9 +20,19 @@ class App extends React.Component<{}, {}> {
     configs: any;
     translator: any;
 
+    constructor(props: any) {
+        super(props);
+        this.switchChanged = this.switchChanged.bind(this);
+    }
+
+    switchChanged(isChecked: boolean) {
+        alert("Switched on : "+isChecked);
+    }
+
     componentDidMount() {
         document.title = this.translator.TITLE;
     }
+
     render(): React.ReactElement<{}> {
         const template = (
             <div className="container">
@@ -34,10 +44,15 @@ class App extends React.Component<{}, {}> {
                         while you use ".bind" in eventchange it is necessary to pass "this" as first argument.
                     </div>
                     <div className="col-xs-12 text-center">
-                        customTheme is name of class if you want to add different theme.
+                        customTheme is name of class if you want to add different theme if not used assig it empty string.
                     </div>
                     <div className="col-xs-12 text-center">
-                        <AppSwitchComponent />
+                        <AppSwitchComponent theme="dark"
+                            customTheme=""
+                            onText="ON"
+                            offText="OFF"
+                            isChecked={true}
+                            eventChange={this.switchChanged}/>
                     </div>
                 </div>
             </div>
