@@ -13,15 +13,6 @@
     width: 100%;
     text-align: center;
 }
-// Variables
-$toggle-enabled-bg: #86d993;
-$toggle-enabled-color: #FFFFFF;
-$toggle-enabled-tab-bg: #FFFFFF;
-
-$toggle-disabled-bg: #de474e;
-$toggle-disabled-color: #FFFFFF;
-$toggle-disabled-tab-bg: #FFFFFF;
-
 .simple_switch {
     .tgl {
         font-size: 2rem;
@@ -53,7 +44,7 @@ $toggle-disabled-tab-bg: #FFFFFF;
                 display: block;
                 line-height: 2.6rem;
                 padding: 0 0.4rem;
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
 
             &:after {
@@ -65,7 +56,7 @@ $toggle-disabled-tab-bg: #FFFFFF;
                 height: 2.6rem;
                 margin-left: -2.90rem;
                 top: 0.4rem;
-                background: #FFFFFF;
+                background: $whiteColor;
                 transition: left 0.3s cubic-bezier( 0.175, 0.885, 0.320, 0.97 ), background 0.3s ease-in-out;
             }
         }
@@ -75,18 +66,18 @@ $toggle-disabled-tab-bg: #FFFFFF;
             // Off
             &:not(:checked) {
                 + span {
-                    background: $toggle-disabled-bg;
-                    color: $toggle-disabled-color;
+                    background: $dangerColor;
+                    color: $whiteColor;
                     padding-left: 1.6em;
                     padding-right: 0.4em;
 
                     &:before {
                         content: attr(data-off);
-                        color: $toggle-disabled-color;
+                        color: $whiteColor;
                     }
 
                     &:after {
-                        background: $toggle-disabled-tab-bg;
+                        background: $whiteColor;
                         left: 1.6em;
                     }
                 }
@@ -94,17 +85,18 @@ $toggle-disabled-tab-bg: #FFFFFF;
             // On
             &:checked {
                 + span {
-                    background: $toggle-enabled-bg;
-                    color: $toggle-enabled-color;
+                    background: $successColor;
+                    color: $whiteColor;
                     padding-left: 0.4em;
                     padding-right: 1.6em;
 
                     &:before {
                         content: attr(data-on);
+                        color:$whiteColor;
                     }
 
                     &:after {
-                        background: $toggle-enabled-tab-bg;
+                        background: $whiteColor;
                         left: 100%;
                     }
                 }
@@ -112,6 +104,7 @@ $toggle-disabled-tab-bg: #FFFFFF;
             // Disabled
             &:disabled, &:disabled + span, &:read-only, &:read-only + span {
                 cursor: not-allowed;
+                opacity:0.5;
             }
         }
     }
