@@ -8,8 +8,7 @@ import * as ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router';
 
 import { BaseApp, Translate } from '../../scripts/rtx/RTX';
-import { AppHelloWidget } from '../widgets/app-hello/AppHelloWidget';
-import { AppHeaderWidget } from '../widgets/app-header/AppHeaderWidget';
+import { AppHelloWidget } from '../../ui-toolkit/widgets/app-hello/AppHelloWidget';
 
 
 @BaseApp({
@@ -26,11 +25,8 @@ class Application extends React.Component<{}, {}> {
     }
     render(): React.ReactElement<{}> {
         const template = (
-            <div>
-                <AppHeaderWidget framework="React" compiler="TypeScript compiler" />
-                <div className="container theme-showcase" role="main">
-                    <AppHelloWidget framework="React" compiler="TypeScript" />
-                </div>
+            <div className="container theme-showcase" role="main">
+                <AppHelloWidget framework="React" compiler="TypeScript" />
             </div>
         );
         return template;

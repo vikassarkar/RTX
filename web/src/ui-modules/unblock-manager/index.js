@@ -17,8 +17,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var React = require('react');
 var ReactDOM = require('react-dom');
 var RTX_1 = require('../../scripts/rtx/RTX');
-var AppHelloWidget_1 = require('../widgets/app-hello/AppHelloWidget');
-var AppHeaderWidget_1 = require('../widgets/app-header/AppHeaderWidget');
+var AppHelloWidget_1 = require('../../ui-toolkit/widgets/app-hello/AppHelloWidget');
 var Application = (function (_super) {
     __extends(Application, _super);
     function Application() {
@@ -28,11 +27,8 @@ var Application = (function (_super) {
         document.title = this.translator.TITLE;
     };
     Application.prototype.render = function () {
-        var template = (<div>
-                <AppHeaderWidget_1.AppHeaderWidget framework="React" compiler="TypeScript compiler"/>
-                <div className="container theme-showcase" role="main">
-                    <AppHelloWidget_1.AppHelloWidget framework="React" compiler="TypeScript"/>
-                </div>
+        var template = (<div className="container theme-showcase" role="main">
+                <AppHelloWidget_1.AppHelloWidget framework="React" compiler="TypeScript"/>
             </div>);
         return template;
     };
