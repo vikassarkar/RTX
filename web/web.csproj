@@ -29,7 +29,7 @@
     <Content Include="build-process\configs\generator.config.json" />
     <Content Include="build-process\configs\webpack.html.config.json" />
     <Content Include="build-process\configs\webpack.path.config.json" />
-    <Content Include="build-process\configs\webpack.theme.config.json" />
+    <Content Include="build-process\configs\webpack-theme-config.json" />
     <Content Include="build-process\utils\fs-generator\generator.js" />
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js" />
     <Content Include="build-process\utils\fs-generator\test-widget\WidgetName.spec.js" />
@@ -50,7 +50,7 @@
     <Content Include="src\assets\bell\styles\_main.scss" />
     <Content Include="src\assets\bell\styles\_variables.scss" />
     <Content Include="src\assets\common\bootstrap\fonts\OpenSans-Light.ttf" />
-    <Content Include="build-process\configs\webpack.theme.config.scss" />
+    <Content Include="build-process\configs\webpack-theme-config.scss" />
     <Content Include="Scripts\typings\react\README.md" />
     <Content Include="Scripts\typings\react\tsconfig.json" />
     <Content Include="Scripts\typings\react\tslint.json" />

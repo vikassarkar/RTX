@@ -48,7 +48,7 @@
     <Content Include="build-process\configs\generator.config.json" />
     <Content Include="build-process\configs\webpack.html.config.json" />
     <Content Include="build-process\configs\webpack.path.config.json" />
-    <Content Include="build-process\configs\webpack.theme.config.json" />
+    <Content Include="build-process\configs\webpack-theme-config.json" />
     <Content Include="build-process\utils\fs-generator\widget\styles\ComponentName.scss" />
     <Content Include="build-process\utils\fs-generator\widget\styles\main.scss" />
     <Content Include="package-lock.json" />

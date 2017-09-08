@@ -4,7 +4,7 @@
  */
 
 //get all config jsons
-const webpackTheme:any = require("../../../../build-process/configs/webpack.theme.config.json");
+const webpackTheme:any = require("../../../../build-process/configs/webpack-theme-config.json");
 const configData: any = require("../../../configs/config.json");
 const themes: any = require("../../../configs/themes.config.json");
 
@@ -53,6 +53,6 @@ export const localConfigs = {
  * @param name 
  */
 export const requireGlobalStyle = function (annotationType: String, moduleName: String) {
-    require("../../../../build-process/configs/webpack.theme.config.scss");
+    require("../../../../build-process/configs/webpack-theme-config.scss");
 };
 
