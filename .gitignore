@@ -18,8 +18,11 @@ MUE/LICENCE
 node_modules
 MUE/node_modules
 
-src/build/
-web/src/build/
+build-process/configs/webpack.theme.config.scss
+/web/build-process/configs/webpack.theme.config.scss
+
+build-process/configs/webpack.theme.config.json
+/web/build-process/configs/webpack.theme.config.json
 
 src-output/tests-coverage/
 web/src-output/tests-coverage/
@@ -27,23 +30,24 @@ web/src-output/tests-coverage/
 src-output/app-build/
 web/src-output/app-build/
 
-src/modules/**/**/**/build/
-web/src/modules/**/**/**/build/
+src/ui-toolkit/**/**/**/build/
+web/src/ui-toolkit/**/**/**/build/
 
-src/modules/**/**/**/*.js
-web/src/modules/**/**/**/*.js
+src/ui-toolkit/**/**/**/*.js
+web/src/ui-toolkit/**/**/**/*.js
 
-src/modules/**/**/**/*.map.js
-web/src/modules/**/**/**/*.map.js
+src/ui-toolkit/**/**/**/*.map.js
+web/src/ui-toolkit/**/**/**/*.map.js
 
-src/assets/loadtheme.scss
-web/src/assets/loadtheme.scss
 
-build-process/configs/webpack.theme.config.scss
-web/build-process/configs/webpack.theme.config.scss
+src/ui-modules/**/**/**/build/
+web/src/ui-modules/**/**/**/build/
 
-build-process/configs/webpack.theme.config.json
-web/build-process/configs/webpack.theme.config.json
+src/ui-modules/**/**/**/*.js
+web/src/ui-modules/**/**/**/*.js
+
+src/ui-modules/**/**/**/*.map.js
+web/src/ui-modules/**/**/**/*.map.js
 
 obj/
 web/obj/
