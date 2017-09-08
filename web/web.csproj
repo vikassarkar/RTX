@@ -151,7 +151,6 @@
     <TypeScriptCompile Include="src\scripts\rtx\annotations\ReactTsBooster.ts" />
     <TypeScriptCompile Include="src\scripts\rtx\RTX.ts" />
     <TypeScriptCompile Include="src\scripts\rtx\utils\Localization.utils.ts" />
-    <TypeScriptCompile Include="src\scripts\rtx\utils\Template.utils.ts" />
     <TypeScriptCompile Include="src\scripts\rtx\utils\Themes.utils.ts" />
     <TypeScriptCompile Include="src\tests\widgets\app-hello\Hello.spec.tsx" />
   </ItemGroup>

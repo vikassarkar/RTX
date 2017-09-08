@@ -7,7 +7,6 @@
 //import all dependencies
 import { localConfigs, requireGlobalStyle } from "../utils/Themes.utils";
 import { requireContext, requireTranslator, translatorExt, requireTranslateMethod } from "../utils/Localization.utils";
-import { requireTemplate, templateExt } from "../utils/Template.utils";
 
 //load all required jsons
 const api: any = require("../../../configs/api.config.json");
