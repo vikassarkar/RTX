@@ -22,13 +22,6 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\typings\jest\" />
-    <Folder Include="Scripts\typings\react-dom\" />
-    <Folder Include="Scripts\typings\react-redux\" />
-    <Folder Include="Scripts\typings\react-router-redux\" />
-    <Folder Include="Scripts\typings\react-router\" />
-    <Folder Include="Scripts\typings\react\test\" />
-    <Folder Include="Scripts\typings\redux\" />
     <Folder Include="src\tests\pages\" />
     <Folder Include="src\tests\sandbox\" />
   </ItemGroup>
@@ -58,6 +51,9 @@
     <Content Include="src\assets\bell\styles\_variables.scss" />
     <Content Include="src\assets\common\bootstrap\fonts\OpenSans-Light.ttf" />
     <Content Include="build-process\configs\webpack.theme.config.scss" />
+    <Content Include="Scripts\typings\react\README.md" />
+    <Content Include="Scripts\typings\react\tsconfig.json" />
+    <Content Include="Scripts\typings\react\tslint.json" />
     <None Include="src\assets\common\_commonVariable.scss" />
     <Content Include="src\assets\common\bootstrap\_customizations.scss" />
     <Content Include="src\assets\common\bootstrap\_endpoint.scss" />
@@ -115,6 +111,22 @@
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\components\ComponentName.tsx" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\models\ComponentName.ts" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\WidgetName.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\jest\jest.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-dom\react-dom.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-redux\react-redux-2.1.2.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router-redux\react-router-redux-2.x.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router-redux\react-router-redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\history.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router-0.13.3.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router-1.0.0.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react-router\react-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\cssProperties.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\index.ts" />
+    <TypeScriptCompile Include="Scripts\typings\react\test\tsx.tsx" />
+    <TypeScriptCompile Include="Scripts\typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\typings.d.ts" />
     <TypeScriptCompile Include="src\ui-modules\agent-search\index.tsx" />
     <TypeScriptCompile Include="src\ui-modules\unblock-manager\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\app\index.tsx" />
