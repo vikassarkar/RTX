@@ -17,6 +17,7 @@ export interface ISwitchProps {
     offText: string;
     isChecked: boolean;
     eventChange: any;
+    name: string;
 }
 
 export interface ISwitchStates { }
@@ -35,8 +36,8 @@ export class AppSwitchComponent extends React.Component<ISwitchProps, ISwitchSta
         this.switchChanged = this.switchChanged.bind(this);
     }
 
-    switchChanged(isChecked: boolean) {
-        this.props.eventChange(isChecked);
+    switchChanged(isChecked: boolean, name: string) {
+        this.props.eventChange(isChecked, name);
     }
 
     render(): React.ReactElement<ISwitchProps> {
@@ -47,6 +48,7 @@ export class AppSwitchComponent extends React.Component<ISwitchProps, ISwitchSta
                     onText={this.props.onText}
                     offText={this.props.offText}
                     isChecked={this.props.isChecked}
+                    name={this.props.name}
                     eventChange={this.switchChanged}/>
             </div>
         );

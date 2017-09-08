@@ -25,8 +25,9 @@ class App extends React.Component<{}, {}> {
         this.switchChanged = this.switchChanged.bind(this);
     }
 
-    switchChanged(isChecked: boolean) {
+    switchChanged(isChecked: boolean, name: string) {
         alert("Switched on : "+isChecked);
+        alert("you can set this value in state named as per name attr as : " + name);
     }
 
     componentDidMount() {
@@ -52,6 +53,17 @@ class App extends React.Component<{}, {}> {
                             onText="ON"
                             offText="OFF"
                             isChecked={true}
+                            name="firstSwitch"
+                            eventChange={this.switchChanged}/>
+                    </div>
+
+                    <div className="col-xs-12 text-center">
+                        <AppSwitchComponent theme="dark"
+                            customTheme=""
+                            onText="ON"
+                            offText="OFF"
+                            isChecked={false}
+                            name="secondSwitch"
                             eventChange={this.switchChanged}/>
                     </div>
                 </div>
