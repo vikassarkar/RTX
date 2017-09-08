@@ -35,12 +35,8 @@
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js" />
     <Content Include="build-process\utils\fs-generator\test-widget\WidgetName.spec.js" />
     <Content Include="build-process\utils\fs-generator\widget\app\index.html" />
-    <Content Include="build-process\utils\fs-generator\widget\app\index.js" />
-    <Content Include="build-process\utils\fs-generator\widget\components\ComponentName.js" />
-    <Content Include="build-process\utils\fs-generator\widget\models\ComponentName.js" />
     <Content Include="build-process\utils\fs-generator\widget\styles\ComponentName.scss" />
     <Content Include="build-process\utils\fs-generator\widget\styles\main.scss" />
-    <Content Include="build-process\utils\fs-generator\widget\WidgetName.js" />
     <Content Include="build-process\utils\webpack\webpack.bootstrap.utils.js" />
     <Content Include="build-process\utils\webpack\webpack.config.utils.js" />
     <Content Include="package.json" />
@@ -97,10 +93,6 @@
   <ItemGroup>
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js.map" />
     <Content Include="build-process\utils\fs-generator\test-widget\WidgetName.spec.js.map" />
-    <Content Include="build-process\utils\fs-generator\widget\app\index.js.map" />
-    <Content Include="build-process\utils\fs-generator\widget\components\ComponentName.js.map" />
-    <Content Include="build-process\utils\fs-generator\widget\models\ComponentName.js.map" />
-    <Content Include="build-process\utils\fs-generator\widget\WidgetName.js.map" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.tsx" />
