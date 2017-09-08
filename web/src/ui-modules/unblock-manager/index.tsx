@@ -26,6 +26,7 @@ class Application extends React.Component<{}, {}> {
     render(): React.ReactElement<{}> {
         const template = (
             <div className="container theme-showcase" role="main">
+                <h1>Unblock Manager</h1>
                 <AppHelloWidget framework="React" compiler="TypeScript" />
             </div>
         );

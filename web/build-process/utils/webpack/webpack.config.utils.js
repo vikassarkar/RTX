@@ -159,7 +159,7 @@ const webpackConfig = function (srcFolder, packageType, envirnoment, packageName
             inline: true,
             quiet: true,   // important
             open: true,
-            openPage: htmlConfig.outFile
+            openPage: htmlConfig["config-" + srcFolder][packageType]["outFile"]
         },
         plugins: configurations.plugins
     }

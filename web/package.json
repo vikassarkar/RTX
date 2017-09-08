@@ -119,6 +119,18 @@
     "tre-app-build-virgin": "webpack -p --progress --env=config_virgin_ui-toolkit_app",
     "tre-app-devserver-bell": "webpack-dashboard -- webpack-dev-server -w --hot --inline --history-api-fallback --env=config_bell_ui-toolkit_app",
     "tre-app-devserver-virgin": "webpack-dashboard -- webpack-dev-server -w --hot --inline --history-api-fallback --env=config_virgin_ui-toolkit_app",
+    "tre-um-build-test-bell": "jest && webpack -p --progress --env=config_bell_ui-modules_unblock-manager",
+    "tre-um-build-test-virgin": "jest && webpack -p --progress --env=config_virgin_ui-modules_unblock-manager",
+    "tre-um-build-bell": "webpack -p --progress --env=config_bell_ui-modules_unblock-manager",
+    "tre-um-build-virgin": "webpack -p --progress --env=config_virgin_ui-modules_unblock-manager",
+    "tre-um-devserver-bell": "webpack-dashboard -- webpack-dev-server -w --hot --inline --history-api-fallback --env=config_bell_ui-modules_unblock-manager",
+    "tre-um-devserver-virgin": "webpack-dashboard -- webpack-dev-server -w --hot --inline --history-api-fallback --env=config_virgin_ui-modules_unblock-manager",
+    "tre-as-build-test-bell": "jest && webpack -p --progress --env=config_bell_ui-modules_agent-search",
+    "tre-as-build-test-virgin": "jest && webpack -p --progress --env=config_virgin_ui-modules_agent-search",
+    "tre-as-build-bell": "webpack -p --progress --env=config_bell_ui-modules_agent-search",
+    "tre-as-build-virgin": "webpack -p --progress --env=config_virgin_ui-modules_agent-search",
+    "tre-as-devserver-bell": "webpack-dashboard -- webpack-dev-server -w --hot --inline --history-api-fallback --env=config_bell_ui-modules_agent-search",
+    "tre-as-devserver-virgin": "webpack-dashboard -- webpack-dev-server -w --hot --inline --history-api-fallback --env=config_virgin_ui-modules_agent-search",
     "start": "npm run tre-app-build-bell"
   },
   "version": "1.0.0"
