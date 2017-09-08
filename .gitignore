@@ -18,11 +18,11 @@ MUE/LICENCE
 node_modules
 MUE/node_modules
 
-build-process/configs/webpack.theme.config.scss
-web/build-process/configs/webpack.theme.config.scss
+build-process/configs/*webpack.theme.config.scss
+web/build-process/configs/*webpack.theme.config.scss
 
-build-process/configs/webpack.theme.config.json
-web/build-process/configs/webpack.theme.config.json
+build-process/configs/*webpack.theme.config.json
+web/build-process/configs/*webpack.theme.config.json
 
 src-output/tests-coverage/
 web/src-output/tests-coverage/
