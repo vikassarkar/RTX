@@ -1,11 +1,35 @@
 {
-  "ui-toolkit": {
+  "config-ui-toolkit": {
     "app": {
+      "inFile": "./src/ui-toolkit/app/index.html",
+      "outFile": "index.html"
+    },
+    "widget": {
+      "inFile": "./src/ui-toolkit/app/index.html",
+      "outFile": "index.html"
+    },
+    "dashboardWidget": {
+      "inFile": "./src/ui-toolkit/app/index.html",
+      "outFile": "index.html"
+    },
+    "page": {
+      "inFile": "./src/ui-toolkit/app/index.html",
+      "outFile": "index.html"
+    },
+    "dashboardPage": {
+      "inFile": "./src/ui-toolkit/app/index.html",
+      "outFile": "index.html"
+    },
+    "sandbox": {
+      "inFile": "./src/ui-toolkit/app/index.html",
+      "outFile": "index.html"
+    },
+    "dashboardSandbox": {
       "inFile": "./src/ui-toolkit/app/index.html",
       "outFile": "index.html"
     }
   },
-  "ui-modules": {
+  "config-ui-modules": {
     "agent-search": {
       "inFile": "./src/ui-modules/agent-search/index.html",
       "outFile": "index.html"

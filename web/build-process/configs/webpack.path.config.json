@@ -1,6 +1,73 @@
 {
-  "ui-toolkit": {
+  "default-theme": "bell",
+  "default-prefix": "app",
+  "default-app": "app",
+  "default-folder": "ui-toolkit",
+  "defaults-ui-toolkit": {
+    "app": {
+      "prefix": ""
+    },
     "widget": {
+      "prefix": "app"
+    },
+    "dashboardWidget": {
+      "prefix": "app"
+    },
+    "page": {
+      "prefix": "app"
+    },
+    "dashboardPage": {
+      "prefix": "app"
+    },
+    "sandbox": {
+      "prefix": "app"
+    },
+    "dashboardSandbox": {
+      "prefix": "app"
+    }
+  },
+  "defaults-ui-modules": {
+    "agent-search": {
+      "prefix": ""
+    },
+    "unblock-manager": {
+      "prefix": ""
+    }
+  },
+  "config-ui-toolkit": {
+    "app": {
+      "entryBaseDir": "../../../src/ui-toolkit/app/",
+      "entryPath": "",
+      "entryFile": "index.tsx",
+      "outBaseDir": "../../../src-output/app-build/app",
+      "outPath": "",
+      "outFile": "libs/bundle.js",
+      "vendorPath": "vendors/",
+      "vendorFile": "vendor.bundle.js",
+      "ReactFile": "react.bundle.js",
+      "bootstrapFile": "bootstrap.bundle.js",
+      "stylePath": "styles/",
+      "styleFile": "styles.css",
+      "bellStylePath": "../../../src/assets/bell/",
+      "virginStylePath": "../../../src/assets/virgin/"
+    },
+    "widget": {
+      "entryBaseDir": "../../../src/ui-toolkit/widgets/",
+      "entryPath": "/app/",
+      "entryFile": "index.tsx",
+      "outBaseDir": "../../../src/ui-toolkit/widgets/",
+      "outPath": "/build",
+      "outFile": "libs/bundle.js",
+      "vendorPath": "vendors/",
+      "vendorFile": "vendor.bundle.js",
+      "ReactFile": "react.bundle.js",
+      "bootstrapFile": "bootstrap.bundle.js",
+      "stylePath": "styles/",
+      "styleFile": "styles.css",
+      "bellStylePath": "../../../src/assets/bell/",
+      "virginStylePath": "../../../src/assets/virgin/"
+    },
+    "dashboardWidget": {
       "entryBaseDir": "../../../src/ui-toolkit/widgets/",
       "entryPath": "/app/",
       "entryFile": "index.tsx",
@@ -32,6 +99,22 @@
       "bellStylePath": "../../../src/assets/bell/",
       "virginStylePath": "../../../src/assets/virgin/"
     },
+    "dashboardPage": {      
+      "entryBaseDir": "../../../src/ui-toolkit/pages/",
+      "entryPath": "/app/",
+      "entryFile": "index.tsx",
+      "outBaseDir": "../../../src/ui-toolkit/pages/",
+      "outPath": "/build",
+      "outFile": "libs/bundle.js",
+      "vendorPath": "vendors/",
+      "vendorFile": "vendor.bundle.js",
+      "ReactFile": "react.bundle.js",
+      "bootstrapFile": "bootstrap.bundle.js",
+      "stylePath": "styles/",
+      "styleFile": "styles.css",
+      "bellStylePath": "../../../src/assets/bell/",
+      "virginStylePath": "../../../src/assets/virgin/"
+    },
     "sandbox": {
       "entryBaseDir": "../../../src/ui-toolkit/sandbox/",
       "entryPath": "/app/",
@@ -48,12 +131,12 @@
       "bellStylePath": "../../../src/assets/bell/",
       "virginStylePath": "../../../src/assets/virgin/"
     },
-    "app": {
-      "entryBaseDir": "../../../src/ui-toolkit/app/",
-      "entryPath": "",
+    "dashboardSandbox": {      
+      "entryBaseDir": "../../../src/ui-toolkit/sandbox/",
+      "entryPath": "/app/",
       "entryFile": "index.tsx",
-      "outBaseDir": "../../../src-output/app-build/app",
-      "outPath": "",
+      "outBaseDir": "../../../src/ui-toolkit/sandbox/",
+      "outPath": "/build",
       "outFile": "libs/bundle.js",
       "vendorPath": "vendors/",
       "vendorFile": "vendor.bundle.js",
@@ -65,7 +148,7 @@
       "virginStylePath": "../../../src/assets/virgin/"
     }
   },
-  "ui-modules": {
+  "config-ui-modules": {
     "agent-search": {
       "entryBaseDir": "../../../src/ui-modules/agent-search/",
       "entryPath": "",
@@ -83,7 +166,7 @@
       "virginStylePath": "../../../src/assets/virgin/"
     },
     "unblock-manager": {
-       "entryBaseDir": "../../../src/ui-modules/unblock-manager/",
+      "entryBaseDir": "../../../src/ui-modules/unblock-manager/",
       "entryPath": "",
       "entryFile": "index.tsx",
       "outBaseDir": "../../../src-output/app-build/unblock-manager",

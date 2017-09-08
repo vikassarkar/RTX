@@ -8,6 +8,7 @@ var prompt = require('prompt');
 
 //define all configs
 var themeConfig = require("./build-process/configs/webpack.theme.config.json");
+var webpackPathConfig = require("./build-process/configs/webpack.path.config.json");
 
 var editThemeFile = function () {
 
@@ -39,7 +40,7 @@ var promptUserWithType = function () {
     console.log("\x1b[33m%s\x1b[0m", "Please enter below details as-");
     console.log("\x1b[33m%s\x1b[0m", "PackageType : give package type you want to build - page/widget/sandbox ");
     console.log("\x1b[33m%s\x1b[0m", "Name : give exact package type name eg. for widget- app-header");
-    console.log("\x1b[33m%s\x1b[0m", "Envirnoment : -d/-p");
+    console.log("\x1b[33m%s\x1b[0m", "Envirnoment (developement/production): d/p");
 
     prompt.get(['PackageType', 'Name', 'Envirnoment'], function (err, result) {
         if (err) { return onErr(err); }
@@ -55,7 +56,7 @@ var promptUser = function () {
     prompt.start();
     console.log("\x1b[33m%s\x1b[0m", "Please enter below details as-");
     console.log("\x1b[33m%s\x1b[0m", "Name : give exact package type name eg. for widget- app-header");
-    console.log("\x1b[33m%s\x1b[0m", "Envirnoment : -d/-p");
+    console.log("\x1b[33m%s\x1b[0m", "Envirnoment (developement/production) : d/p");
 
     prompt.get(['Name', 'Envirnoment'], function (err, result) {
         if (err) { return onErr(err); }
@@ -71,76 +72,34 @@ var callWebpack = function (pkgType, env, name) {
     console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~webpack started with prompt~~~~~~~~~~~~~~~~~~~~~");
     var webpackConfig = require("./build-process/utils/webpack/webpack.config.utils");
     //define params
+    var buildConfig = {};
+    var srcFolder = webpackPathConfig["default-folder"];
+    var buildFolder = webpackPathConfig["default-app"];
+    var buildTheme = webpackPathConfig["default-theme"];
     var buildPkg = pkgType || null;
     var buildEnv = env || null;
     var buildMod = name || null;
-    var buildConfig = {};
     var isDevServer = buildPkg == 'dashboardApp' || buildPkg == 'dashboardPage' || buildPkg == 'dashboardWidget' || buildPkg == 'dashboardSandbox' ? true : false;
     editThemeFile();
 
-    //build for components in sandbox
-    if (buildPkg == "page") {
-        if (buildMod.split("-")[0] == "app") {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~Page Build ~~~~~~");
-            buildConfig = webpackConfig(buildPkg, buildEnv, buildMod, false, false)
-        } else {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~please try running again by command ~~~~~~");
-            console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run prompt-page-build~~~~~~");
-        }
-    }
 
-        //build for Page webserver
-    else if (buildPkg == "dashboardPage") {
-        if (buildMod.split("-")[0] == "app") {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~~Page webserver Build ~~~~~~~~~~~~~~~~~~~~~");
-            buildConfig = webpackConfig("page", buildEnv, buildMod, true, true)
-        } else {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~please try running again by command ~~~~~~");
-            console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run prompt-page-devserver~~~~~~");
+    //setting loop from webpackconfig
+if (buildPkg && srcFolder == webpackPathConfig["default-folder"]) {
+        var configSet = false;
+        var defaultsConfig = webpackPathConfig["defaults-" + webpackPathConfig["default-folder"]];
+        for (var i in defaultsConfig) {
+            if (buildPkg == i) {
+                if (buildMod.split("-")[0] == defaultsConfig[i]["prefix"]) {
+                    console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~" + buildPkg + " Build ~~~~~~~~~~~~~~~");
+                    buildConfig = webpackConfig(srcFolder, buildPkg, "-"+buildEnv, buildMod, false, false, buildTheme);
+                    configSet = true;
+                    break;
+                }
+            }
         }
-    }
-
-        //build for widget
-    else if (buildPkg == "widget") {
-        if (buildMod && buildMod.split("-")[0] == "app") { 
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~~~~~~Widigts Build ~~~~~~~~~~~~~~~~~~~");
-            buildConfig = webpackConfig(buildPkg, buildEnv, buildMod, false, false)
-        } else {
+        if (!configSet) {
             console.log("\x1b[33m%s\x1b[0m", "~~~~~~please try running again by command ~~~~~~");
-            console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run prompt-widget-build~~~~~~");
-        }
-    }
-
-        //build for widget webserver
-    else if (buildPkg == "dashboardWidget") {
-        if (buildMod && buildMod.split("-")[0] == "app") { 
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~Widget webserver Build ~~~~~~~~~~~~~~~~~~~~");
-            buildConfig = webpackConfig("widget", buildEnv, buildMod, true, true)
-        } else {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~please try running again by command ~~~~~~");
-            console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run prompt-widget-devserver~~~~~~");
-        }
-    }
-
-        //build for components in sandbox
-    else if (buildPkg == "sandbox") {
-        if (buildMod.split("-")[0] != "app") {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~~~~~~~Sandbox Build ~~~~~~~~~~~~~~~~~~~~");
-            buildConfig = webpackConfig(buildPkg, buildEnv, buildMod, false, false)
-        } else {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~please try running again by command ~~~~~~");
-            console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run prompt-sandbox-build~~~~~~");
-        }
-    }
-
-        //build for sandbox components webserver
-    else if (buildPkg == "dashboardSandbox") {
-        if (buildMod && buildMod.split("-")[0] == "app") {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~~~Sandbox webserver Build ~~~~~~~~~~~~~~~~~~~~");
-            buildConfig = webpackConfig("sandbox", buildEnv, buildMod, true, true)
-        } else {
-            console.log("\x1b[33m%s\x1b[0m", "~~~~~~please try running again by command ~~~~~~");
-            console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run prompt-sandbox-devserver ~~~~~~");
+            console.log("\x1b[43m%s\x1b[0m", "~~~~~~~~~~~~npm run prompt-" + buildPkg + "-build / npm run prompt-" + buildPkg + "-devserver~~~~~~~~~~~~~~");
         }
     }
 

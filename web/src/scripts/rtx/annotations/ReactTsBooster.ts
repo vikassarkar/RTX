@@ -115,7 +115,7 @@ function ClassDecorator<TFunction extends Function>(target: TFunction, annotatio
 
 /**
  * get required localization data 
- * @param templateName 
+ * @param translatorName 
  */
 function getTranslator(translatorName: any): any {
     let translatorContext = requireTranslator(localConfigs.currentTheme);
@@ -123,16 +123,6 @@ function getTranslator(translatorName: any): any {
     return translator;
 };
 
-/**
- * get required template data 
- * @param templateName 
- */
-function getTemplate(templateName: any, moduleType:any, moduleName:any): any {
-    let translator: any;
-    if (moduleType != "baseapp") //add different condition for base app :TODO
-        translator = requireTemplate(moduleType + "/"+moduleName+ "/views/" + templateName+ templateExt);
-    return translator;
-};
 
 /**
  * method to add properties accordingly passed in it
@@ -164,15 +154,6 @@ function addProps(newConstructor: any, annotationType: String, annotationObj: an
         }
         else if (i == "style") {
             requireGlobalStyle(annotationType, annotationObj[i]);
-        }
-        else if (i == "template") {
-            //if (moduleName) {
-            //    let contentTemplate = getTemplate(annotationObj[i], annotationType, moduleName);
-            //    constructorInstance.prototype["template"] = contentTemplate;
-            //} else {
-            //    constructorInstance.prototype["template"] = annotationObj[i];
-            //}
-            constructorInstance.prototype["template"] = annotationObj[i]
         }
         else if (i == "api") {
             constructorInstance.prototype["api"] = localConfigs.ajax == "api" ? api[annotationObj[i]] : fixture[annotationObj[i]];

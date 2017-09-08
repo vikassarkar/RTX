@@ -1,4 +1,4 @@
 {
-  "theme": "virgin",
+  "theme": "bell",
   "themeFile": "./build-process/configs/webpack.theme.config.scss"
 }
