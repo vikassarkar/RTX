@@ -37,7 +37,7 @@ export class AppSwitchComponent extends React.Component<any, any> {
                     onText={this.props.onText || "On"}
                     offText={this.props.offText || "Off"}
                     defaultChecked={this.props.defaultChecked || false}
-                    name={this.props.name || ""}
+                    data={this.props.data || ""}
                     eventChange={this.switchChanged}/>
             </div>
         );

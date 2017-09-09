@@ -25,14 +25,14 @@ export class Switch extends React.Component<ISwitchProps, ISwitchStates> {
     }
 
     switchChanged(event: any) {
-        this.props.eventChange(event.target.checked, event.target.name);
+        this.props.eventChange(event.target.checked, event.target.dataset.params);
     }
 
     render(): React.ReactElement<ISwitchProps> {
         const template = (
             <div className="simple_switch">
                 <label className={"tgl " + this.props.theme + this.props.customTheme} >
-                    <input type="checkbox" defaultChecked={this.props.defaultChecked} onChange={this.switchChanged} name={this.props.name}/>
+                    <input type="checkbox" defaultChecked={this.props.defaultChecked} onChange={this.switchChanged} data-params={this.props.data}/>
                     <span data-on={this.props.onText} data-off={this.props.offText}></span>
                 </label>
             </div>

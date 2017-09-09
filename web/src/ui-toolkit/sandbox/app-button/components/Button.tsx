@@ -20,12 +20,17 @@ export class Button extends React.Component<IButtonProps, IButtonStates> {
     translator: any;
 
     constructor(props:any) {
-        super(props);
+        super(props);        
+        this.eventClick = this.eventClick.bind(this);
+    }
+
+    eventClick(event: any) {
+        this.props.eventClick(event.target.dataset.params);
     }
 
     render(): React.ReactElement<IButtonProps> {
         const template = (
-            <button className={"app_btn " + this.props.theme + this.props.customTheme} onClick={this.props.eventClick}>{this.props.text}</button>
+            <button className={"app_btn " + this.props.theme + this.props.customTheme} data-params={this.props.data} onClick={this.eventClick}>{this.props.text}</button>
         );
        return template;
     }

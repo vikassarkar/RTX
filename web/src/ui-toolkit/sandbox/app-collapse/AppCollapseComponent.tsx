@@ -56,7 +56,7 @@ export class AppCollapseComponent extends React.Component<any, any> {
                     startIconTheme={this.props.startIconTheme || "dark"}
                     childCollapsibleTemplate={this.props.childCollapsibleTemplate || this.childElement()} 
                     eventToggle={this.props.eventToggle || this.eventToggle}
-                    name={this.props.name|| ""}/>
+                    data={this.props.data|| ""}/>
             </div>
         );
         return template;

@@ -24,8 +24,8 @@ class App extends React.Component<{}, {}> {
         super(props);
     }
 
-    handleIndexBack(data: any) {
-        alert("hi " + data);
+    handleIndexBack(data: string) {
+        alert("you can set this value in state named as per data attr as : " + data);
     }
 
     componentDidMount() {
@@ -42,9 +42,9 @@ class App extends React.Component<{}, {}> {
                     <div className="col-xs-12 text-center">
                         <AppButtonComponent 
                             theme="transparent" 
-                            text="Index Back" 
-                            customTheme="" 
-                            eventClick={this.handleIndexBack.bind(this, "vikas") }/>
+                            text="Index Back"
+                            data="dummyButton"
+                            eventClick={this.handleIndexBack}/>
                     </div>
                      <h3 className="col-xs-12 text-center">
                         while you use ".bind" in eventclick it is necessary to pass "this" as first argument.

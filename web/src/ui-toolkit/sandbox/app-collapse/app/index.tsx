@@ -25,7 +25,7 @@ class App extends React.Component<{}, {}> {
     }
 
     accordToggled(isChecked: boolean, name: string) {
-        alert("you can set this value in state named as per name attr as : " + name+". Accordion opened : "+isChecked);
+        alert("you can set this value in state named as per data attr as : " + name+". Accordion opened : "+isChecked);
     }
 
     childElement(): any {
@@ -80,7 +80,7 @@ class App extends React.Component<{}, {}> {
                                 startIconTheme="dark"
                                 childCollapsibleTemplate={this.childElement()}
                                 eventToggle={ this.accordToggled}
-                                name="accord_1"/>
+                                data="dummyCollapse"/>
                         </div>
                     </div>
                     <h3 className="col-xs-12 text-center">

@@ -48,7 +48,7 @@ class App extends React.Component<{}, {}> {
                             onText="Yes"
                             offText="No"
                             defaultChecked={true}
-                            name="firstSwitch"
+                            data="firstSwitch"
                             eventChange={this.switchChanged}/>
                     </div>
 
@@ -58,7 +58,7 @@ class App extends React.Component<{}, {}> {
                             onText="ON"
                             offText="OFF"
                             defaultChecked={false}
-                            name="secondSwitch"
+                            data="secondSwitch"
                             eventChange={this.switchChanged}/>
                     </div>
                     

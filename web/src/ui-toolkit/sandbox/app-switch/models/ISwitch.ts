@@ -5,7 +5,7 @@ export interface ISwitchProps {
     offText: string;
     defaultChecked: boolean;
     eventChange: any;
-    name: string;
+    data: string;
 }
 
 export interface ISwitchStates {

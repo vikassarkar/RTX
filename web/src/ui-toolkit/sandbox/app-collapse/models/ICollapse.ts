@@ -14,7 +14,7 @@ export interface ICollapseProps {
     startIconTheme: string;
     childCollapsibleTemplate: any;
     eventToggle:any;
-    name:string;
+    data:string;
 }
 
 export interface ICollapseStates {
