@@ -9,7 +9,7 @@ const fs = require("fs");
 const fse = require("fs-extra");
 
 //define all configs
-var themeConfig;
+var themeConfig = require("./build-process/configs/webpack.theme.config.json");
 var webpackConfig = require("./build-process/utils/webpack/webpack.config.utils");
 var webpackPathConfig = require("./build-process/configs/webpack.path.config.json");
 var themeConfigPath = "./build-process/configs/webpack.theme.config.json";
@@ -33,16 +33,17 @@ var editThemeConfig = function (buildTheme) {
     }
 };
 
-var editThemeFile = function () {
+var editThemeFile = function (buildTheme) {
 
     var updateFileContent = function (oldContent, contentReplaceRegx) {
         var newContent = oldContent.replace(contentReplaceRegx, function (e) {
-            return themeConfig.theme;
+            return buildTheme;
         });
         return newContent;
     };
-
+    console.log(themeConfig)
     if (fs.existsSync(themeConfig.themeFile)) {
+        
         var contentReplaceRegx = new RegExp("virgin|bell", "g")
         var oldContent = fs.readFileSync(themeConfig.themeFile, 'utf8');
         var newContent = updateFileContent(oldContent, contentReplaceRegx);
@@ -73,9 +74,7 @@ module.exports = function (env) {
     if (buildTheme)
         editThemeConfig(buildTheme);
 
-    //get theme config once updated
-    themeConfig = require("./build-process/configs/webpack.theme.config.json");
-    editThemeFile();
+    editThemeFile(buildTheme);
 
     //default final app build
     if (!buildPkg && buildEnv) {

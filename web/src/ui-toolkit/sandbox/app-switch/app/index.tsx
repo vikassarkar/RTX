@@ -48,10 +48,10 @@ class App extends React.Component<{}, {}> {
                         customTheme is name of class if you want to add different theme if not used assig it empty string.
                     </div>
                     <div className="col-xs-12 text-center">
-                        <AppSwitchComponent theme="dark"
+                        <AppSwitchComponent theme=""
                             customTheme=""
-                            onText="ON"
-                            offText="OFF"
+                            onText="Yes"
+                            offText="No"
                             isChecked={true}
                             name="firstSwitch"
                             eventChange={this.switchChanged}/>

@@ -36,7 +36,7 @@ export class Collapse extends React.Component<ICollapseProps, ICollapseStates> {
                 <label className="collaspse_label">
                     <input type="checkbox" defaultChecked={this.props.defaultOpen} onChange={this.toggleCollapse}/>
                     <span className="icon_start">
-                        <i className={this.state.isOpened ? "glyphicon glyphicon-minus-sign" : "glyphicon glyphicon-plus-sign"}>startIcon</i>
+                        <i className={this.state.isOpened ? "glyphicon glyphicon-minus-sign" : "glyphicon glyphicon-plus-sign"}></i>
                     </span>
                     <span className="collapse_title">collapse</span>
                     <span className="icon_end">
