@@ -68,6 +68,7 @@
     <Content Include="src\ui-toolkit\app\index.html" />
     <Content Include="src\ui-toolkit\app\README.md" />
     <Content Include="src\ui-toolkit\pages\README.md" />
+    <Content Include="src\ui-toolkit\sandbox\app-collapse\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-button\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-switch\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\README.md" />
@@ -89,6 +90,7 @@
     <Content Include="src\ui-modules\unblock-manager\README.md" />
     <Content Include="src\ui-modules\agent-search\README.md" />
     <Content Include="src\ui-toolkit\sandbox\app-switch\styles\_switch.scss" />
+    <Content Include="src\ui-toolkit\sandbox\app-collapse\styles\_collapse.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js.map" />
@@ -120,6 +122,10 @@
     <TypeScriptCompile Include="src\ui-modules\agent-search\index.tsx" />
     <TypeScriptCompile Include="src\ui-modules\unblock-manager\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-collapse\AppCollapseComponent.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-collapse\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-collapse\components\Collapse.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-collapse\models\ICollapse.ts" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\AppButtonComponent.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\app\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-button\components\Button.tsx" />
