@@ -13,19 +13,31 @@
     width: 100%;
 
     .collaspse_label {
-        border: 1px solid;
         position: relative;
         width: 100%;
-        margin:0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &.contentWidth {
+            width: fit-content;
+        }
 
         input[type="checkbox"] {
             display: none !important;
         }
 
+        .icon_hide {
+            display: none;
+        }
+
         .icon_start {
             float: left;
+            display: flex;
             padding-left: 0.2rem;
             padding-right: 2rem;
+            font-size: 2.5rem;
         }
 
         .collapse_title {
@@ -37,30 +49,39 @@
             position: absolute;
             right: 1rem;
         }
+
+        .dark {
+            color: $baseColor;
+        }
+
+        .light {
+            color: $baselightColor;
+        }
     }
 
     .collapse_description {
         .description_container {
             overflow: auto;
-            border: 0.1rem solid $blackColor;
-            border-top:none;            
+            border-top: none;
             margin-top: -0.45rem;
+            padding: 2rem 2rem 2rem 0.5rem;
+            text-align: left;
         }
 
         &.slideup {
-            max-height: 0;         
-            border-top:none;            
+            max-height: 0;
+            border-top: none;
             margin-top: -0.45rem;
             overflow: hidden;
-            transition: max-height 0.5s, overflow 0s;
+            transition: max-height 0.5s, overflow 0.5s;
         }
 
         &.slidedown {
-            max-height: 10rem;            
-            border-top:none;            
+            max-height: 20rem;
+            border-top: none;
             margin-top: -0.45rem;
             overflow: hidden;
-            transition: max-height 0.5s, overflow 0.5s 0.5s;
+            transition: max-height 0.5s, overflow 0.5s;
         }
     }
 }

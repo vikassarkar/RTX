@@ -28,35 +28,78 @@ class App extends React.Component<{}, {}> {
         alert("hi " + data);
     }
 
+    childElement(): any {
+        return (
+            <div className="row">
+                <div className="col-sm-4">
+                    <h3>Column 1</h3>
+                    <p>Lorem ipsum dolor..</p>
+                    <p>Ut enim ad..</p>
+                </div>
+                <div className="col-sm-4">
+                    <h3>Column 2</h3>
+                    <p>Lorem ipsum dolor..</p>
+                    <p>Ut enim ad..</p>
+                </div>
+                <div className="col-sm-4">
+                    <h3>Column 3</h3>
+                    <p>Lorem ipsum dolor..</p>
+                    <p>Ut enim ad..</p>
+                </div>
+            </div>
+        )
+    }
+
     componentDidMount() {
         document.title = this.translator.TITLE;
     }
 
     render(): React.ReactElement<{}> {
         const innerContainerStyle = {
-            width: "45%",
-            margin:"0 auto"
+            margin: "0 auto",
+            float:"none"
         };
         const template = (
             <div className="container">
                 <div className="row text-center">
                     <h2 className="col-xs-12 text-center">
                         It's a React "AppButtonComponent".
-                    </h2>
-                    <div className="col-xs-12 text-center">
-                        while you use ".bind" in eventclick it is necessary to pass "this" as first argument.
-                    </div>
-                    <div className="col-xs-12 text-center">
-                        Available themes are "dark / light /transparent".
-                    </div>
-                    <div className="col-xs-12 text-center">
-                        customTheme is name of class if you want to add different theme.
-                    </div>
+                    </h2>                   
                     <div className="col-xs-12 text-center clearfix">
-                        <div style={innerContainerStyle} className="text-center">
-                            <AppCollapseComponent defaultOpen={false}/>
-                            <AppCollapseComponent defaultOpen={false}/>
+                        <div style={innerContainerStyle} className="col-xs-5 text-center">
+                            <AppCollapseComponent
+                                defaultOpen={true}
+                                cutomCollapseLableStyle="contentWidth"
+                                showEndIcon={false}
+                                showStartIcon={true}
+                                startOpenIconClass="glyphicon glyphicon-minus-sign"
+                                startCloseIconClass="glyphicon glyphicon-plus-sign"
+                                endOpenIconClass="glyphicon glyphicon-chevron-down"
+                                endCloseIconClass="glyphicon glyphicon-chevron-right"
+                                endIconTheme="dark"
+                                startIconTheme="dark"
+                                childCollapsible={this.childElement()}/>
                         </div>
+                    </div>
+                    <div className="col-xs-12 text-center">
+                        Available icon themes are "dark / light ".
+                    </div>
+                    <div className="col-xs-12 text-center">
+                        <h3>Available properties</h3>
+                        <p>defaultOpen: boolean; </p>
+                        <p>cutomCollapseLableStyle: string; </p>
+                        <p>customDescriptionStyle: string; </p>
+                        <p> showEndIcon: boolean; </p>
+                        <p> showStartIcon: boolean; </p>
+                        <p>startOpenIconClass: string; </p>
+                        <p>startCloseIconClass: string; </p>
+                        <p>endOpenIconClass: string; </p>
+                        <p>endCloseIconClass: string; </p>
+                        <p>customEndIconStyle: string; </p>
+                        <p>endIconTheme: string; </p>
+                        <p>customStartIconStyle: string; </p>
+                        <p>startIconTheme: string; </p>
+                        <p>childCollapsible: any; </p>
                     </div>
                 </div>
             </div>

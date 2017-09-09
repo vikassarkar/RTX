@@ -52,7 +52,7 @@ class App extends React.Component<{}, {}> {
                             customTheme=""
                             onText="Yes"
                             offText="No"
-                            isChecked={true}
+                            defaultChecked={true}
                             name="firstSwitch"
                             eventChange={this.switchChanged}/>
                     </div>

@@ -15,7 +15,7 @@ export interface ISwitchProps {
     customTheme: string;
     onText: string;
     offText: string;
-    isChecked: boolean;
+    defaultChecked: boolean;
     eventChange: any;
     name: string;
 }
@@ -47,7 +47,7 @@ export class AppSwitchComponent extends React.Component<ISwitchProps, ISwitchSta
                     customTheme={this.props.customTheme}
                     onText={this.props.onText}
                     offText={this.props.offText}
-                    isChecked={this.props.isChecked}
+                    defaultChecked={this.props.defaultChecked}
                     name={this.props.name}
                     eventChange={this.switchChanged}/>
             </div>

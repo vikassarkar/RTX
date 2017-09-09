@@ -11,16 +11,16 @@ import { Widget } from '../../../scripts/rtx/RTX';
 import { Collapse } from './components/Collapse';
 
 export interface ICollapseProps {
-    defaultOpen: boolean;
+
 }
 
-export interface ICollapseStates {}
+export interface ICollapseStates { }
 
 @Widget({
-    moduleName: "app-button", 
+    moduleName: "app-button",
     translator: "app"
 })
-export class AppCollapseComponent extends React.Component<ICollapseProps, ICollapseStates> {
+export class AppCollapseComponent extends React.Component<any, any> {
     permit: any;
     configs: any;
     translator: any;
@@ -29,10 +29,33 @@ export class AppCollapseComponent extends React.Component<ICollapseProps, IColla
         super(props);
     }
 
-    render(): React.ReactElement<ICollapseProps> {
+    childElement(): any {
+        return (
+            <div>
+                <h3>Two columns with two nested columns</h3>
+                <p>Per the documentation, nesting is easy—just put a row of columns within an existing column.This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+            </div>
+        )
+    }
+
+    render(): React.ReactElement<any> {
+
         const template = (
             <div>
-                <Collapse defaultOpen={this.props.defaultOpen}/>
+                <Collapse defaultOpen={this.props.defaultOpen || false}
+                    cutomCollapseLableStyle={this.props.cutomCollapseLableStyle || "contentWidth"}
+                    customDescriptionStyle={this.props.customDescriptionStyle || ""}
+                    showEndIcon={this.props.showEndIcon || false}
+                    showStartIcon={this.props.showStartIcon || true}
+                    startOpenIconClass= {this.props.startOpenIconClass || "glyphicon glyphicon-minus-sign"}
+                    startCloseIconClass={this.props.startCloseIconClass || "glyphicon glyphicon-plus-sign"}
+                    endOpenIconClass={this.props.endOpenIconClass || "glyphicon glyphicon-chevron-down"}
+                    endCloseIconClass={this.props.endCloseIconClass || "glyphicon glyphicon-chevron-right"}
+                    customEndIconStyle={this.props.customEndIconStyle || ""}
+                    customStartIconStyle={ this.props.customStartIconStyle || ""}
+                    endIconTheme={this.props.endIconTheme || "dark"}
+                    startIconTheme={this.props.startIconTheme || "dark"}
+                    childCollapsible={this.props.childCollapsible || this.childElement() }/>
             </div>
         );
         return template;

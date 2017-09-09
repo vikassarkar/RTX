@@ -3,7 +3,7 @@ export interface ISwitchProps {
     customTheme: string;
     onText: string;
     offText: string;
-    isChecked: boolean;
+    defaultChecked: boolean;
     eventChange: any;
     name: string;
 }
