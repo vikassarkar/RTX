@@ -26,18 +26,15 @@ export class Collapse extends React.Component<ICollapseProps, ICollapseStates> {
     }
 
     toggleCollapse(event: any) {
-        this.setState({ isOpened: event.target.checked })
+        this.setState({ isOpened: event.target.checked });
+        this.props.eventToggle(event.target.checked, event.target.name);
     }
 
     render(): React.ReactElement<ICollapseProps> {
-        //glyphicon glyphicon-minus-sign
-        //glyphicon glyphicon-plus-sign
-        //glyphicon glyphicon-chevron-down
-        //glyphicon glyphicon-chevron-right
         const template = (
             <div className="collapse_row">
                 <label className={"collaspse_label " + this.props.cutomCollapseLableStyle}>
-                    <input type="checkbox" defaultChecked={this.props.defaultOpen} onChange={this.toggleCollapse}/>
+                    <input type="checkbox" defaultChecked={this.props.defaultOpen} onChange={this.toggleCollapse} name={this.props.name}/>
                     <span className={this.props.showStartIcon ? "icon_start" : "icon_hide" }>
                         <i className={this.state.isOpened ? this.props.startIconTheme + " " + this.props.startOpenIconClass + " " + this.props.customStartIconStyle : this.props.startIconTheme + " " + this.props.startCloseIconClass + " " + this.props.customEndIconStyle}></i>
                     </span>
@@ -48,7 +45,7 @@ export class Collapse extends React.Component<ICollapseProps, ICollapseStates> {
                 </label>
                 <div className={this.state.isOpened ? "collapse_description slidedown" + this.props.customDescriptionStyle : "collapse_description slideup" + this.props.customDescriptionStyle}>
                     <div className="description_container">
-                        {this.props.childCollapsible}
+                        {this.props.childCollapsibleTemplate}
                     </div>
                 </div>
             </div>

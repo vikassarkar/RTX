@@ -24,8 +24,8 @@ class App extends React.Component<{}, {}> {
         super(props);
     }
 
-    handleIndexBack(data: any) {
-        alert("hi " + data);
+    accordToggled(isChecked: boolean, name: string) {
+        alert("you can set this value in state named as per name attr as : " + name+". Accordion opened : "+isChecked);
     }
 
     childElement(): any {
@@ -63,7 +63,7 @@ class App extends React.Component<{}, {}> {
             <div className="container">
                 <div className="row text-center">
                     <h2 className="col-xs-12 text-center">
-                        It's a React "AppButtonComponent".
+                        It's a React "AppCollapseComponent".
                     </h2>                   
                     <div className="col-xs-12 text-center clearfix">
                         <div style={innerContainerStyle} className="col-xs-5 text-center">
@@ -78,12 +78,14 @@ class App extends React.Component<{}, {}> {
                                 endCloseIconClass="glyphicon glyphicon-chevron-right"
                                 endIconTheme="dark"
                                 startIconTheme="dark"
-                                childCollapsible={this.childElement()}/>
+                                childCollapsibleTemplate={this.childElement()}
+                                eventToggle={ this.accordToggled}
+                                name="accord_1"/>
                         </div>
                     </div>
-                    <div className="col-xs-12 text-center">
+                    <h3 className="col-xs-12 text-center">
                         Available icon themes are "dark / light ".
-                    </div>
+                    </h3>
                     <div className="col-xs-12 text-center">
                         <h3>Available properties</h3>
                         <p>defaultOpen: boolean; </p>
@@ -99,7 +101,9 @@ class App extends React.Component<{}, {}> {
                         <p>endIconTheme: string; </p>
                         <p>customStartIconStyle: string; </p>
                         <p>startIconTheme: string; </p>
-                        <p>childCollapsible: any; </p>
+                        <p> childCollapsibleTemplate: any; </p>
+                        <p>eventToggle:any; </p>
+                        <p>name:string; </p>
                     </div>
                 </div>
             </div>

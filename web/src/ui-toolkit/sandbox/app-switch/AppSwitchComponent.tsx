@@ -10,23 +10,11 @@ import { Router, Route } from 'react-router';
 import { Widget } from '../../../scripts/rtx/RTX';
 import { Switch } from './components/Switch';
 
-export interface ISwitchProps {
-    theme: string;
-    customTheme: string;
-    onText: string;
-    offText: string;
-    defaultChecked: boolean;
-    eventChange: any;
-    name: string;
-}
-
-export interface ISwitchStates { }
-
 @Widget({
     moduleName: "app-switch",
     translator: "app"
 })
-export class AppSwitchComponent extends React.Component<ISwitchProps, ISwitchStates> {
+export class AppSwitchComponent extends React.Component<any, any> {
     permit: any;
     configs: any;
     translator: any;
@@ -37,18 +25,19 @@ export class AppSwitchComponent extends React.Component<ISwitchProps, ISwitchSta
     }
 
     switchChanged(isChecked: boolean, name: string) {
-        this.props.eventChange(isChecked, name);
+        if(this.props.eventChange)
+            this.props.eventChange(isChecked, name);
     }
 
-    render(): React.ReactElement<ISwitchProps> {
+    render(): React.ReactElement<any> {
         const template = (
             <div>
-                <Switch  theme={this.props.theme}
-                    customTheme={this.props.customTheme}
-                    onText={this.props.onText}
-                    offText={this.props.offText}
-                    defaultChecked={this.props.defaultChecked}
-                    name={this.props.name}
+                <Switch  theme={this.props.theme || ""}
+                    customTheme={this.props.customTheme || ""}
+                    onText={this.props.onText || "On"}
+                    offText={this.props.offText || "Off"}
+                    defaultChecked={this.props.defaultChecked || false}
+                    name={this.props.name || ""}
                     eventChange={this.switchChanged}/>
             </div>
         );

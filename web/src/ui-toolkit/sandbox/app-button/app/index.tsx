@@ -38,18 +38,30 @@ class App extends React.Component<{}, {}> {
                 <div className="row text-center">
                     <h2 className="col-xs-12 text-center">
                         It's a React "AppButtonComponent".
-                    </h2>
+                    </h2>                   
                     <div className="col-xs-12 text-center">
+                        <AppButtonComponent 
+                            theme="transparent" 
+                            text="Index Back" 
+                            customTheme="" 
+                            eventClick={this.handleIndexBack.bind(this, "vikas") }/>
+                    </div>
+                     <h3 className="col-xs-12 text-center">
                         while you use ".bind" in eventclick it is necessary to pass "this" as first argument.
-                    </div>
-                    <div className="col-xs-12 text-center">
-                        Available themes are "dark / light /transparent".
-                    </div>
-                    <div className="col-xs-12 text-center">
+                    </h3>
+                    <h3 className="col-xs-12 text-center">
+                        Available themes are "dark / light / transparent".
+                    </h3>
+                    <h3 className="col-xs-12 text-center">
                         customTheme is name of class if you want to add different theme.
+                    </h3>
+                    <div>
+                        <h3>Available properties</h3>
+                        <p>text: string;</p>
+                        <p>theme: string; //dark / light / transparent</p>
+                        <p>eventClick: any; </p>
+                        <p>customTheme: string; </p>
                     </div>
-
-                    <AppButtonComponent theme="transparent" text="Index Back" customTheme="" eventClick={this.handleIndexBack.bind(this, "vikas") }/>
                 </div>
             </div>
         );

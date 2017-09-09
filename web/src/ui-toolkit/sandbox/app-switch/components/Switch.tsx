@@ -33,7 +33,7 @@ export class Switch extends React.Component<ISwitchProps, ISwitchStates> {
             <div className="simple_switch">
                 <label className={"tgl " + this.props.theme + this.props.customTheme} >
                     <input type="checkbox" defaultChecked={this.props.defaultChecked} onChange={this.switchChanged} name={this.props.name}/>
-                    <span data-on={this.props.onText || "YES"} data-off={this.props.offText || "NO"}></span>
+                    <span data-on={this.props.onText} data-off={this.props.offText}></span>
                 </label>
             </div>
         );

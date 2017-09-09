@@ -10,20 +10,11 @@ import { Router, Route } from 'react-router';
 import { Widget } from '../../../scripts/rtx/RTX';
 import { Button } from './components/Button';
 
-export interface IButtonProps {
-    text: string;
-    theme: string; //dark / light /transparent
-    eventClick: any;
-    customTheme: string;
-}
-
-export interface IButtonStates {}
-
 @Widget({
     moduleName: "app-button", 
     translator: "app"
 })
-export class AppButtonComponent extends React.Component<IButtonProps, IButtonStates> {
+export class AppButtonComponent extends React.Component<any, any> {
     permit: any;
     configs: any;
     translator: any;
@@ -32,10 +23,18 @@ export class AppButtonComponent extends React.Component<IButtonProps, IButtonSta
         super(props);
     }
 
-    render(): React.ReactElement<IButtonProps> {
+    eventClick(data:any) {
+        alert(data)
+    }
+
+    render(): React.ReactElement<any> {
         const template = (
             <div>
-                <Button text={this.props.text} theme={this.props.theme} customTheme="" eventClick={this.props.eventClick}/>
+                <Button 
+                    text={this.props.text || "Button"} 
+                    theme={this.props.theme || ""} 
+                    customTheme={this.props.customTheme || ""} 
+                    eventClick={this.props.eventClick || this.eventClick.bind(this, "button clicked")}/>
             </div>
         );
         return template;

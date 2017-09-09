@@ -12,7 +12,9 @@ export interface ICollapseProps {
     endIconTheme: string;
     customStartIconStyle: string;
     startIconTheme: string;
-    childCollapsible: any;
+    childCollapsibleTemplate: any;
+    eventToggle:any;
+    name:string;
 }
 
 export interface ICollapseStates {

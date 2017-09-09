@@ -25,9 +25,8 @@ class App extends React.Component<{}, {}> {
         this.switchChanged = this.switchChanged.bind(this);
     }
 
-    switchChanged(isChecked: boolean, name: string) {
-        alert("Switched on : "+isChecked);
-        alert("you can set this value in state named as per name attr as : " + name);
+    switchChanged(isChecked: boolean, name: string) {        
+        alert("you can set this value in state named as per name attr as : " + name+". Switched on : "+isChecked);
     }
 
     componentDidMount() {
@@ -41,14 +40,10 @@ class App extends React.Component<{}, {}> {
                     <h2 className="col-xs-12 text-center">
                         It's a React "AppSwitchComponent".
                     </h2>
+                    
                     <div className="col-xs-12 text-center">
-                        while you use ".bind" in eventchange it is necessary to pass "this" as first argument.
-                    </div>
-                    <div className="col-xs-12 text-center">
-                        customTheme is name of class if you want to add different theme if not used assig it empty string.
-                    </div>
-                    <div className="col-xs-12 text-center">
-                        <AppSwitchComponent theme=""
+                        <AppSwitchComponent 
+                            theme=""
                             customTheme=""
                             onText="Yes"
                             offText="No"
@@ -62,10 +57,28 @@ class App extends React.Component<{}, {}> {
                             customTheme=""
                             onText="ON"
                             offText="OFF"
-                            isChecked={false}
+                            defaultChecked={false}
                             name="secondSwitch"
                             eventChange={this.switchChanged}/>
                     </div>
+                    
+                    <h3 className="col-xs-12 text-center">
+                        while you use ".bind" in eventchange it is necessary to pass "this" as first argument.
+                    </h3>
+                    <h3 className="col-xs-12 text-center">
+                        customTheme is name of class if you want to add different theme if not used assig it empty string.
+                    </h3>
+                    <div className="col-xs-12 text-center">
+                        <h3>Available properties</h3>
+                         <p>theme: string;</p>
+                        <p>customTheme: string;</p>
+                        <p>onText: string;</p>
+                        <p>offText: string;</p>
+                        <p>defaultChecked: boolean;</p>
+                        <p>eventChange: any;</p>
+                        <p>name: string;</p>
+                    </div>
+
                 </div>
             </div>
                 

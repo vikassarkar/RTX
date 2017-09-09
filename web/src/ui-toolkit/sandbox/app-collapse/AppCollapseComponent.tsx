@@ -10,12 +10,6 @@ import { Router, Route } from 'react-router';
 import { Widget } from '../../../scripts/rtx/RTX';
 import { Collapse } from './components/Collapse';
 
-export interface ICollapseProps {
-
-}
-
-export interface ICollapseStates { }
-
 @Widget({
     moduleName: "app-button",
     translator: "app"
@@ -27,6 +21,11 @@ export class AppCollapseComponent extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
+    }
+
+    eventToggle(isChecked: boolean, name: string) {
+        if(this.props.eventToggle)
+            this.props.eventToggle(isChecked, name);
     }
 
     childElement(): any {
@@ -55,7 +54,9 @@ export class AppCollapseComponent extends React.Component<any, any> {
                     customStartIconStyle={ this.props.customStartIconStyle || ""}
                     endIconTheme={this.props.endIconTheme || "dark"}
                     startIconTheme={this.props.startIconTheme || "dark"}
-                    childCollapsible={this.props.childCollapsible || this.childElement() }/>
+                    childCollapsibleTemplate={this.props.childCollapsibleTemplate || this.childElement()} 
+                    eventToggle={this.props.eventToggle || this.eventToggle}
+                    name={this.props.name|| ""}/>
             </div>
         );
         return template;

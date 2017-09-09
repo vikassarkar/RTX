@@ -10,6 +10,16 @@
 //@import "../../../../../build-process/configs/webpack.theme.config.scss";
 
 .app_btn {
+    color: $whiteColor;
+    background-color: $successColor;
+    border: 0.15rem solid $whiteColor;
+    padding: 0.5rem 2.5rem;
+    border-radius: 2rem;
+
+    &:hover {
+        background-color: $dangerColor;
+    }
+
     &.dark {
         color: $baselightColor;
         background-color: $baseColor;
@@ -42,9 +52,9 @@
         border-radius: 2rem;
 
         &:hover {
-            color: $basedarkColor;
+            color: $baselightColor;
             background-color: $baseColor;
-            border: 0.15rem solid $basedarkColor;
+            border: 0.15rem solid $baselightColor;
         }
     }
 }
