@@ -68,6 +68,7 @@
     <Content Include="src\ui-toolkit\app\index.html" />
     <Content Include="src\ui-toolkit\app\README.md" />
     <Content Include="src\ui-toolkit\pages\README.md" />
+    <Content Include="src\ui-toolkit\sandbox\app-inputbox\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-collapse\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-button\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-switch\app\index.html" />
@@ -91,6 +92,7 @@
     <Content Include="src\ui-modules\agent-search\README.md" />
     <Content Include="src\ui-toolkit\sandbox\app-switch\styles\_switch.scss" />
     <Content Include="src\ui-toolkit\sandbox\app-collapse\styles\_collapse.scss" />
+    <Content Include="src\ui-toolkit\sandbox\app-inputbox\styles\_inputbox.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js.map" />
@@ -122,6 +124,11 @@
     <TypeScriptCompile Include="src\ui-modules\agent-search\index.tsx" />
     <TypeScriptCompile Include="src\ui-modules\unblock-manager\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-inputbox\AppInputboxComponent.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-inputbox\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-inputbox\components\Inputbox.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-inputbox\models\CValidatorRegex.ts" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-inputbox\models\IInputbox.ts" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-collapse\AppCollapseComponent.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-collapse\app\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-collapse\components\Collapse.tsx" />
