@@ -36,7 +36,7 @@ export function BaseApp(info: Object): ClassDecorator {
  * @Page Class decorator - should be used in Page and its child-component class
  * @param info 
  */
-export function Page(info: Object): ClassDecorator {
+export function PgProvider(info: Object): ClassDecorator {
     return <TFunction extends Function>(target: TFunction): TFunction => {
 
         return ClassDecorator(target, "pages", info);
@@ -44,10 +44,10 @@ export function Page(info: Object): ClassDecorator {
 };
 
 /**
- * @Widget class decorator - should be used in widget and its child-component class
+ * @WgProvider class decorator - should be used in widget and its child-component class
  * @param info 
  */
-export function Widget(info: Object): ClassDecorator {
+export function WgProvider(info: Object): ClassDecorator {
     return <TFunction extends Function>(target: TFunction): TFunction => {
 
         return ClassDecorator(target, "widgets", info);
@@ -58,7 +58,7 @@ export function Widget(info: Object): ClassDecorator {
  * @Component Class decorator - should be used in sandbox component class
  * @param info 
  */
-export function Component(info: Object): ClassDecorator {
+export function SbProvider(info: Object): ClassDecorator {
     return <TFunction extends Function>(target: TFunction): TFunction => {
 
         return ClassDecorator(target, "sandbox", info);

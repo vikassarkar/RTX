@@ -7,9 +7,9 @@ import * as RTX from './annotations/ReactTsBooster';
 
 export const {
     BaseApp,
-    Page,
-    Widget,
-    Component,
+    PgProvider,
+    WgProvider,
+    SbProvider,
     Config,
     Translate
 } = RTX;

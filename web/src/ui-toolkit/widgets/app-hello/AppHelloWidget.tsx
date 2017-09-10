@@ -7,7 +7,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router';
 
-import { Widget } from '../../../scripts/rtx/RTX';
+import { WgProvider } from '../../../scripts/rtx/RTX';
 import { Hello } from './components/Hello';
 
 export interface IHelloProps {
@@ -17,7 +17,7 @@ export interface IHelloProps {
 
 export interface IHelloStates {}
 
-@Widget({
+@WgProvider({
     moduleName: "app-hello", 
     translator: "app-hello"
 })

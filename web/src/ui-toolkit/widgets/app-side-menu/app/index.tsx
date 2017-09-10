@@ -7,10 +7,10 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router';
 
-import { Widget } from '../../../../scripts/rtx/RTX';
+import { WgProvider } from '../../../../scripts/rtx/RTX';
 import { AppSideMenuWidget } from '../AppSideMenuWidget';
 
-@Widget({
+@WgProvider({
     moduleName: "app-side-menu", 
     translator: "app"
 })

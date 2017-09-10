@@ -7,10 +7,10 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router';
 
-import { Widget } from '../../../scripts/rtx/RTX';
+import { SbProvider } from '../../../scripts/rtx/RTX';
 import { Inputbox } from './components/Inputbox';
 
-@Widget({
+@SbProvider({
     moduleName: "app-button",
     translator: "app"
 })

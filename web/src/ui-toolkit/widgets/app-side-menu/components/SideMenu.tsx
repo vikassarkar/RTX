@@ -7,11 +7,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Widget } from '../../../../scripts/rtx/RTX';
+import { WgProvider } from '../../../../scripts/rtx/RTX';
 import {ISideMenuProps} from '../models/ISideMenu'
 
 
-@Widget({
+@WgProvider({
     moduleName: "app-side-menu",
     translator: "app-header"
 })

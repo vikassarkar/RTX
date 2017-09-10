@@ -7,7 +7,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router';
 
-import { Widget } from '../../../scripts/rtx/RTX';
+import { WgProvider } from '../../../scripts/rtx/RTX';
 import {Header} from './components/Header';
 
 export interface IHeaderProps {
@@ -16,7 +16,7 @@ export interface IHeaderProps {
     headerTitle: string;
 };
 
-@Widget({
+@WgProvider({
     moduleName: "app-header",
     translator: "app-header"
 })

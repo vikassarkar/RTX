@@ -7,10 +7,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Widget, Translate } from '../../../../scripts/rtx/RTX';
+import { SbProvider, Translate } from '../../../../scripts/rtx/RTX';
 import {ISwitchProps, ISwitchStates} from '../models/ISwitch'
 
-@Widget({
+@SbProvider({
     moduleName: "app-hello",
     translator: "app"
 })

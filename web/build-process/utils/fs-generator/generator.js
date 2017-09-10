@@ -24,8 +24,8 @@ const createConfig = (JSON.parse(process.env.npm_config_argv)).original || null;
 var propmtCreate = function (createConfig) {
     prompt.start();
     console.log("\x1b[33m%s\x1b[0m", "Please enter below details as-");
-    console.log("\x1b[33m%s\x1b[0m", "Type : widget,  component or page");
-    console.log("\x1b[33m%s\x1b[0m", "Name : WidgetName,  ComponentName or PageName");
+    console.log("\x1b[33m%s\x1b[0m", "Type : widget,  sandbox or page");
+    console.log("\x1b[33m%s\x1b[0m", "Name : WidgetName,  SandboxName or PageName");
 
     prompt.get(['Type', 'Name'], function (err, result) {
         if (err) { return onErr(err); }
@@ -42,7 +42,7 @@ var propmtCreate = function (createConfig) {
  * generator functionpassing relevent data for folder cretion
  */
 var generator = function(createConfig) {
-    var folderCreateType = createConfig[2] == "-p" || createConfig[2] == "page" ? "page" : createConfig[2] == "-w" || createConfig[2] == "widget" ? "widget" : createConfig[2] == "-c" || createConfig[2] == "component" ? "component" : null;
+    var folderCreateType = createConfig[2] == "-p" || createConfig[2] == "page" ? "page" : createConfig[2] == "-w" || createConfig[2] == "widget" ? "widget" : createConfig[2] == "-s" || createConfig[2] == "sandbox" ? "sandbox" : null;
     var folderCreateName = createConfig[3];
 
     if (folderCreateType && folderCreateName) {
@@ -62,7 +62,7 @@ var generator = function(createConfig) {
         console.log("\x1b[33m%s\x1b[0m", "~~~~~~please try running again by proper command ~~~~~~");
         console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run create -p PageName~~~~~~");
         console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run create -w WidgetName~~~~~~");
-        console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run create -c ComponentName~~~~~~");
+        console.log("\x1b[43m%s\x1b[0m", "~~~~~~npm run create -s SandboxName~~~~~~");
     }
 }
 

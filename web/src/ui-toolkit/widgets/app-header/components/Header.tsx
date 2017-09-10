@@ -7,11 +7,11 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 
-import { Widget } from '../../../../scripts/rtx/RTX';
+import { WgProvider } from '../../../../scripts/rtx/RTX';
 import { IHeaderProps, IHeaderState } from '../models/IHeader';
 import { AppButtonComponent } from '../../../sandbox/app-button/AppButtonComponent';
 
-@Widget({
+@WgProvider({
     moduleName: "app-header",
     translator: "app-header"
 })

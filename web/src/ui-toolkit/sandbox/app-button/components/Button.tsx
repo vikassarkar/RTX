@@ -7,10 +7,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Widget, Translate } from '../../../../scripts/rtx/RTX';
+import { SbProvider, Translate } from '../../../../scripts/rtx/RTX';
 import {IButtonProps, IButtonStates} from '../models/IButton'
 
-@Widget({
+@SbProvider({
     moduleName: "app-button", 
     translator: "app"
 })

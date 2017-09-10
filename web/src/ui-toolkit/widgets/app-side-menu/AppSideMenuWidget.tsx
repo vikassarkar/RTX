@@ -7,7 +7,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router';
 
-import { Widget } from '../../../scripts/rtx/RTX';
+import { WgProvider } from '../../../scripts/rtx/RTX';
 import { SideMenu } from './components/SideMenu';
 
 export interface IHelloProps {
@@ -15,7 +15,7 @@ export interface IHelloProps {
     framework: string;
 }
 
-@Widget({
+@WgProvider({
     moduleName: "app-side-menu", 
     translator: "app-header"
 })

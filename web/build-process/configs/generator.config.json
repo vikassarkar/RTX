@@ -1,148 +1,216 @@
 {
-    "widget": {
+  "widget": {
+    "app": {
+      "type": "widget",
+      "input": "",
+      "folderName": [
+        "lowercaseHyphenSeprated",
+        "app-",
+        ""
+      ],
+      "tempFolderPath": "../fs-generator/temp/",
+      "refrenceSourcePath": "../fs-generator/ui-toolkit/widgets/",
+      "destinationSourcePath": "../../../src/ui-toolkit/widgets/",
+      "replaceFileName": {
         "app": {
-            "type": "widget",
-            "input": "",
-            "folderName": [
-                "lowercaseHyphenSeprated",
-                "app-",
-                ""
-            ],
-            "tempFolderPath": "../fs-generator/temp/",
-            "refrenceSourcePath": "../fs-generator/widget/",
-            "destinationSourcePath": "../../../src/modules/widgets/",
-            "replaceFileName": {
-                "app": {
-                    "index.html": "",
-                    "index.tsx": ""
-                },
-                "components": {
-                    "ComponentName.tsx": [
-                        "camelUpperCase",
-                        "",
-                        ""
-                    ]
-                },
-                "models": {
-                    "ComponentName.ts": [
-                        "camelUpperCase",
-                        "I",
-                        ""
-                    ]
-                },
-                "styles": {
-                    "ComponentName.scss": [
-                        "camelLowerCase",
-                        "_",
-                        ""
-                    ]
-                },
-                "WidgetName.tsx": [
-                    "camelUpperCase",
-                    "App",
-                    "Widget"
-                ]
-            },
-            "replaceContent": {
-                "ComponentName": [
-                    "camelUpperCase",
-                    "",
-                    ""
-                ],
-                "componentName": [
-                    "camelLowerCase",
-                    "",
-                    ""
-                ],
-                "widget-folder-name": [
-                    "lowercaseHyphenSeprated",
-                    "app-",
-                    ""
-                ],
-                "WidgetName": [
-                    "camelUpperCase",
-                    "",
-                    ""
-                ],
-                "widgetName": [
-                    "camelLowerCase",
-                    "",
-                    ""
-                ]
-            }
+          "index.html": "",
+          "index.tsx": ""
         },
-        "test": {
-            "type": "test",
-            "input": "",
-            "folderName": [
-                "lowercaseHyphenSeprated",
-                "app-",
-                ""
-            ],
-            "tempFolderPath": "../fs-generator/temp/",
-            "refrenceSourcePath": "../fs-generator/test-widget/",
-            "destinationSourcePath": "../../../src/tests/widgets/",
-            "replaceFileName": {
-                "ComponentName.spec.tsx": [
-                    "camelUpperCase",
-                    "",
-                    ".spec"
-                ],
-                "WidgetName.spec.tsx": [
-                    "camelUpperCase",
-                    "App",
-                    "Widget.spec"
-                ]
-            },
-            "replaceContent": {
-                "ComponentName": [
-                    "camelUpperCase",
-                    "",
-                    ""
-                ],
-                "componentName": [
-                    "camelLowerCase",
-                    "",
-                    ""
-                ],
-                "widget-folder-name": [
-                    "lowercaseHyphenSeprated",
-                    "app-",
-                    ""
-                ],
-                "WidgetName": [
-                    "camelUpperCase",
-                    "",
-                    ""
-                ],
-                "widgetName": [
-                    "camelLowerCase",
-                    "",
-                    ""
-                ]
-            }
-        }
+        "components": {
+          "WidgetComponent.tsx": [
+            "camelUpperCase",
+            "",
+            "Component"
+          ]
+        },
+        "models": {
+          "IWidgetComponent.ts": [
+            "camelUpperCase",
+            "I",
+            "Component"
+          ]
+        },
+        "styles": {
+          "_widget.scss": [
+            "camelLowerCase",
+            "_",
+            ""
+          ]
+        },
+        "AppWidgetComponent.tsx": [
+          "camelUpperCase",
+          "App",
+          "Widget"
+        ]
+      },
+      "replaceContent": {
+        "AppWidgetComponent": [
+          "camelUpperCase",
+          "App",
+          "Widget"
+        ],
+        "Widget": [
+          "camelUpperCase",
+          "",
+          ""
+        ],
+        "widget": [
+          "camelLowerCase",
+          "",
+          ""
+        ]
+      }
     },
-    "component": {
-        "name": "",
-        "prefix": "app",
-        "suffix": "",
-        "type": "",
-        "tempFolderPath": "",
-        "refrenceSourcePath": "",
-        "destinationSourcePath": "",
-        "replaceFileName": {},
-        "replaceContent": {}
-    },
-    "page": {
-        "name": "",
-        "prefix": "app",
-        "suffix": "",
-        "type": "",
-        "tempFolderPath": "",
-        "refrenceSourcePath": "",
-        "destinationSourcePath": "",
-        "replaceFileName": {},
-        "replaceContent": {}
+    "test": {
+      "type": "test",
+      "input": "",
+      "folderName": [
+        "lowercaseHyphenSeprated",
+        "app-",
+        ""
+      ],
+      "tempFolderPath": "../fs-generator/temp/",
+      "refrenceSourcePath": "../fs-generator/test/widgets/",
+      "destinationSourcePath": "../../../src/tests/widgets/",
+      "replaceFileName": {
+        "App.spec.tsx": [
+          "camelUpperCase",
+          "",
+          ".spec"
+        ]
+      },
+      "replaceContent": {
+        "AppWidget": [
+          "camelUpperCase",
+          "App",
+          "Widget"
+        ],
+        "App": [
+          "camelUpperCase",
+          "",
+          ""
+        ],
+        "app": [
+          "camelLowerCase",
+          "",
+          ""
+        ],
+        "folder-name": [
+          "lowercaseHyphenSeprated",
+          "app-",
+          ""
+        ]
+      }
     }
+  },
+  "sandbox": {
+    "app": {
+      "type": "sandbox",
+      "input": "",
+      "folderName": [
+        "lowercaseHyphenSeprated",
+        "app-",
+        ""
+      ],
+      "tempFolderPath": "../fs-generator/temp/",
+      "refrenceSourcePath": "../fs-generator/ui-toolkit/sandbox/",
+      "destinationSourcePath": "../../../src/ui-toolkit/sandbox/",
+      "replaceFileName": {
+        "app": {
+          "index.html": "",
+          "index.tsx": ""
+        },
+        "components": {
+          "Sandbox.tsx": [
+            "camelUpperCase",
+            "",
+            ""
+          ]
+        },
+        "models": {
+          "ISandbox.ts": [
+            "camelUpperCase",
+            "I",
+            ""
+          ]
+        },
+        "styles": {
+          "_sandbox.scss": [
+            "camelLowerCase",
+            "_",
+            ""
+          ]
+        },
+        "AppSandboxComponent.tsx": [
+          "camelUpperCase",
+          "App",
+          "Component"
+        ]
+      },
+      "replaceContent": {
+        "Sandbox": [
+          "camelUpperCase",
+          "",
+          ""
+        ],
+        "sandbox": [
+          "camelLowerCase",
+          "",
+          ""
+        ]
+      }
+    },
+    "test": {
+      "type": "test",
+      "input": "",
+      "folderName": [
+        "lowercaseHyphenSeprated",
+        "app-",
+        ""
+      ],
+      "tempFolderPath": "../fs-generator/temp/",
+      "refrenceSourcePath": "../fs-generator/test/sandbox/",
+      "destinationSourcePath": "../../../src/tests/sandbox/",
+      "replaceFileName": {
+        "App.spec.tsx": [
+          "camelUpperCase",
+          "",
+          ".spec"
+        ]
+      },
+      "replaceContent": {
+        "AppComponent": [
+          "camelUpperCase",
+          "App",
+          "Component"
+        ],
+        "App": [
+          "camelUpperCase",
+          "",
+          ""
+        ],
+        "app": [
+          "camelLowerCase",
+          "",
+          ""
+        ],
+        "folder-name": [
+          "lowercaseHyphenSeprated",
+          "app-",
+          ""
+        ]
+      }
+    }
+  },
+  "page": {
+    "name": "",
+    "prefix": "app",
+    "suffix": "",
+    "type": "",
+    "tempFolderPath": "",
+    "refrenceSourcePath": "",
+    "destinationSourcePath": "",
+    "replaceFileName": { },
+    "replaceContent": { }
+  }
 }

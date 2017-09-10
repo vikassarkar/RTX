@@ -7,10 +7,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Widget, Translate } from '../../../../scripts/rtx/RTX';
+import { WgProvider, Translate } from '../../../../scripts/rtx/RTX';
 import {IHelloProps, IHelloStates} from '../models/IHello'
 
-@Widget({
+@WgProvider({
     moduleName: "app-hello", 
     translator: "app-hello"
 })
