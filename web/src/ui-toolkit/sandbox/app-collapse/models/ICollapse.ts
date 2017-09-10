@@ -2,6 +2,7 @@ export interface ICollapseProps {
     defaultOpen: boolean;
     cutomCollapseLableStyle: string;
     customDescriptionStyle: string;
+    customDescriptionTemplateStyle: string;
     showEndIcon: boolean;
     showStartIcon: boolean;
     startOpenIconClass: string;

@@ -61,7 +61,7 @@ export class Collapse extends React.Component<ICollapseProps, ICollapseStates> {
                     </span>
                 </label>
                 <div className={this.state.isOpened ? "collapse_description slidedown" + this.props.customDescriptionStyle : "collapse_description slideup" + this.props.customDescriptionStyle}>
-                    <div className="description_container">
+                    <div className={"description_container " + this.props.customDescriptionTemplateStyle}>
                         {this.props.childCollapsibleTemplate}
                     </div>
                 </div>

@@ -58,6 +58,7 @@ export class AppCollapseComponent extends React.Component<any, any> {
                     showStartIcon={this.props.hasOwnProperty('showStartIcon') ? this.props.showStartIcon : true}
                     cutomCollapseLableStyle={this.props.cutomCollapseLableStyle || "contentWidth"}
                     customDescriptionStyle={this.props.customDescriptionStyle || ""}
+                    customDescriptionTemplateStyle={this.props.customDescriptionTemplateStyle || ""}
                     startOpenIconClass= {this.props.startOpenIconClass || "glyphicon glyphicon-minus-sign"}
                     startCloseIconClass={this.props.startCloseIconClass || "glyphicon glyphicon-plus-sign"}
                     endOpenIconClass={this.props.endOpenIconClass || "glyphicon glyphicon-chevron-down"}
