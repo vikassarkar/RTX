@@ -66,20 +66,20 @@ export class AppInputboxComponent extends React.Component<any, any> {
         const template = (
             <div>
                 <Inputbox
+                    showLabelLeft={this.props.hasOwnProperty('showLabelLeft') ? this.props.showLabelLeft : false}
+                    showLabelTop={this.props.hasOwnProperty('showLabelTop') ? this.props.showLabelTop : true}
+                    hideErrors= {this.props.hasOwnProperty('hideErrors') ? this.props.hideErrors : false}
+                    highlightInputError={this.props.hasOwnProperty('highlightInputError') ? this.props.highlightInputError : true}
+                    highlightLabelError={this.props.hasOwnProperty('highlightLabelError') ? this.props.highlightLabelError : true}
+                    showClearButton={this.props.hasOwnProperty('showClearButton') ? this.props.showClearButton : true}
                     inputLabel={this.props.inputLabel || "Input Label"}
-                    showLabelLeft={this.props.labelLeft || false}
-                    showLabelTop={this.props.labelTop || true}
                     placeHolder={this.props.placeHolder || "username@domain.com"}
                     data={this.props.data || "dummyData"}
-                    hideErrors= {this.props.showError || false}
                     theme={this.props.theme || "light"}
                     validations={this.props.validations || "required|email"}
-                    highlightInputError={this.props.highlightInputError || true}
-                    highlightLabelError={this.props.highlightLabelError || true}
                     customInputStyle={this.props.customInputStyle || ""}
                     customTopLabelStyle={this.props.customTopLabelStyle || ""}
                     customLeftLabelStyle={this.props.customLeftLabelStyle || ""}
-                    showClearButton={this.props.showClearButton || true}
                     eventChange={this.props.eventChange || this._eventChange}
                     eventKeypress={this.props.eventKeypress || this._eventKeypress}
                     eventBlur={this.props.eventBlur || this._eventBlur}

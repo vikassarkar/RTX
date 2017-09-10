@@ -44,7 +44,7 @@ export class AppSwitchComponent extends React.Component<any, any> {
                     customTheme={this.props.customTheme || ""}
                     onText={this.props.onText || "On"}
                     offText={this.props.offText || "Off"}
-                    defaultChecked={this.props.defaultChecked || false}
+                    defaultChecked={this.props.hasOwnProperty('defaultChecked') ? this.props.defaultChecked : false}
                     data={this.props.data || ""}
                     eventChange={this._switchChanged}/>
             </div>

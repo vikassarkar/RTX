@@ -82,6 +82,10 @@ class App extends React.Component<{}, {}> {
                    <div className="col-xs-12 text-center clearfix">
                         <div style={innerContainerStyle} className="col-xs-6 text-center">
                             <AppInputboxComponent 
+                                theme="light"
+                                hideErrors={false}
+                                highlightInputError={false}
+                                highlightLabelError={false}
                                 eventChange={this._handleEventChange}
                                 eventKeypress={this._handleEventKeypress}
                                 eventBlur={this._handleEventBlur}
@@ -92,17 +96,28 @@ class App extends React.Component<{}, {}> {
                         while you use ".bind" in eventclick it is necessary to pass "this" as first argument.
                     </h3>
                     <h3 className="col-xs-12 text-center">
-                        Available themes are "dark / light / transparent".
-                    </h3>
-                    <h3 className="col-xs-12 text-center">
-                        customTheme is name of class if you want to add different theme.
+                        Available themes are "dark / light ".
                     </h3>
                     <div>
                         <h3>Available properties</h3>
-                        <p>text: string;</p>
-                        <p>theme: string; //dark / light / transparent</p>
-                        <p>eventClick: any; </p>
-                        <p>customTheme: string; </p>
+                        <p>inputLabel: string;</p>
+                        <p>showLabelLeft: boolean;</p>
+                        <p>showLabelTop: boolean;</p>
+                        <p>placeHolder: string;</p>
+                        <p>hideErrors: boolean;</p >
+                        <p>theme: string;</p >
+                        <p>validations: string;</p >
+                        <p>highlightInputError: boolean;</p >
+                        <p>highlightLabelError: boolean;</p >
+                        <p>customInputStyle: string;</p >
+                        <p>customTopLabelStyle: string;</p >
+                        <p>customLeftLabelStyle: string;</p >
+                        <p>showClearButton: boolean;</p >
+                        <p>eventChange: any;</p >
+                        <p>eventKeypress: any;</p >
+                        <p>eventBlur: any;</p >
+                        <p>eventClearInput: any;</p >
+                        <p>data: any;</p >
                     </div>
                 </div>
             </div>

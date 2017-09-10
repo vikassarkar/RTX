@@ -52,11 +52,12 @@ export class AppCollapseComponent extends React.Component<any, any> {
 
         const template = (
             <div>
-                <Collapse defaultOpen={this.props.defaultOpen || false}
+                <Collapse
+                    defaultOpen={this.props.hasOwnProperty('defaultOpen') ? this.props.defaultOpen : false}
+                    showEndIcon={this.props.hasOwnProperty('showEndIcon') ? this.props.showEndIcon : false}
+                    showStartIcon={this.props.hasOwnProperty('showStartIcon') ? this.props.showStartIcon : true}
                     cutomCollapseLableStyle={this.props.cutomCollapseLableStyle || "contentWidth"}
                     customDescriptionStyle={this.props.customDescriptionStyle || ""}
-                    showEndIcon={this.props.showEndIcon || false}
-                    showStartIcon={this.props.showStartIcon || true}
                     startOpenIconClass= {this.props.startOpenIconClass || "glyphicon glyphicon-minus-sign"}
                     startCloseIconClass={this.props.startCloseIconClass || "glyphicon glyphicon-plus-sign"}
                     endOpenIconClass={this.props.endOpenIconClass || "glyphicon glyphicon-chevron-down"}
