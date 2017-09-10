@@ -31,7 +31,7 @@ export class RadioCheckbox extends React.Component<IRadioCheckboxProps, IRadioCh
     _eventChange(event: any) {
         this.props.eventChange({
             "event": event,
-            "checked": event.target.value,
+            "checked": event.target.checked,
             "data": event.target.dataset.params
         });
     }
@@ -43,18 +43,16 @@ export class RadioCheckbox extends React.Component<IRadioCheckboxProps, IRadioCh
         const radioShape = this.props.radioShape + " ";
         const theme = this.props.theme + " ";
         const template = (
-            <div className="radio_checkbox">
+            <label className="radio_checkbox">
                 <input
                     type="radio"
-                    id={this.props.radioId}
+                    defaultChecked={this.props.defaultChecked}
                     className="radio_custom"
                     name={this.props.radioGroup}
                     data-params = {this.props.data}
                     onClick={this._eventChange}/>
-                <label
-                    htmlFor={this.props.radioId}
-                    className={"radio_custom_label " + radioShape + theme + this.props.customTheme}>{this.props.labelTemplate}</label>
-            </div>
+                <span className={"radio_custom_label " + radioShape + theme + this.props.customTheme}>{this.props.labelTemplate}</span>
+            </label>
         );
         return template;
     }

@@ -5,8 +5,8 @@ export interface IRadioCheckboxProps {
     data:any;
     customTheme: string;
     radioShape: string;
-    radioId: string;
     radioGroup: string;
+    defaultChecked: boolean;
 }
 
 export interface IRadioCheckboxStates { }

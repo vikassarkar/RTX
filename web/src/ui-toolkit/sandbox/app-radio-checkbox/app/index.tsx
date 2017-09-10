@@ -54,17 +54,21 @@ class App extends React.Component<{}, {}> {
                     <h2 className="col-xs-12 text-center">
                         It's a React "AppButtonComponent".
                     </h2>                   
-                    <div className="col-xs-5 text-center" style={alignCenter} >
+                    <div className="col-xs-5 text-left" style={alignCenter} >
                         <AppRadioCheckboxComponent 
                             theme="transparent" 
-                            labelTemplate="Select a radio"
+                            defaultChecked={true}
                             data="firstRadioButton"
                             radioGroup="group_1"
                             eventChange={this._handleRadioChecked}/>
                         <AppRadioCheckboxComponent
-                            theme="transparent"
-                            labelTemplate="Select a radio"
+                            theme="dark"
                             data="secondRadioButton"
+                            radioGroup="group_1"
+                            eventChange={this._handleRadioChecked}/>
+                        <AppRadioCheckboxComponent
+                            theme="dark"
+                            data="thirdRadioButton"
                             radioGroup="group_1"
                             eventChange={this._handleRadioChecked}/>
                     </div>
@@ -79,10 +83,13 @@ class App extends React.Component<{}, {}> {
                     </h3>
                     <div>
                         <h3>Available properties</h3>
-                        <p>text: string;</p>
-                        <p>theme: string; //dark / light / transparent</p>
-                        <p>eventClick: any; </p>
-                        <p>customTheme: string; </p>
+                        <p>labelTemplate: any; </p>
+                        <p>theme: string; </p>
+                        <p>eventChange: any; </p>
+                        <p>data: any; </p>
+                        <p>customTheme: string; </p >
+                        <p>checkboxShape: string; </p>
+                        <p>defaultChecked: boolean; </p>
                     </div>
                 </div>
             </div>

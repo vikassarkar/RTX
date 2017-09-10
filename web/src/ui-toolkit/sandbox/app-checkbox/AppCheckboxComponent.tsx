@@ -43,7 +43,7 @@ export class AppCheckboxComponent extends React.Component<any, any> {
             <div>
                 <Checkbox 
                     defaultChecked={this.props.hasOwnProperty('defaultChecked') ? this.props.defaultChecked : false}
-                    labelTemplate={this.props.labelTemplate || "Checkbox Lable to choose " + checkboxId}
+                    labelTemplate={this.props.labelTemplate || "Checkbox Lable to choose " + this.props.theme || "dark"}
                     theme={this.props.theme || "dark"}
                     eventChange={this._eventChange}
                     data={this.props.data || "radioDummy"}

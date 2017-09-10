@@ -41,13 +41,13 @@ export class AppRadioCheckboxComponent extends React.Component<any, any> {
         const template = (
             <div>
                 <RadioCheckbox
-                    labelTemplate={this.props.labelTemplate || "Radio Lable to choose " + radioId}
+                    defaultChecked={this.props.hasOwnProperty('defaultChecked') ? this.props.defaultChecked : false}
+                    labelTemplate={this.props.labelTemplate || "Radio Lable to choose " + this.props.theme || "dark"}
                     theme={this.props.theme || "dark"}
                     eventChange={this._eventChange}
                     data={this.props.data || "radioDummy"}
                     customTheme={this.props.customTheme || ""}
                     radioShape={this.props.radioShape || "square"}
-                    radioId={this.props.radioId || radioId}
                     radioGroup={this.props.radioGroup || "radio_group"}/>
             </div>
         );

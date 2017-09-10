@@ -44,13 +44,17 @@ class App extends React.Component<{}, {}> {
      * React utility method to render jsx 
      */
     render(): React.ReactElement<{}> {
+        const alignCenter = {
+            float: "none",
+            margin: "0 auto"
+        }
         const template = (
             <div className="container">
                 <div className="row text-center">
                     <h2 className="col-xs-12 text-center">
                         It's a React "AppCheckboxComponent".
                     </h2>                   
-                    <div className="col-xs-12 text-center">
+                    <div className="col-xs-5 text-left" style={alignCenter}>
                         <AppCheckboxComponent 
                             theme="light"
                             defaultChecked={true}
@@ -81,6 +85,7 @@ class App extends React.Component<{}, {}> {
                         <p>data: any; </p>
                         <p>customTheme: string; </p >
                         <p>checkboxShape: string; </p>
+                        <p>defaultChecked: boolean;</p>
                     </div>
                 </div>
             </div>

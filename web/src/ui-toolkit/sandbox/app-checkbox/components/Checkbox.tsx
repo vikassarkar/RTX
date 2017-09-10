@@ -31,7 +31,7 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxStates> {
     _eventChange(event: any) {
         this.props.eventChange({
             "event": event,
-            "checked": event.target.value,
+            "checked": event.target.checked,
             "data": event.target.dataset.params
         });
     }

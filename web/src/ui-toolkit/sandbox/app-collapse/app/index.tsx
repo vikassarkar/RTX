@@ -40,7 +40,7 @@ class App extends React.Component<{}, {}> {
      */
     _accordToggled(params: any) {
         console.log(params);
-        alert("you can set this value in state named as per data attr as : " + params.data + ". Accordion opened : " + params.checked);
+        alert("you can set this value in state named as per data attr as : " + params.data + ". Accordion opened : " + params.open);
     }
 
     /**
