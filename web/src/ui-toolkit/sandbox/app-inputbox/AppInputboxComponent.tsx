@@ -25,46 +25,38 @@ export class AppInputboxComponent extends React.Component<any, any> {
 
     /**
      * default change input event
-     * @param val
-     * @param data
-     * @param validation
+     * @param params
      */
-    _eventChange(val: string, data: string, validation: any) {
+    _eventChange(params:any) {
         if (this.props.eventChange)
-            this.props.eventChange(data);
+            this.props.eventChange(params);
     }
 
     /**
      * default keypress event
-     * @param val
-     * @param data
-     * @param validation
+     * @param params
      */
-    _eventKeypress(val: string, data: string, validation: any) {
+    _eventKeypress(params: any) {
         if (this.props.eventKeypress)
-            this.props.eventKeypress(data);
+            this.props.eventKeypress(params);
     }
 
     /**
      * default Blur event
-     * @param val
-     * @param data
-     * @param validation
+     * @param params
      */
-    _eventBlur(val: string, data: string, validation: any) {
+    _eventBlur(params: any) {
         if (this.props.eventBlur)
-            this.props.eventBlur(data);
+            this.props.eventBlur(params);
     }
 
     /**
      * default clear input click event
-     * @param val
-     * @param data
-     * @param validation
+     * @param params
      */
-    _eventClearInput(val: string, data: string, validation: any) {
+    _eventClearInput(params: any) {
         if (this.props.eventBlur)
-            this.props.eventBlur(data);
+            this.props.eventBlur(params);
     }
 
     /**

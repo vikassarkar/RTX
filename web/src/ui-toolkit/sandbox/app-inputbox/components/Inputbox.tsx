@@ -43,11 +43,23 @@ export class Inputbox extends React.Component<IInputboxProps, IInputboxStates> {
      */
     _clearInput(event: any) {
         event.target.parentElement.previousElementSibling.value = '';
+        let evt = event;
+        let targetEvt = event.target;
+        let targetInput = event.target.parentElement.previousElementSibling;
+        let inputValue = evt.target.value;
+        let inputData = evt.target.dataset.params;
         this.setState({
-            validation: this._validateFields(event)
+            validation: this._validateFields(null, targetEvt)
         }, function () {
             console.log(this.state.validation);
-            this.props.eventClearInput(event.target.value, event.target.dataset.params, this.state.validation)
+            this.props.eventClearInput({
+                "event": event,
+                "targetEvt": targetEvt,
+                "targetInput": targetInput,
+                "value": inputValue,
+                "data": inputData,
+                "validation":this.state.validation
+            })
         });
     }
 
@@ -55,9 +67,16 @@ export class Inputbox extends React.Component<IInputboxProps, IInputboxStates> {
      * validate input feild
      * @param event
      */
-    _validateFields(event: any) {
-        let validations = (event.target.dataset.validations.replace(/\s/g, '')).split("|");
-        let val = event.target.value;
+    _validateFields(targetEvt: any, clearInputEvt?: any) {
+        let validations: any = null;
+        let val: any = null;
+        if (clearInputEvt) {
+            validations = (clearInputEvt.parentElement.previousElementSibling.dataset.validations.replace(/\s/g, '')).split("|");
+            val = clearInputEvt.parentElement.previousElementSibling.value;
+        } else {
+            validations = (targetEvt.dataset.validations.replace(/\s/g, '')).split("|");
+            val = targetEvt.value;
+        }
 
         if (validations.includes('required')) {
             if (val && typeof (val) == "string" && validations.length > 1) {
@@ -109,13 +128,22 @@ export class Inputbox extends React.Component<IInputboxProps, IInputboxStates> {
      * @param event
      */
     _inputChanged(event: any) {
-        console.log(event.target.value + " -- " + event.target.dataset.params);
+        let evt = event;
+        let targetEvt = event.target;
+        let inputValue = evt.target.value;
+        let inputData = evt.target.dataset.params;
         if (this.state.validation.isDirty) {
             this.setState({
-                validation: this._validateFields(event)
+                validation: this._validateFields(targetEvt)
             }, function () {
                 console.log(this.state.validation);
-                this.props.eventChange(event.target.value, event.target.dataset.params, this.state.validation);
+                this.props.eventChange({
+                    "event": evt,
+                    "targetEvt": targetEvt,
+                    "value": inputValue,
+                    "data": inputData,
+                    "validation": this.state.validation
+                });
             });
         }
     }
@@ -125,8 +153,24 @@ export class Inputbox extends React.Component<IInputboxProps, IInputboxStates> {
      * @param event
      */
     _keyPressed(event: any) {
-        console.log(event.target.value + " -- " + event.target.dataset.params);
-        this.props.eventKeypress(event.target.value, event.target.dataset.params, this.state.validation);
+        let evt = event;
+        let targetEvt = event.target;
+        let inputValue = evt.target.value;
+        let inputData = evt.target.dataset.params;
+        if (this.state.validation.isDirty) {
+            this.setState({
+                validation: this._validateFields(targetEvt)
+            }, function () {
+                console.log(this.state.validation);
+                this.props.eventChange({
+                    "event": evt,
+                    "targetEvt": targetEvt,
+                    "value": inputValue,
+                    "data": inputData,
+                    "validation": this.state.validation
+                });
+            });
+        }
     }
 
     /**
@@ -134,11 +178,21 @@ export class Inputbox extends React.Component<IInputboxProps, IInputboxStates> {
     * @param event
     */
     _validateOnFocusOut(event: any) {
+        let evt = event;
+        let targetEvt = event.target;
+        let inputValue = evt.target.value;
+        let inputData = evt.target.dataset.params;
         this.setState({
-            validation: this._validateFields(event)
+            validation: this._validateFields(targetEvt)
         }, function () {
             console.log(this.state.validation);
-            this.props.eventBlur(event.target.value, event.target.dataset.params, this.state.validation);
+            this.props.eventBlur({
+                "event":evt,
+                "targetEvt": targetEvt,
+                "value": inputValue,
+                "data": inputData,
+                "validation": this.state.validation
+            });
         });
     }
 

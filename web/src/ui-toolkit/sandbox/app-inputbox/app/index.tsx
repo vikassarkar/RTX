@@ -26,42 +26,34 @@ class App extends React.Component<{}, {}> {
 
     /**
      * handle change input event
-     * @param val
-     * @param data
-     * @param validation
+     * @param params
      */
-    _handleEventChange(val:string, data: string, validation:any) {
-        console.log("you can set this value in state named as per data attr as : " + data);
+    _handleEventChange(params: any) {
+        console.log("you can set this value in state named as per data attr as : " + params.data);
     }
 
     /**
      * handle key up input event
-     * @param val
-     * @param data
-     * @param validation
+     * @param params
      */
-    _handleEventKeypress(val: string, data: string, validation: any) {
-        console.log("you can set this value in state named as per data attr as : " + data);
+    _handleEventKeypress(params:any) {
+        console.log("you can set this value in state named as per data attr as : " + params.data);
     }
 
     /**
      * handle blur input event
-     * @param val
-     * @param data
-     * @param validation
+     * @param params
      */
-    _handleEventBlur(val: string, data: string, validation: any) {
-        console.log("you can set this value in state named as per data attr as : " + data);
+    _handleEventBlur(params: any) {
+        console.log("you can set this value in state named as per data attr as : " + params.targetEvt.value);
     }
 
     /**
      * handle clear input icon event
-     * @param val
-     * @param data
-     * @param validation
+     * @param params
      */
-    _handleEventClearInput(val: string, data: string, validation: any) {
-        console.log("you can set this value in state named as per data attr as : " + data);
+    _handleEventClearInput(params: any) {
+        console.log("you can set this value in state named as per data attr as : " + params.data);
     }
 
     /**
