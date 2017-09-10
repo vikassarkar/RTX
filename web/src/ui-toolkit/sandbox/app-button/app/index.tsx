@@ -9,6 +9,7 @@ import { Router, Route } from 'react-router';
 
 import { Widget } from '../../../../scripts/rtx/RTX';
 import { AppButtonComponent } from '../AppButtonComponent';
+import { AppHeaderWidget } from '../../../widgets/app-header/AppHeaderWidget';
 
 @Widget({
     moduleName: "app-button",
@@ -45,7 +46,9 @@ class App extends React.Component<{}, {}> {
      */
     render(): React.ReactElement<{}> {
         const template = (
-            <div className="container">
+            <div>
+                <AppHeaderWidget framework="React" compiler="TypeScript" headerTitle="Button Component"/>
+                <div className="container">
                 <div className="row text-center">
                     <h2 className="col-xs-12 text-center">
                         It's a React "AppButtonComponent".
@@ -73,6 +76,7 @@ class App extends React.Component<{}, {}> {
                         <p>eventClick: any; </p>
                         <p>customTheme: string; </p>
                     </div>
+                </div>
                 </div>
             </div>
         );

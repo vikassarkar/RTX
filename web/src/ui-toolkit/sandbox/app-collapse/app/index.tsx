@@ -10,6 +10,7 @@ import { Router, Route } from 'react-router';
 import { Widget } from '../../../../scripts/rtx/RTX';
 import { AppCollapseComponent } from '../AppCollapseComponent';
 import { AppButtonComponent } from '../../app-button/AppButtonComponent';
+import { AppHeaderWidget } from '../../../widgets/app-header/AppHeaderWidget';
 
 @Widget({
     moduleName: "app-button",
@@ -91,50 +92,53 @@ class App extends React.Component<{}, {}> {
             float: "none"
         };
         const template = (
-            <div className="container">
-                <div className="row text-center">
-                    <h2 className="col-xs-12 text-center">
-                        It's a React "AppCollapseComponent".
-                    </h2>
-                    <div className="col-xs-12 text-center clearfix">
-                        <div style={innerContainerStyle} className="col-xs-6 text-center">
-                            <AppCollapseComponent
-                                defaultOpen={true}
-                                cutomCollapseLableStyle="contentWidth"
-                                showEndIcon={false}
-                                showStartIcon={true}
-                                startOpenIconClass="glyphicon glyphicon-minus-sign"
-                                startCloseIconClass="glyphicon glyphicon-plus-sign"
-                                endOpenIconClass="glyphicon glyphicon-chevron-down"
-                                endCloseIconClass="glyphicon glyphicon-chevron-right"
-                                endIconTheme="dark"
-                                startIconTheme="dark"
-                                childCollapsibleTemplate={this._childElement() }
-                                eventToggle={ this._accordToggled}
-                                data="dummyCollapse"/>
+            <div>
+                <AppHeaderWidget framework="React" compiler="TypeScript" headerTitle="Collapse Component"/>
+                <div className="container">
+                    <div className="row text-center">
+                        <h2 className="col-xs-12 text-center">
+                            It's a React "AppCollapseComponent".
+                        </h2>
+                        <div className="col-xs-12 text-center clearfix">
+                            <div style={innerContainerStyle} className="col-xs-6 text-center">
+                                <AppCollapseComponent
+                                    defaultOpen={true}
+                                    cutomCollapseLableStyle="contentWidth"
+                                    showEndIcon={false}
+                                    showStartIcon={true}
+                                    startOpenIconClass="glyphicon glyphicon-minus-sign"
+                                    startCloseIconClass="glyphicon glyphicon-plus-sign"
+                                    endOpenIconClass="glyphicon glyphicon-chevron-down"
+                                    endCloseIconClass="glyphicon glyphicon-chevron-right"
+                                    endIconTheme="dark"
+                                    startIconTheme="dark"
+                                    childCollapsibleTemplate={this._childElement() }
+                                    eventToggle={ this._accordToggled}
+                                    data="dummyCollapse"/>
+                            </div>
                         </div>
-                    </div>
-                    <h3 className="col-xs-12 text-center">
-                        Available icon themes are "dark / light ".
-                    </h3>
-                    <div className="col-xs-12 text-center">
-                        <h3>Available properties</h3>
-                        <p>defaultOpen: boolean; </p>
-                        <p>cutomCollapseLableStyle: string; </p>
-                        <p>customDescriptionStyle: string; </p>
-                        <p> showEndIcon: boolean; </p>
-                        <p> showStartIcon: boolean; </p>
-                        <p>startOpenIconClass: string; </p>
-                        <p>startCloseIconClass: string; </p>
-                        <p>endOpenIconClass: string; </p>
-                        <p>endCloseIconClass: string; </p>
-                        <p>customEndIconStyle: string; </p>
-                        <p>endIconTheme: string; </p>
-                        <p>customStartIconStyle: string; </p>
-                        <p>startIconTheme: string; </p>
-                        <p> childCollapsibleTemplate: any; </p>
-                        <p>eventToggle: any; </p>
-                        <p>name: string; </p>
+                        <h3 className="col-xs-12 text-center">
+                            Available icon themes are "dark / light ".
+                        </h3>
+                        <div className="col-xs-12 text-center">
+                            <h3>Available properties</h3>
+                            <p>defaultOpen: boolean; </p>
+                            <p>cutomCollapseLableStyle: string; </p>
+                            <p>customDescriptionStyle: string; </p>
+                            <p> showEndIcon: boolean; </p>
+                            <p> showStartIcon: boolean; </p>
+                            <p>startOpenIconClass: string; </p>
+                            <p>startCloseIconClass: string; </p>
+                            <p>endOpenIconClass: string; </p>
+                            <p>endCloseIconClass: string; </p>
+                            <p>customEndIconStyle: string; </p>
+                            <p>endIconTheme: string; </p>
+                            <p>customStartIconStyle: string; </p>
+                            <p>startIconTheme: string; </p>
+                            <p> childCollapsibleTemplate: any; </p>
+                            <p>eventToggle: any; </p>
+                            <p>name: string; </p>
+                        </div>
                     </div>
                 </div>
             </div>

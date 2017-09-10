@@ -13,6 +13,7 @@ import {Header} from './components/Header';
 export interface IHeaderProps {
     compiler: string;
     framework: string;
+    headerTitle: string;
 };
 
 @Widget({
@@ -27,7 +28,7 @@ export class AppHeaderWidget extends React.Component<IHeaderProps, {}> {
     render(): React.ReactElement<IHeaderProps> {
         const template = (
             <div>
-                <Header framework={this.props.compiler} compiler={this.props.framework} />
+                <Header framework={this.props.compiler} compiler={this.props.framework} headerTitle={this.props.headerTitle}/>
             </div>
         );
         return template;

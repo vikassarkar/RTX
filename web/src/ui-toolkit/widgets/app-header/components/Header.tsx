@@ -62,7 +62,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
                         </div>
                         <div className="col-xs-4">
                             <div className="header_title">
-                                <h2>Header Title</h2>
+                                <h2>{this.props.headerTitle}</h2>
                             </div>
                         </div>
                         <div className="col-xs-4">

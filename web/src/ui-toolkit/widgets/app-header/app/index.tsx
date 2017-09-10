@@ -26,7 +26,7 @@ class App extends React.Component<{}, {}> {
     render(): React.ReactElement<{}> {
         const template = (
             <div>
-                <AppHeaderWidget framework="React" compiler="TypeScript" />
+                <AppHeaderWidget framework="React" compiler="TypeScript" headerTitle="Header Title"/>
             </div>
         );
         return template;
