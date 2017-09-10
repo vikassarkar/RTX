@@ -50,10 +50,10 @@ export class RadioCheckbox extends React.Component<IRadioCheckboxProps, IRadioCh
                     className="radio_custom"
                     name={this.props.radioGroup}
                     data-params = {this.props.data}
-                    onChange={this._eventChange}/>
+                    onClick={this._eventChange}/>
                 <label
                     htmlFor={this.props.radioId}
-                    className={"radio_custom_label square dark " + radioShape + theme + this.props.customTheme}>{this.props.labelTemplate}</label>
+                    className={"radio_custom_label " + radioShape + theme + this.props.customTheme}>{this.props.labelTemplate}</label>
             </div>
         );
         return template;

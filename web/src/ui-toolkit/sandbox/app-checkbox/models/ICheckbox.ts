@@ -1,9 +1,11 @@
 export interface ICheckboxProps {
-    text: string;
+    defaultChecked: boolean;
+    labelTemplate: any;
     theme: string;
-    eventClick: any;
-    data:any;
+    eventChange: any;
+    data: any;
     customTheme: string;
+    checkboxShape: string;
 }
 
 export interface ICheckboxStates { }

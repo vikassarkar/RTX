@@ -58,7 +58,14 @@ class App extends React.Component<{}, {}> {
                         <AppRadioCheckboxComponent 
                             theme="transparent" 
                             labelTemplate="Select a radio"
-                            data="dummyRadioButton"
+                            data="firstRadioButton"
+                            radioGroup="group_1"
+                            eventChange={this._handleRadioChecked}/>
+                        <AppRadioCheckboxComponent
+                            theme="transparent"
+                            labelTemplate="Select a radio"
+                            data="secondRadioButton"
+                            radioGroup="group_1"
                             eventChange={this._handleRadioChecked}/>
                     </div>
                      <h3 className="col-xs-12 text-center">

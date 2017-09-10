@@ -21,29 +21,34 @@ export class AppCheckboxComponent extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
+        this._eventChange = this._eventChange.bind(this);
     }
 
     /**
      * event handler for click event of button
      * @param data
      */
-    _eventClick(params: any) {
-        if(this.props.eventClick)
-            this.props.eventClick(params);
+    _eventChange(params: any) {
+        if (this.props.eventChange)
+            this.props.eventChange(params);
     }
 
     /**
      * React utility method to render jsx 
      */
     render(): React.ReactElement<any> {
+
+        const checkboxId = "radio_" + Math.round(Math.random() * 10000) + 1;
         const template = (
             <div>
                 <Checkbox 
-                    text={this.props.text || "Button"} 
-                    theme={this.props.theme || ""} 
-                    customTheme={this.props.customTheme || ""} 
-                    data={this.props.data || "dummyButton"}
-                    eventClick={this.props.eventClick || this._eventClick}/>
+                    defaultChecked={this.props.hasOwnProperty('defaultChecked') ? this.props.defaultChecked : false}
+                    labelTemplate={this.props.labelTemplate || "Checkbox Lable to choose " + checkboxId}
+                    theme={this.props.theme || "dark"}
+                    eventChange={this._eventChange}
+                    data={this.props.data || "radioDummy"}
+                    customTheme={this.props.customTheme || ""}
+                    checkboxShape={this.props.radioShape || "square"}/>
             </div>
         );
         return template;

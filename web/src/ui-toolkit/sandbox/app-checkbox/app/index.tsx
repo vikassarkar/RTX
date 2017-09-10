@@ -25,10 +25,10 @@ class App extends React.Component<{}, {}> {
     }
 
     /**
-     * event to handle button click 
+     * event to handle checkbox event 
      * @param data
      */
-    _handleIndexBack(params: any) {
+    _handleChangeEvent(params: any) {
         console.log(params);
         alert("you can set this value in state named as per data attr as : " + params.data);
     }
@@ -52,10 +52,20 @@ class App extends React.Component<{}, {}> {
                     </h2>                   
                     <div className="col-xs-12 text-center">
                         <AppCheckboxComponent 
-                            theme="transparent" 
-                            text="Index Back"
-                            data="dummyButton"
-                            eventClick={this._handleIndexBack}/>
+                            theme="light"
+                            defaultChecked={true}
+                            data="firstCheckboxButton"
+                            eventChange={this._handleChangeEvent}/>
+                        <AppCheckboxComponent
+                            theme="dark"
+                            defaultChecked={true}
+                            data="secondCheckboxButton"
+                            eventChange={this._handleChangeEvent}/>
+                        <AppCheckboxComponent
+                            theme="transparent"
+                            defaultChecked={true}
+                            data="thirdCheckboxButton"
+                            eventChange={this._handleChangeEvent}/>
                     </div>
                      <h3 className="col-xs-12 text-center">
                         while you use ".bind" in eventclick it is necessary to pass "this" as first argument.
@@ -63,15 +73,14 @@ class App extends React.Component<{}, {}> {
                     <h3 className="col-xs-12 text-center">
                         Available themes are "dark / light / transparent".
                     </h3>
-                    <h3 className="col-xs-12 text-center">
-                        customTheme is name of class if you want to add different theme.
-                    </h3>
                     <div>
                         <h3>Available properties</h3>
-                        <p>text: string;</p>
-                        <p>theme: string; //dark / light / transparent</p>
-                        <p>eventClick: any; </p>
-                        <p>customTheme: string; </p>
+                        <p>labelTemplate: any; </p>
+                        <p>theme: string; </p>
+                        <p>eventChange: any; </p>
+                        <p>data: any; </p>
+                        <p>customTheme: string; </p >
+                        <p>checkboxShape: string; </p>
                     </div>
                 </div>
             </div>

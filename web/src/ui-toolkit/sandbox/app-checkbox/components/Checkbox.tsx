@@ -21,16 +21,17 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxStates> {
 
     constructor(props:any) {
         super(props);        
-        this._eventClick = this._eventClick.bind(this);
+        this._eventChange = this._eventChange.bind(this);
     }
 
     /**
      * button click event handler
      * @param event
      */
-    _eventClick(event: any) {
-        this.props.eventClick({
+    _eventChange(event: any) {
+        this.props.eventChange({
             "event": event,
+            "checked": event.target.value,
             "data": event.target.dataset.params
         });
     }
@@ -39,12 +40,18 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxStates> {
      * React utility method to render jsx 
      */
     render(): React.ReactElement<ICheckboxProps> {
+        const checkboxShape = this.props.checkboxShape + " ";
+        const theme = this.props.theme + " ";
         const template = (
-            <button
-                className={"app_btn " + this.props.theme + this.props.customTheme}
-                data-params={this.props.data} onClick={this._eventClick}>
-                {this.props.text}
-            </button>
+            <label className="checkbox_block">
+                <input
+                    type="checkbox"        
+                    defaultChecked={this.props.defaultChecked}            
+                    className="checkbox_custom"
+                    data-params = {this.props.data}
+                    onClick={this._eventChange}/>
+                <span className={"checkbox_custom_label " + checkboxShape + theme + this.props.customTheme}>{this.props.labelTemplate}</span>
+            </label>
         );
        return template;
     }

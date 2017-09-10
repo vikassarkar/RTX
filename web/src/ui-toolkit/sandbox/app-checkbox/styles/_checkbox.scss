@@ -9,52 +9,82 @@
 //if style id required for individual then we would need to change webpack settings to ignore scss, then importing features as per requirement.
 //@import "../../../../../build-process/configs/webpack.theme.config.scss";
 
-.app_btn {
-    color: $whiteColor;
-    background-color: $successColor;
-    border: 0.15rem solid $whiteColor;
-    padding: 0.5rem 2.5rem;
-    border-radius: 2rem;
 
-    &:hover {
-        background-color: $dangerColor;
+.checkbox_block {
+    .checkbox_custom, .checkbox_custom_label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        cursor: pointer;
     }
 
-    &.dark {
-        color: $baselightColor;
-        background-color: $baseColor;
-        border: 0.15rem solid $baselightColor;
-        padding: 0.5rem 2.5rem;
-        border-radius: 2rem;
+    input[type="checkbox"] {
+        display: none !important;
+    }
 
-        &:hover {
-            opacity: 0.5;
+    .checkbox_custom + .checkbox_custom_label:before {
+        content: '';
+        background: $whiteColor;
+        border: 0.1rem solid $dustGrayColor;
+        display: inline-block;
+        vertical-align: middle;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.5rem;
+        border-radius: 50%;
+    }
+
+
+    .checkbox_custom:checked + .checkbox_custom_label:before {
+        content: "\e013";
+        font-family: 'Glyphicons Halflings';
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: $whiteColor;
+        background: $successColor;
+    }
+
+    .checkbox_custom + .checkbox_custom_label {
+        &.square:before {
+            border-radius: 10%;
+        }
+
+        &.circle:before {
+            border-radius: 50%;
+        }
+
+        &.light:before {
+            background: $whiteColor;
+            border: 0.1rem solid $dustGrayColor;
+        }
+
+        &.dark:before {
+            background: $whiteColor;
+            border: 0.1rem solid $dustGrayColor;
+        }
+        &.transparent:before{
+            background: $transparent;
+            border: 0.1rem solid $baseColor;
         }
     }
 
-    &.light {
-        color: $baseColor;
-        background-color: $baselightColor;
-        border: 0.15rem solid $baseColor;
-        padding: 0.5rem 2.5rem;
-        border-radius: 2rem;
-
-        &:hover {
-            opacity: 0.5;
+    .checkbox_custom:checked + .checkbox_custom_label {
+        &.light:before {
+            background: $dustGrayColor;
+            color: $whiteColor;
+            border: 0.1rem solid $darkGrayColor;
         }
-    }
-
-    &.transparent {
-        color: $baselightColor;
-        background-color: $transparent;
-        border: 0.15rem solid $baselightColor;
-        padding: 0.5rem 2.5rem;
-        border-radius: 2rem;
-
-        &:hover {
-            color: $baselightColor;
-            background-color: $baseColor;
-            border: 0.15rem solid $baselightColor;
+        &.dark:before {
+            background: $baseColor;
+            color: $whiteColor;
+            border: 0.1rem solid $dustGrayColor;
+        }
+        &.transparent:before{
+            background: $transparent;
+            color: $baseColor;
+            border: 0.1rem solid $baseColor;
         }
     }
 }
