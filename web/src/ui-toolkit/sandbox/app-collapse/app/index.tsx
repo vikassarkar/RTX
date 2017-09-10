@@ -9,6 +9,7 @@ import { Router, Route } from 'react-router';
 
 import { Widget } from '../../../../scripts/rtx/RTX';
 import { AppCollapseComponent } from '../AppCollapseComponent';
+import { AppButtonComponent } from '../../app-button/AppButtonComponent';
 
 @Widget({
     moduleName: "app-button",
@@ -24,49 +25,78 @@ class App extends React.Component<{}, {}> {
         super(props);
     }
 
-    accordToggled(isChecked: boolean, name: string) {
-        alert("you can set this value in state named as per data attr as : " + name+". Accordion opened : "+isChecked);
+    /**
+     * handle button event used inside collapsible
+     * @param data
+     */
+    _handleIndexBack(data: string) {
+        alert("you can set this value in state named as per data attr as ######: " + data);
     }
 
-    childElement(): any {
+    /**
+     * handle toggle collapse
+     * @param isChecked
+     * @param name
+     */
+    _accordToggled(isChecked: boolean, name: string) {
+        alert("you can set this value in state named as per data attr as : " + name + ". Accordion opened : " + isChecked);
+    }
+
+    /**
+     * child template to be used inside collapsible
+     */
+    _childElement(): any {
         return (
-            <div className="row">
-                <div className="col-sm-4">
+            <div className="col-xs-12">
+                <div className="col-xs-4">
                     <h3>Column 1</h3>
                     <p>Lorem ipsum dolor..</p>
                     <p>Ut enim ad..</p>
                 </div>
-                <div className="col-sm-4">
+                <div className="col-xs-4">
                     <h3>Column 2</h3>
                     <p>Lorem ipsum dolor..</p>
                     <p>Ut enim ad..</p>
                 </div>
-                <div className="col-sm-4">
+                <div className="col-xs-4">
                     <h3>Column 3</h3>
                     <p>Lorem ipsum dolor..</p>
                     <p>Ut enim ad..</p>
+                </div>
+                <div className="col-xs-12 text-right">
+                    <AppButtonComponent
+                        theme="dark"
+                        text="AppButtonComponent"
+                        data="dummyButton"
+                        eventClick={this._handleIndexBack}/>
                 </div>
             </div>
         )
     }
 
+    /**
+     * React utility method after component was mounted
+     */
     componentDidMount() {
         document.title = this.translator.TITLE;
     }
 
+    /**
+     * React utility method to render jsx 
+     */
     render(): React.ReactElement<{}> {
         const innerContainerStyle = {
             margin: "0 auto",
-            float:"none"
+            float: "none"
         };
         const template = (
             <div className="container">
                 <div className="row text-center">
                     <h2 className="col-xs-12 text-center">
                         It's a React "AppCollapseComponent".
-                    </h2>                   
+                    </h2>
                     <div className="col-xs-12 text-center clearfix">
-                        <div style={innerContainerStyle} className="col-xs-5 text-center">
+                        <div style={innerContainerStyle} className="col-xs-6 text-center">
                             <AppCollapseComponent
                                 defaultOpen={true}
                                 cutomCollapseLableStyle="contentWidth"
@@ -78,8 +108,8 @@ class App extends React.Component<{}, {}> {
                                 endCloseIconClass="glyphicon glyphicon-chevron-right"
                                 endIconTheme="dark"
                                 startIconTheme="dark"
-                                childCollapsibleTemplate={this.childElement()}
-                                eventToggle={ this.accordToggled}
+                                childCollapsibleTemplate={this._childElement() }
+                                eventToggle={ this._accordToggled}
                                 data="dummyCollapse"/>
                         </div>
                     </div>
@@ -102,8 +132,8 @@ class App extends React.Component<{}, {}> {
                         <p>customStartIconStyle: string; </p>
                         <p>startIconTheme: string; </p>
                         <p> childCollapsibleTemplate: any; </p>
-                        <p>eventToggle:any; </p>
-                        <p>name:string; </p>
+                        <p>eventToggle: any; </p>
+                        <p>name: string; </p>
                     </div>
                 </div>
             </div>

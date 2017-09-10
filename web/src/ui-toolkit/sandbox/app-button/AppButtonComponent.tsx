@@ -23,11 +23,18 @@ export class AppButtonComponent extends React.Component<any, any> {
         super(props);
     }
 
-    eventClick(data: string) {
+    /**
+     * event handler for click event of button
+     * @param data
+     */
+    _eventClick(data: string) {
         if(this.props.eventClick)
             this.props.eventClick(data);
     }
 
+    /**
+     * React utility method to render jsx 
+     */
     render(): React.ReactElement<any> {
         const template = (
             <div>
@@ -36,7 +43,7 @@ export class AppButtonComponent extends React.Component<any, any> {
                     theme={this.props.theme || ""} 
                     customTheme={this.props.customTheme || ""} 
                     data={this.props.data || "dummyButton"}
-                    eventClick={this.props.eventClick || this.eventClick}/>
+                    eventClick={this.props.eventClick || this._eventClick}/>
             </div>
         );
         return template;

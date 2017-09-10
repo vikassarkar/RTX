@@ -29,7 +29,7 @@ const nodeModulesDir = path.resolve(__dirname, 'node_modules');
 const webpackConfig = function (srcFolder, packageType, envirnoment, packageName, isDashboard, isTRE, buildTheme) {
     //initilize variables
     var configurations = {};
-    console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~getting configuration  config-" + srcFolder + "/" + packageType + "~~~~~~~~~~~");
+    console.log("\x1b[33m%s\x1b[0m", "~~~getting configuration  config-" + srcFolder + "/" + packageType + "~~~");
     var buildData = buildPathConfig["config-" + srcFolder][packageType];
     var theme = buildTheme? buildTheme : currentTheme.theme;
     var entryDir = path.resolve(__dirname, buildData['entryBaseDir'] + packageName + buildData['entryPath'] + buildData['entryFile']);

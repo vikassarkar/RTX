@@ -21,18 +21,30 @@ export class Switch extends React.Component<ISwitchProps, ISwitchStates> {
 
     constructor(props:any) {
         super(props);
-        this.switchChanged = this.switchChanged.bind(this);
+        this._switchChanged = this._switchChanged.bind(this);
     }
 
-    switchChanged(event: any) {
+    /**
+     * switch toggle event handler
+     * @param isChecked
+     * @param name
+     */
+    _switchChanged(event: any) {
         this.props.eventChange(event.target.checked, event.target.dataset.params);
     }
 
+    /**
+     * React utility method to render jsx 
+     */
     render(): React.ReactElement<ISwitchProps> {
         const template = (
             <div className="simple_switch">
                 <label className={"tgl " + this.props.theme + this.props.customTheme} >
-                    <input type="checkbox" defaultChecked={this.props.defaultChecked} onChange={this.switchChanged} data-params={this.props.data}/>
+                    <input
+                        type="checkbox"
+                        defaultChecked={this.props.defaultChecked}
+                        onChange={this._switchChanged}
+                        data-params={this.props.data}/>
                     <span data-on={this.props.onText} data-off={this.props.offText}></span>
                 </label>
             </div>

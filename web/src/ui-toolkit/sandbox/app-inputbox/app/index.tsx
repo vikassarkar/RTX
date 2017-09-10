@@ -24,26 +24,56 @@ class App extends React.Component<{}, {}> {
         super(props);
     }
 
+    /**
+     * handle change input event
+     * @param val
+     * @param data
+     * @param validation
+     */
     _handleEventChange(val:string, data: string, validation:any) {
         console.log("you can set this value in state named as per data attr as : " + data);
     }
 
+    /**
+     * handle key up input event
+     * @param val
+     * @param data
+     * @param validation
+     */
     _handleEventKeypress(val: string, data: string, validation: any) {
         console.log("you can set this value in state named as per data attr as : " + data);
     }
 
+    /**
+     * handle blur input event
+     * @param val
+     * @param data
+     * @param validation
+     */
     _handleEventBlur(val: string, data: string, validation: any) {
         console.log("you can set this value in state named as per data attr as : " + data);
     }
 
+    /**
+     * handle clear input icon event
+     * @param val
+     * @param data
+     * @param validation
+     */
     _handleEventClearInput(val: string, data: string, validation: any) {
         console.log("you can set this value in state named as per data attr as : " + data);
     }
 
+    /**
+     * React utility method after component was mounted
+     */
     componentDidMount() {
         document.title = this.translator.TITLE;
     }
 
+    /**
+     * React utility method to render jsx 
+     */
     render(): React.ReactElement<{}> {
         const innerContainerStyle = {
             margin: "0 auto",

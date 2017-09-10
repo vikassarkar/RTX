@@ -143,7 +143,7 @@ export class Inputbox extends React.Component<IInputboxProps, IInputboxStates> {
     }
 
     /**
-     * render jsx method
+     * React utility method to render jsx 
      */
     render(): React.ReactElement<IInputboxProps> {
         const template = (
@@ -167,7 +167,7 @@ export class Inputbox extends React.Component<IInputboxProps, IInputboxStates> {
                     <span className={this.props.showClearButton ? "clear_input " + this.props.theme : "hide_block"} >
                         <i className="glyphicon glyphicon-remove-circle" onClick={this._clearInput}></i>
                     </span>
-                    <div className={this.props.hideErrors ? "hide_block" : "error_message"}>
+                    <div className={this.props.hideErrors ? "hide_block" : "error_block"}>
                         <div className={this.state.validation && this.state.validation['isValid'] ? "hide_block" : "input_error"}>
                             <i className="glyphicon glyphicon-alert"></i>
                             <span className="error_message">{this.state.validation ? this.state.validation.message : ""}</span>

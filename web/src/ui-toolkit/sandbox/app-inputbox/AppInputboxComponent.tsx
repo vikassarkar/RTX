@@ -68,7 +68,7 @@ export class AppInputboxComponent extends React.Component<any, any> {
     }
 
     /**
-     * render input jsx
+     * React utility method to render jsx 
      */
     render(): React.ReactElement<any> {
         const template = (

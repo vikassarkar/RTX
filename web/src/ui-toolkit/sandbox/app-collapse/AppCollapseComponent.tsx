@@ -23,12 +23,20 @@ export class AppCollapseComponent extends React.Component<any, any> {
         super(props);
     }
 
-    eventToggle(isChecked: boolean, name: string) {
+    /**
+     * toggle collpse event
+     * @param isChecked
+     * @param name
+     */
+    _eventToggle(isChecked: boolean, name: string) {
         if(this.props.eventToggle)
             this.props.eventToggle(isChecked, name);
     }
 
-    childElement(): any {
+    /**
+     * default child element for collapsible section
+     */
+    _childElement(): any {
         return (
             <div>
                 <h3>Two columns with two nested columns</h3>
@@ -37,6 +45,9 @@ export class AppCollapseComponent extends React.Component<any, any> {
         )
     }
 
+    /**
+     * React utility method to render jsx 
+     */
     render(): React.ReactElement<any> {
 
         const template = (
@@ -54,8 +65,8 @@ export class AppCollapseComponent extends React.Component<any, any> {
                     customStartIconStyle={ this.props.customStartIconStyle || ""}
                     endIconTheme={this.props.endIconTheme || "dark"}
                     startIconTheme={this.props.startIconTheme || "dark"}
-                    childCollapsibleTemplate={this.props.childCollapsibleTemplate || this.childElement()} 
-                    eventToggle={this.props.eventToggle || this.eventToggle}
+                    childCollapsibleTemplate={this.props.childCollapsibleTemplate || this._childElement()} 
+                    eventToggle={this.props.eventToggle || this._eventToggle}
                     data={this.props.data|| ""}/>
             </div>
         );

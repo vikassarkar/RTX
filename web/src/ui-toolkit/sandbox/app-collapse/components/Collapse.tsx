@@ -21,20 +21,33 @@ export class Collapse extends React.Component<ICollapseProps, ICollapseStates> {
 
     constructor(props: any) {
         super(props);
-        this.state = { isOpened: this.props.defaultOpen };
-        this.toggleCollapse = this.toggleCollapse.bind(this);
+        this.state = {
+            isOpened: this.props.defaultOpen
+        };
+        this._toggleCollapse = this._toggleCollapse.bind(this);
     }
 
-    toggleCollapse(event: any) {
+    /**
+     * toggle handler for collapse
+     * @param event
+     */
+    _toggleCollapse(event: any) {
         this.setState({ isOpened: event.target.checked });
         this.props.eventToggle(event.target.checked, event.target.dataset.params);
     }
 
+    /**
+     * React utility method to render jsx 
+     */
     render(): React.ReactElement<ICollapseProps> {
         const template = (
             <div className="collapse_row">
                 <label className={"collaspse_label " + this.props.cutomCollapseLableStyle}>
-                    <input type="checkbox" defaultChecked={this.props.defaultOpen} onChange={this.toggleCollapse} data-params={this.props.data}/>
+                    <input
+                        type="checkbox"
+                        defaultChecked={this.props.defaultOpen}
+                        onChange={this._toggleCollapse}
+                        data-params={this.props.data}/>
                     <span className={this.props.showStartIcon ? "icon_start" : "icon_hide" }>
                         <i className={this.state.isOpened ? this.props.startIconTheme + " " + this.props.startOpenIconClass + " " + this.props.customStartIconStyle : this.props.startIconTheme + " " + this.props.startCloseIconClass + " " + this.props.customEndIconStyle}></i>
                     </span>

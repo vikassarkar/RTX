@@ -21,14 +21,22 @@ export class AppSwitchComponent extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
-        this.switchChanged = this.switchChanged.bind(this);
+        this._switchChanged = this._switchChanged.bind(this);
     }
 
-    switchChanged(isChecked: boolean, name: string) {
-        if(this.props.eventChange)
+    /**
+     * switch toggle event handler
+     * @param isChecked
+     * @param name
+     */
+    _switchChanged(isChecked: boolean, name: string) {
+        if (this.props.eventChange)
             this.props.eventChange(isChecked, name);
     }
 
+    /**
+    * React utility method after component was mounted
+    */
     render(): React.ReactElement<any> {
         const template = (
             <div>
@@ -38,7 +46,7 @@ export class AppSwitchComponent extends React.Component<any, any> {
                     offText={this.props.offText || "Off"}
                     defaultChecked={this.props.defaultChecked || false}
                     data={this.props.data || ""}
-                    eventChange={this.switchChanged}/>
+                    eventChange={this._switchChanged}/>
             </div>
         );
         return template;

@@ -22,17 +22,28 @@ class App extends React.Component<{}, {}> {
 
     constructor(props: any) {
         super(props);
-        this.switchChanged = this.switchChanged.bind(this);
+        this._switchChanged = this._switchChanged.bind(this);
     }
 
-    switchChanged(isChecked: boolean, name: string) {        
+    /**
+     * switch toggle event handler
+     * @param isChecked
+     * @param name
+     */
+    _switchChanged(isChecked: boolean, name: string) {        
         alert("you can set this value in state named as per name attr as : " + name+". Switched on : "+isChecked);
     }
 
+    /**
+     * React utility method after component was mounted
+     */
     componentDidMount() {
         document.title = this.translator.TITLE;
     }
 
+    /**
+     * React utility method to render jsx 
+     */
     render(): React.ReactElement<{}> {
         const template = (
             <div className="container">
@@ -49,7 +60,7 @@ class App extends React.Component<{}, {}> {
                             offText="No"
                             defaultChecked={true}
                             data="firstSwitch"
-                            eventChange={this.switchChanged}/>
+                            eventChange={this._switchChanged}/>
                     </div>
 
                     <div className="col-xs-12 text-center">
@@ -59,7 +70,7 @@ class App extends React.Component<{}, {}> {
                             offText="OFF"
                             defaultChecked={false}
                             data="secondSwitch"
-                            eventChange={this.switchChanged}/>
+                            eventChange={this._switchChanged}/>
                     </div>
                     
                     <h3 className="col-xs-12 text-center">
