@@ -29,9 +29,9 @@ export class AppSwitchComponent extends React.Component<any, any> {
      * @param isChecked
      * @param name
      */
-    _switchChanged(isChecked: boolean, name: string) {
+    _switchChanged(params:any) {
         if (this.props.eventChange)
-            this.props.eventChange(isChecked, name);
+            this.props.eventChange(params);
     }
 
     /**

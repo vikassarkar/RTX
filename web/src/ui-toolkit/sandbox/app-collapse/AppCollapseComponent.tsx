@@ -28,9 +28,9 @@ export class AppCollapseComponent extends React.Component<any, any> {
      * @param isChecked
      * @param name
      */
-    _eventToggle(isChecked: boolean, name: string) {
+    _eventToggle(params:any) {
         if(this.props.eventToggle)
-            this.props.eventToggle(isChecked, name);
+            this.props.eventToggle(params);
     }
 
     /**

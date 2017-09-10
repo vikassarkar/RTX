@@ -33,7 +33,11 @@ export class Collapse extends React.Component<ICollapseProps, ICollapseStates> {
      */
     _toggleCollapse(event: any) {
         this.setState({ isOpened: event.target.checked });
-        this.props.eventToggle(event.target.checked, event.target.dataset.params);
+        this.props.eventToggle({
+            "event":event,
+            "checked": event.target.checked,
+            "data":event.target.dataset.params
+        });
     }
 
     /**

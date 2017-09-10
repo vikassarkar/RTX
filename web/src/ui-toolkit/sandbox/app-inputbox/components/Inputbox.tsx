@@ -46,8 +46,8 @@ export class Inputbox extends React.Component<IInputboxProps, IInputboxStates> {
         let evt = event;
         let targetEvt = event.target;
         let targetInput = event.target.parentElement.previousElementSibling;
-        let inputValue = evt.target.value;
-        let inputData = evt.target.dataset.params;
+        let inputValue = event.target.parentElement.previousElementSibling.value;
+        let inputData = event.target.parentElement.previousElementSibling.dataset.params;
         this.setState({
             validation: this._validateFields(null, targetEvt)
         }, function () {

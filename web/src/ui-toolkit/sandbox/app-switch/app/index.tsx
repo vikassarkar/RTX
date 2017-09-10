@@ -30,8 +30,9 @@ class App extends React.Component<{}, {}> {
      * @param isChecked
      * @param name
      */
-    _switchChanged(isChecked: boolean, name: string) {        
-        alert("you can set this value in state named as per name attr as : " + name+". Switched on : "+isChecked);
+    _switchChanged(params: any) {
+        console.log(params);
+        alert("you can set this value in state named as per name attr as : " + params.data + ". Switched on : " + params.checked);
     }
 
     /**

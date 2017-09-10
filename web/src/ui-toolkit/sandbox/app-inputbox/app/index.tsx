@@ -53,6 +53,7 @@ class App extends React.Component<{}, {}> {
      * @param params
      */
     _handleEventClearInput(params: any) {
+        console.log(params)
         console.log("you can set this value in state named as per data attr as : " + params.data);
     }
 

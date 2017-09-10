@@ -27,9 +27,9 @@ export class AppButtonComponent extends React.Component<any, any> {
      * event handler for click event of button
      * @param data
      */
-    _eventClick(data: string) {
+    _eventClick(params: any) {
         if(this.props.eventClick)
-            this.props.eventClick(data);
+            this.props.eventClick(params);
     }
 
     /**

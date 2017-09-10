@@ -27,19 +27,20 @@ class App extends React.Component<{}, {}> {
 
     /**
      * handle button event used inside collapsible
-     * @param data
+     * @param params
      */
-    _handleIndexBack(data: string) {
-        alert("you can set this value in state named as per data attr as ######: " + data);
+    _handleIndexBack(params: any) {
+        console.log(params);
+        alert("you can set this value in state named as per data attr as ######: " + params.data);
     }
 
     /**
      * handle toggle collapse
-     * @param isChecked
-     * @param name
+     * @param params
      */
-    _accordToggled(isChecked: boolean, name: string) {
-        alert("you can set this value in state named as per data attr as : " + name + ". Accordion opened : " + isChecked);
+    _accordToggled(params: any) {
+        console.log(params);
+        alert("you can set this value in state named as per data attr as : " + params.data + ". Accordion opened : " + params.checked);
     }
 
     /**

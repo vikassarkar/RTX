@@ -28,8 +28,9 @@ class App extends React.Component<{}, {}> {
      * event to handle button click 
      * @param data
      */
-    _handleIndexBack(data: string) {
-        alert("you can set this value in state named as per data attr as : " + data);
+    _handleIndexBack(params: any) {
+        console.log(params);
+        alert("you can set this value in state named as per data attr as : " + params.data);
     }
 
     /**

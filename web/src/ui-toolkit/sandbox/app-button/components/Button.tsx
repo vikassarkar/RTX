@@ -29,7 +29,10 @@ export class Button extends React.Component<IButtonProps, IButtonStates> {
      * @param event
      */
     _eventClick(event: any) {
-        this.props.eventClick(event.target.dataset.params);
+        this.props.eventClick({
+            "event": event,
+            "data": event.target.dataset.params
+        });
     }
 
     /**

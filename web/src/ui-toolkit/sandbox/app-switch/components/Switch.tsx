@@ -30,7 +30,11 @@ export class Switch extends React.Component<ISwitchProps, ISwitchStates> {
      * @param name
      */
     _switchChanged(event: any) {
-        this.props.eventChange(event.target.checked, event.target.dataset.params);
+        this.props.eventChange({
+            "event":event,
+            "checked": event.target.checked,
+            "data": event.target.dataset.params
+        });
     }
 
     /**
