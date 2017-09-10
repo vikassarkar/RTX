@@ -68,6 +68,8 @@
     <Content Include="src\ui-toolkit\app\index.html" />
     <Content Include="src\ui-toolkit\app\README.md" />
     <Content Include="src\ui-toolkit\pages\README.md" />
+    <Content Include="src\ui-toolkit\sandbox\app-radio-checkbox\app\index.html" />
+    <Content Include="src\ui-toolkit\sandbox\app-checkbox\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-inputbox\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-collapse\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-button\app\index.html" />
@@ -93,6 +95,8 @@
     <Content Include="src\ui-toolkit\sandbox\app-switch\styles\_switch.scss" />
     <Content Include="src\ui-toolkit\sandbox\app-collapse\styles\_collapse.scss" />
     <Content Include="src\ui-toolkit\sandbox\app-inputbox\styles\_inputbox.scss" />
+    <Content Include="src\ui-toolkit\sandbox\app-checkbox\styles\_checkbox.scss" />
+    <Content Include="src\ui-toolkit\sandbox\app-radio-checkbox\styles\_radioCheckbox.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js.map" />
@@ -124,6 +128,14 @@
     <TypeScriptCompile Include="src\ui-modules\agent-search\index.tsx" />
     <TypeScriptCompile Include="src\ui-modules\unblock-manager\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-checkbox\AppRadioCheckboxComponent.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-checkbox\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-checkbox\components\RadioCheckbox.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-checkbox\models\IRadioCheckbox.ts" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-checkbox\AppCheckboxComponent.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-checkbox\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-checkbox\components\Checkbox.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-checkbox\models\ICheckbox.ts" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-inputbox\AppInputboxComponent.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-inputbox\app\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-inputbox\components\Inputbox.tsx" />

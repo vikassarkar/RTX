@@ -1,0 +1,89 @@
+/**
+*Created by Vikas Sarkar
+*Date : 2017-07-07
+*/
+
+//allthe branding images needs tobe added in _main.scss of bell or vergin and that class needs to be extended here in other css
+//we are not using individual css for component pattern, beacause of theme, a theme is set individually for project by loadtheme.scss;
+//no need to import below webpack.theme.config.scss file , and no need to look into errors on common scss var/extendables/mixins etc they will be compiled on project level
+//if style id required for individual then we would need to change webpack settings to ignore scss, then importing features as per requirement.
+//@import "../../../../../build-process/configs/webpack.theme.config.scss";
+
+.radio_checkbox {
+    .radio_custom, .radio_custom_label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    input[type="radio"] {
+        display: none !important;
+    }
+
+    .radio_custom + .radio_custom_label:before {
+        content: '';
+        background: $whiteColor;
+        border: 0.1rem solid $dustGrayColor;
+        display: inline-block;
+        vertical-align: middle;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.5rem;
+        border-radius: 50%;
+    }
+
+
+    .radio_custom:checked + .radio_custom_label:before {
+        content: "\e013";
+        font-family: 'Glyphicons Halflings';
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: $whiteColor;
+        background: $successColor;
+    }
+
+    .radio_custom + .radio_custom_label {
+        &.square:before {
+            border-radius: 10%;
+        }
+
+        &.circle:before {
+            border-radius: 50%;
+        }
+
+        &.light:before {
+            background: $whiteColor;
+            border: 0.1rem solid $dustGrayColor;
+        }
+
+        &.dark:before {
+            background: $whiteColor;
+            border: 0.1rem solid $dustGrayColor;
+        }
+        &.transparent:before{
+            background: $transparent;
+            border: 0.1rem solid $baseColor;
+        }
+    }
+
+    .radio_custom:checked + .radio_custom_label {
+        &.light:before {
+            background: $dustGrayColor;
+            color: $whiteColor;
+            border: 0.1rem solid $darkGrayColor;
+        }
+        &.dark:before {
+            background: $baseColor;
+            color: $whiteColor;
+            border: 0.1rem solid $dustGrayColor;
+        }
+        &.transparent:before{
+            background: $transparent;
+            color: $baseColor;
+            border: 0.1rem solid $baseColor;
+        }
+    }
+}

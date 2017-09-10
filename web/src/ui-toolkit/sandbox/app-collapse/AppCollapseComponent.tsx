@@ -21,6 +21,7 @@ export class AppCollapseComponent extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
+        this._eventToggle = this._eventToggle.bind(this);
     }
 
     /**
@@ -67,7 +68,7 @@ export class AppCollapseComponent extends React.Component<any, any> {
                     endIconTheme={this.props.endIconTheme || "dark"}
                     startIconTheme={this.props.startIconTheme || "dark"}
                     childCollapsibleTemplate={this.props.childCollapsibleTemplate || this._childElement()} 
-                    eventToggle={this.props.eventToggle || this._eventToggle}
+                    eventToggle={this._eventToggle}
                     data={this.props.data|| ""}/>
             </div>
         );

@@ -8,20 +8,19 @@ import * as ReactDOM from 'react-dom';
 import { Router, Route } from 'react-router';
 
 import { Widget } from '../../../scripts/rtx/RTX';
-import { Button } from './components/Button';
+import { Checkbox } from './components/Checkbox';
 
 @Widget({
     moduleName: "app-button", 
     translator: "app"
 })
-export class AppButtonComponent extends React.Component<any, any> {
+export class AppCheckboxComponent extends React.Component<any, any> {
     permit: any;
     configs: any;
     translator: any;
 
     constructor(props: any) {
         super(props);
-        this._eventClick = this._eventClick.bind(this);
     }
 
     /**
@@ -39,12 +38,12 @@ export class AppButtonComponent extends React.Component<any, any> {
     render(): React.ReactElement<any> {
         const template = (
             <div>
-                <Button 
+                <Checkbox 
                     text={this.props.text || "Button"} 
                     theme={this.props.theme || ""} 
                     customTheme={this.props.customTheme || ""} 
                     data={this.props.data || "dummyButton"}
-                    eventClick={this._eventClick}/>
+                    eventClick={this.props.eventClick || this._eventClick}/>
             </div>
         );
         return template;

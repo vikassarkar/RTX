@@ -21,6 +21,10 @@ export class AppInputboxComponent extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
+        this._eventChange = this._eventChange.bind(this);
+        this._eventKeypress = this._eventKeypress.bind(this);
+        this._eventBlur = this._eventBlur.bind(this);
+        this._eventClearInput = this._eventClearInput.bind(this);
     }
 
     /**
@@ -80,10 +84,10 @@ export class AppInputboxComponent extends React.Component<any, any> {
                     customInputStyle={this.props.customInputStyle || ""}
                     customTopLabelStyle={this.props.customTopLabelStyle || ""}
                     customLeftLabelStyle={this.props.customLeftLabelStyle || ""}
-                    eventChange={this.props.eventChange || this._eventChange}
-                    eventKeypress={this.props.eventKeypress || this._eventKeypress}
-                    eventBlur={this.props.eventBlur || this._eventBlur}
-                    eventClearInput={this.props.eventClearInput || this._eventClearInput}/>
+                    eventChange={this._eventChange}
+                    eventKeypress={this._eventKeypress}
+                    eventBlur={this._eventBlur}
+                    eventClearInput={this._eventClearInput}/>
             </div>
         );
         return template;
