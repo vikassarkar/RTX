@@ -61,11 +61,12 @@
 
     .collapse_description {
         .description_container {
-            overflow: auto;
+            overflow-y: auto;
             border-top: none;
             margin-top: -0.45rem;
             padding: 2rem 2rem 2rem 0.5rem;
             text-align: left;
+            max-height: 15rem;
         }
 
         &.slideup {
@@ -77,7 +78,7 @@
         }
 
         &.slidedown {
-            max-height: 20rem;
+            max-height: 15rem;
             border-top: none;
             margin-top: -0.45rem;
             overflow: hidden;
