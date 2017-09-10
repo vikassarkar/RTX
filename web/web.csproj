@@ -32,6 +32,7 @@
     <Content Include="build-process\configs\webpack.theme.config.json" />
     <Content Include="build-process\configs\webpack.theme.config.scss" />
     <Content Include="build-process\utils\fs-generator\generator.js" />
+    <Content Include="build-process\utils\fs-generator\sandbox\app\index.html" />
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js" />
     <Content Include="build-process\utils\fs-generator\test-widget\WidgetName.spec.js" />
     <Content Include="build-process\utils\fs-generator\widget\app\index.html" />
@@ -48,6 +49,7 @@
     <Content Include="Scripts\typings\react\README.md" />
     <Content Include="Scripts\typings\react\tsconfig.json" />
     <Content Include="Scripts\typings\react\tslint.json" />
+    <Content Include="build-process\utils\fs-generator\sandbox\styles\_sandbox.scss" />
     <None Include="src\assets\common\_commonVariable.scss" />
     <Content Include="src\assets\common\bootstrap\_customizations.scss" />
     <Content Include="src\assets\common\bootstrap\_endpoint.scss" />
@@ -68,6 +70,7 @@
     <Content Include="src\ui-toolkit\app\index.html" />
     <Content Include="src\ui-toolkit\app\README.md" />
     <Content Include="src\ui-toolkit\pages\README.md" />
+    <Content Include="src\ui-toolkit\sandbox\app-generator-sandbox\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-radio-checkbox\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-checkbox\app\index.html" />
     <Content Include="src\ui-toolkit\sandbox\app-inputbox\app\index.html" />
@@ -97,12 +100,17 @@
     <Content Include="src\ui-toolkit\sandbox\app-inputbox\styles\_inputbox.scss" />
     <Content Include="src\ui-toolkit\sandbox\app-checkbox\styles\_checkbox.scss" />
     <Content Include="src\ui-toolkit\sandbox\app-radio-checkbox\styles\_radioCheckbox.scss" />
+    <Content Include="src\ui-toolkit\sandbox\app-generator-sandbox\styles\_sandbox.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.js.map" />
     <Content Include="build-process\utils\fs-generator\test-widget\WidgetName.spec.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="build-process\utils\fs-generator\sandbox\AppSandboxComponent.tsx" />
+    <TypeScriptCompile Include="build-process\utils\fs-generator\sandbox\app\index.tsx" />
+    <TypeScriptCompile Include="build-process\utils\fs-generator\sandbox\components\Sandbox.tsx" />
+    <TypeScriptCompile Include="build-process\utils\fs-generator\sandbox\models\ISandbox.ts" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\test-widget\ComponentName.spec.tsx" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\test-widget\WidgetName.spec.tsx" />
     <TypeScriptCompile Include="build-process\utils\fs-generator\widget\app\index.tsx" />
@@ -128,6 +136,10 @@
     <TypeScriptCompile Include="src\ui-modules\agent-search\index.tsx" />
     <TypeScriptCompile Include="src\ui-modules\unblock-manager\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-generator-sandbox\AppSandboxComponent.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-generator-sandbox\app\index.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-generator-sandbox\components\Sandbox.tsx" />
+    <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-generator-sandbox\models\ISandbox.ts" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-checkbox\AppRadioCheckboxComponent.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-checkbox\app\index.tsx" />
     <TypeScriptCompile Include="src\ui-toolkit\sandbox\app-radio-checkbox\components\RadioCheckbox.tsx" />
