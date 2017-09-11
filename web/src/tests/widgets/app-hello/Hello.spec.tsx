@@ -2,6 +2,7 @@
 *Created by Vikas Sarkar
 *Date : 2017-07-07
 */
+/// <reference path="../../../../node_modules/@types/webpack-env/index.d.ts" />
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

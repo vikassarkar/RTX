@@ -5,7 +5,7 @@
         "sourceMap": true,
         "noImplicitAny": true,
         "module": "commonjs",
-        "target": "ES6",
+        "target": "ES5",
         "jsx": "react",
       "skipLibCheck": true,
         "typeRoots": [
