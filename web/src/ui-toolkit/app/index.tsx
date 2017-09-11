@@ -27,7 +27,7 @@ class Application extends React.Component<{}, {}> {
     render(): React.ReactElement<{}> {
         const template = (
             <div>
-                <AppHeaderWidget framework="React" compiler="TypeScript compiler" />
+                <AppHeaderWidget framework="React" compiler="TypeScript compiler" headerTitle="Application"/>
                 <div className="container theme-showcase" role="main">
                     <AppHelloWidget framework="React" compiler="TypeScript" />
                 </div>
