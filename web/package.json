@@ -131,7 +131,8 @@
     "tre-as-build-virgin": "webpack -p --progress --env=config_virgin_ui-modules_agent-search",
     "tre-as-devserver-bell": "webpack-dashboard -- webpack-dev-server -w --hot --inline --history-api-fallback --env=config_bell_ui-modules_agent-search",
     "tre-as-devserver-virgin": "webpack-dashboard -- webpack-dev-server -w --hot --inline --history-api-fallback --env=config_virgin_ui-modules_agent-search",
-    "start": "npm run tre-app-build-bell"
+    "start": "npm run tre-app-build-bell",
+    "test": "npm run tre-clean-test"
   },
   "version": "1.0.0"
 }
