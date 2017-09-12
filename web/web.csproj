@@ -36,6 +36,7 @@
     <Content Include="build-process\utils\fs-generator\ui-toolkit\widgets\app\index.html" />
     <Content Include="build-process\utils\webpack\webpack.bootstrap.utils.js" />
     <Content Include="build-process\utils\webpack\webpack.config.utils.js" />
+    <Content Include="jest.config.js" />
     <Content Include="package.json" />
     <Content Include="src\assets\bell\images\bell.png" />
     <Content Include="src\assets\bell\images\logo-rtx.png" />
