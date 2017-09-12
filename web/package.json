@@ -67,7 +67,7 @@
   "jest": {
     "verbose": true,
     "collectCoverage": true,
-    "coverageDirectory": "./app-output/tests-coverage/",
+    "coverageDirectory": "./src-output/tests-coverage/",
     "moduleFileExtensions": [
       "js",
       "jsx",
