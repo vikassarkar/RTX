@@ -8,7 +8,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as TestUtils from 'react-dom/test-utils';
 
-import { WgProvider, Translate } from '../../../scripts/rtx/RTX';
 import { Hello } from '../../../ui-toolkit/widgets/app-hello/components/Hello';
 import { IHelloProps } from '../../../ui-toolkit/widgets/app-hello/models/IHello';
 
