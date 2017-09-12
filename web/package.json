@@ -66,6 +66,10 @@
   },
   "jest": {
     "verbose": true,
+    "collectCoverageFrom": [
+      "src/tests/**/**/*.ts",
+      "src/tests/**/**/*.tsx"
+    ],
     "collectCoverage": true,
     "coverageDirectory": "./src-output/tests-coverage/",
     "moduleFileExtensions": [

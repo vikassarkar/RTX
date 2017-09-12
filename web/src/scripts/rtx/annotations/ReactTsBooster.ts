@@ -149,7 +149,7 @@ function addProps(newConstructor: any, annotationType: String, annotationObj: an
     for (var i in annotationObj) {
         if (i == "translator") {
             let contentFile = getTranslator(annotationObj[i]);
-            constructorInstance.prototype["translator"] = contentFile[localConfigs.currentLang];
+            constructorInstance.prototype["translator"] = contentFile ? contentFile[localConfigs.currentLang] : {};
         }
         else if (i == "style") {
             requireGlobalStyle(annotationType, annotationObj[i]);

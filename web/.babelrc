@@ -4,12 +4,6 @@
       "plugins": [
         "transform-es2015-modules-commonjs"
       ]
-    },
-    "test": {
-      "plugins": [
-        "transform-decorators-legacy",
-        "transform-decorators"
-      ]
     }
   }
 }
