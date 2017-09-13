@@ -132,7 +132,7 @@ function getTranslator(translatorName: any): any {
 function addProps(newConstructor: any, annotationType: String, annotationObj: any): any {
     let constructorInstance: any = newConstructor;
     let moduleName: String = "";
-    //if(annotationType=="page") get config api > set local store / get locally saved config
+    //if(n=="page") get config api > set local store / get locally saved config
     //set config
     constructorInstance.prototype["configs"] = {
         currentTheme: localConfigs.currentTheme,
@@ -149,7 +149,7 @@ function addProps(newConstructor: any, annotationType: String, annotationObj: an
     for (var i in annotationObj) {
         if (i == "translator") {
             let contentFile = getTranslator(annotationObj[i]);
-            constructorInstance.prototype["translator"] = contentFile ? contentFile[localConfigs.currentLang] : {}; //update code to get translate json for test cases //it was failing undefined for 'en'
+            constructorInstance.prototype["translator"] = contentFile ? contentFile[localConfigs.currentLang] : {};
         }
         else if (i == "style") {
             requireGlobalStyle(annotationType, annotationObj[i]);
