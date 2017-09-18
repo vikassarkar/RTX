@@ -48,8 +48,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     },
     "widget": {
       "entryBaseDir": "../../../src/ui-toolkit/widgets/",
@@ -64,8 +67,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     },
     "dashboardWidget": {
       "entryBaseDir": "../../../src/ui-toolkit/widgets/",
@@ -80,8 +86,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     },
     "page": {
       "entryBaseDir": "../../../src/ui-toolkit/pages/",
@@ -96,8 +105,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     },
     "dashboardPage": {      
       "entryBaseDir": "../../../src/ui-toolkit/pages/",
@@ -112,8 +124,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     },
     "sandbox": {
       "entryBaseDir": "../../../src/ui-toolkit/sandbox/",
@@ -128,8 +143,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     },
     "dashboardSandbox": {      
       "entryBaseDir": "../../../src/ui-toolkit/sandbox/",
@@ -144,8 +162,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",      
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     }
   },
   "config-ui-modules": {
@@ -162,8 +183,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     },
     "unblock-manager": {
       "entryBaseDir": "../../../src/ui-modules/unblock-manager/",
@@ -178,8 +202,11 @@
       "bootstrapFile": "bootstrap.bundle.js",
       "stylePath": "styles/",
       "styleFile": "styles.css",
+      "testCasePath": "../../../src/tests/",
       "bellStylePath": "../../../src/assets/bell/",
-      "virginStylePath": "../../../src/assets/virgin/"
+      "virginStylePath": "../../../src/assets/virgin/",
+      "bellil18Path": "../../../src/translator/bell/",
+      "virginil18Path": "../../../src/translator/virgin/"
     }
   }
 }

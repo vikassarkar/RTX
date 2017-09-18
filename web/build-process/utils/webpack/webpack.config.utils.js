@@ -38,6 +38,9 @@ const webpackConfig = function (srcFolder, packageType, envirnoment, packageName
     var includeTheme = theme == "bell" ? /\.bell.scss$/ : /\.virgin.scss$/;
     var excludeThemeDir = path.resolve(__dirname, theme == "bell" ? buildData.virginStylePath : buildData.bellStylePath);
     var includeThemeDir = path.resolve(__dirname, theme == "bell" ? buildData.bellStylePath : buildData.virginStylePath);
+    var excludeil18Dir = path.resolve(__dirname, theme == "bell" ? buildData.virginil18Path : buildData.bellil18Path);
+    var includeil18Dir = path.resolve(__dirname, theme == "bell" ? buildData.bellil18Path : buildData.virginil18Path);
+    var excludeTestCases = path.resolve(__dirname, buildData.testCasePath);
     console.log("\x1b[33m%s\x1b[0m", "~~~~~~~~~~~~~~~Building Theme " + theme + "~~~~~~~~~~~~~~~~~~~~~");
     configurations['plugins'] = [
             new CleanWebpackPlugin([outDir], process.cwd()),
@@ -102,13 +105,15 @@ const webpackConfig = function (srcFolder, packageType, envirnoment, packageName
                 },
                 {
                     test: /\.tsx?$/,
-                    use: ["babel-loader?presets[]=es2015", "awesome-typescript-loader"]
+                    use: ["babel-loader?presets[]=es2015", "awesome-typescript-loader"],
+                    exclude: excludeTestCases
                 },
                 {
                     test: /\.css$/,
                     use: ExtractTextPlugin.extract({
                         use: ["style-loader", "css-loader?sourceMap"],
-                    })
+                    }),
+                    exclude: excludeThemeDir
                 },
                 {
                     test: /\.html$/,
@@ -125,7 +130,8 @@ const webpackConfig = function (srcFolder, packageType, envirnoment, packageName
                         fallback: 'style-loader',
                         use: ["css-loader?sourceMap", "sass-loader?sourceMap"],
                         publicPath: outDir
-                    })
+                    }),
+                    exclude: excludeThemeDir
                 },
                 {
                     test: /\.json$/,
@@ -134,7 +140,8 @@ const webpackConfig = function (srcFolder, packageType, envirnoment, packageName
                 },
                 {
                     test: /\.(gif|png|jpe?g)$/i,
-                    use: ['file-loader?name=[name].[ext]&publicPath=./&outputPath=assets/images/', 'image-webpack-loader']
+                    use: ['file-loader?name=[name].[ext]&publicPath=./&outputPath=assets/images/', 'image-webpack-loader'],
+                    exclude: excludeThemeDir
                 },
                 {
                     test: /\.(woff2?|svg)$/,
